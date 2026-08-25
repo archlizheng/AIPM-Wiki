@@ -1,3 +1,9 @@
+---
+title: bytedance-ai-agent-pm-intern-202604
+type: note
+permalink: aipmwiki/docs/04-interview/experiences/bytedance-ai-agent-pm-intern-202604
+---
+
 # 字节跳动 AI Agent 产品经理（暑期实习）面经（2026 年 04 月）
 
 **出处**：小红书 @MOMO，《新鲜的字节AI Agent产品经理暑期实习面经》，2026-04-20。 [原文链接](https://www.xiaohongshu.com/search_result/69e5f5990000000023011cb0?xsec_token=AB8RQpMk7vp2VBE5x9wmQ_vRSoEgMp49HePhmMHdGRksU=&xsec_source=)

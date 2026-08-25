@@ -1,3 +1,9 @@
+---
+title: quantify-model-accuracy-value
+type: note
+permalink: aipmwiki/docs/04-interview/case-analysis/quantify-model-accuracy-value
+---
+
 # 模型准确率从 90% 提升到 95%,对业务价值如何量化?
 
 **难度**:⭐⭐⭐ 进阶

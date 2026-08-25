@@ -1,3 +1,9 @@
+---
+title: what-is-vibe-coding
+type: note
+permalink: aipmwiki/docs/02-pm-skills/vibe-coding/what-is-vibe-coding
+---
+
 # Vibe Coding 是什么:AI PM 该不该自己写代码
 
 ## 一句话解释

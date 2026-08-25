@@ -1,3 +1,9 @@
+---
+title: README
+type: note
+permalink: aipmwiki/docs/04-interview/product-design/readme
+---
+
 # 产品设计题
 
 "为 X 设计一个 AI 功能"类题目。考察需求分析、方案设计、技术可行性判断的综合能力。

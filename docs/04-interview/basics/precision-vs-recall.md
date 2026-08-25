@@ -1,3 +1,9 @@
+---
+title: precision-vs-recall
+type: note
+permalink: aipmwiki/docs/04-interview/basics/precision-vs-recall
+---
+
 # 精确率和召回率的区别?举一个产品中需要权衡的例子
 
 **难度**:⭐⭐ 入门必备

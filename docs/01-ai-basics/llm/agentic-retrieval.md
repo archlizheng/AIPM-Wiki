@@ -1,3 +1,9 @@
+---
+title: agentic-retrieval
+type: note
+permalink: aipmwiki/docs/01-ai-basics/llm/agentic-retrieval
+---
+
 # Agentic Retrieval:检索如何变成 Agent 的工具
 
 [《RAG 没死:死的是 Naive 固定流水线》](rag-evolution-naive-to-agentic.md)把"检索"从"向量数据库"里解放出来,指出真正过时的是"固定切块 → 固定 Top-K → 固定拼上下文"这套僵化流水线。本文接着往下拆一个更具体的产品问题:**当检索不再是写死的前置步骤,而是模型自己决定要不要用、用哪个的工具之后,系统到底该长什么样?**

@@ -1,3 +1,9 @@
+---
+title: README
+type: note
+permalink: aipmwiki/docs/04-interview/preparation/readme
+---
+
 # 面试准备方法
 
 这里不是新的题型分类，而是帮助你把已有项目、作品集和 Demo 准备成**可讲清、可验证、经得起追问**的面试材料。它和 [basics/](../basics/README.md)、[product-design/](../product-design/README.md)、[case-analysis/](../case-analysis/README.md) 的关系是：题型目录告诉你面试官可能问什么，本目录告诉你如何准备自己的证据和表达。

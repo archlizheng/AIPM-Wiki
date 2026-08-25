@@ -1,3 +1,9 @@
+---
+title: ai-customer-service
+type: note
+permalink: aipmwiki/docs/03-case-studies/vertical/ai-customer-service
+---
+
 # 智能客服:最成熟的 LLM 落地场景拆解
 
 **分类**:垂直行业

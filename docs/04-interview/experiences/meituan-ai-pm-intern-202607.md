@@ -1,3 +1,9 @@
+---
+title: meituan-ai-pm-intern-202607
+type: note
+permalink: aipmwiki/docs/04-interview/experiences/meituan-ai-pm-intern-202607
+---
+
 # 美团 AI 产品 实习面经（合并）
 
 **来源**: 牛客 @blaze\*0932（2026-03）、@Luck_Aqua（2026-05）、@\_Amethyst_Adventure（2026-03） | **岗位**: AI 产品 / 产品经理（含 AI 专项面） | **类型**: 实习

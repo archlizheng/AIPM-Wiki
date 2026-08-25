@@ -1,3 +1,9 @@
+---
+title: ai-feature-retention-diagnosis
+type: note
+permalink: aipmwiki/docs/04-interview/case-analysis/ai-feature-retention-diagnosis
+---
+
 # AI 功能上线后留存很差，你怎么分诊？
 
 **难度**:⭐⭐⭐ 进阶

@@ -1,3 +1,9 @@
+---
+title: README
+type: note
+permalink: aipmwiki/docs/02-pm-skills/model-evaluation/readme
+---
+
 # 模型与产品效果评估
 
 AI PM 最重要的硬技能:没有评估,就没有迭代。

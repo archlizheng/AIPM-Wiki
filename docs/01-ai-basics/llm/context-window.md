@@ -1,3 +1,9 @@
+---
+title: context-window
+type: note
+permalink: aipmwiki/docs/01-ai-basics/llm/context-window
+---
+
 # 上下文窗口:限制、成本与产品设计影响
 
 ## 一句话说清

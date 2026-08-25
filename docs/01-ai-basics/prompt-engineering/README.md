@@ -1,3 +1,9 @@
+---
+title: README
+type: note
+permalink: aipmwiki/docs/01-ai-basics/prompt-engineering/readme
+---
+
 # Prompt 工程
 
 Prompt 是 AI PM 最直接的"生产工具":不写代码也能显著改变产品效果。进阶则要理解：线上效果往往取决于「窗口里拼进了什么」——见 Context Engineering。

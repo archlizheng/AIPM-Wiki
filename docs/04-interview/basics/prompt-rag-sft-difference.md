@@ -1,3 +1,9 @@
+---
+title: prompt-rag-sft-difference
+type: note
+permalink: aipmwiki/docs/04-interview/basics/prompt-rag-sft-difference
+---
+
 # Prompt、RAG、SFT 分别是什么?有什么区别?
 
 **难度**:⭐⭐ 入门必备

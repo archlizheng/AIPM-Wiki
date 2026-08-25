@@ -1,3 +1,9 @@
+---
+title: kimi
+type: note
+permalink: aipmwiki/docs/03-case-studies/chatbot-assistant/kimi
+---
+
 # Kimi 案例拆解:从长文本卖点到 Agent 产品化
 
 **分类**:对话助手

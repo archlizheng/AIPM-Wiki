@@ -1,3 +1,9 @@
+---
+title: README
+type: note
+permalink: aipmwiki/docs/03-case-studies/vertical/readme
+---
+
 # 垂直行业案例
 
 医疗、教育、法律、金融、电商客服等行业的 AI 落地。

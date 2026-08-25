@@ -1,3 +1,9 @@
+---
+title: agentic-workflows
+type: note
+permalink: aipmwiki/docs/04-interview/basics/agentic-workflows
+---
+
 # 什么是 Agentic Workflows?
 
 **难度**:⭐⭐ 进阶

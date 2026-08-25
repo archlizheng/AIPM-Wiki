@@ -1,3 +1,9 @@
+---
+title: bilibili-multimodal-ai-pm-202607
+type: note
+permalink: aipmwiki/docs/04-interview/experiences/bilibili-multimodal-ai-pm-202607
+---
+
 # B 站 多模态视频 AI 产品 面经
 
 **来源**: 牛客 @山姆牛（整理 B 站三面实录）, 2026-05 | **岗位**: 多模态视频 AI 产品 | **类型**: 校招/社招（帖中未区分）

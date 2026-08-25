@@ -1,3 +1,9 @@
+---
+title: cursor-vs-copilot
+type: note
+permalink: aipmwiki/docs/03-case-studies/aigc/cursor-vs-copilot
+---
+
 # Cursor 与 GitHub Copilot:AI 代码助手的付费转化
 
 **分类**:AIGC

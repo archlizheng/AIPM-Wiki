@@ -1,3 +1,9 @@
+---
+title: llm-familiarity-three-levels
+type: note
+permalink: aipmwiki/docs/04-interview/preparation/llm-familiarity-three-levels
+---
+
 # JD 写「熟悉大模型」，面试官的三档标准是什么？怎么自测？
 
 **难度**:⭐⭐ 常规

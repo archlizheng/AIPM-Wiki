@@ -1,3 +1,9 @@
+---
+title: glossary
+type: note
+permalink: aipmwiki/docs/01-ai-basics/glossary
+---
+
 # AI 术语速查表
 
 > 面试和日常工作高频术语。每条力求一句话说清「是什么」+ 一句话说清「PM 为什么要关心」。

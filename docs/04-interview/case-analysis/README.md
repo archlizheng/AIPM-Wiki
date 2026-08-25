@@ -1,3 +1,9 @@
+---
+title: README
+type: note
+permalink: aipmwiki/docs/04-interview/case-analysis/readme
+---
+
 # 案例分析与估算题
 
 拆解现有产品、估算成本与收益、设计指标体系。

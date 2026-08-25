@@ -1,3 +1,9 @@
+---
+title: hallucination-mitigation
+type: note
+permalink: aipmwiki/docs/04-interview/basics/hallucination-mitigation
+---
+
 # 什么是大模型的幻觉?产品上怎么缓解?
 
 **难度**:⭐⭐ 入门必备

@@ -1,3 +1,9 @@
+---
+title: ai-pm-team-org-and-roles
+type: note
+permalink: aipmwiki/docs/00-roadmap/ai-pm-team-org-and-roles
+---
+
 # AI 产品团队怎么建：角色、分工与选型话语权
 
 > 本文回答三件事：AI 产品团队常见怎么搭？从 0 到 1 最少要哪些角色？模型选型时 PM 和算法各自说了算什么？

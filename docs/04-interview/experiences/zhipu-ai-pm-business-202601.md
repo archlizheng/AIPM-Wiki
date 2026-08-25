@@ -1,3 +1,9 @@
+---
+title: zhipu-ai-pm-business-202601
+type: note
+permalink: aipmwiki/docs/04-interview/experiences/zhipu-ai-pm-business-202601
+---
+
 # 智谱 AI 产品经理（业务面）面经（2026 年 01 月）
 
 **出处**：小红书 @明天好，《智谱AI产品经理业务面面经（已过附答案）》，2026-01-29。 [原文链接](https://www.xiaohongshu.com/search_result/697b385900000000220380f0?xsec_token=AB4pK-bfuotYiaWgoyhg1wlpt4z4DqO23SiQgrl7fd2Ow=&xsec_source=)

@@ -1,3 +1,9 @@
+---
+title: transformer-architecture
+type: note
+permalink: aipmwiki/docs/01-ai-basics/llm/transformer-architecture
+---
+
 # Transformer 架构:大模型的地基
 
 ## 一句话说清
@@ -97,4 +103,3 @@ Transformer 相对 RNN/LSTM 的关键突破,是 **注意力机制**:处理某个
 - [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) — Jay Alammar(配图来源,CC BY-NC-SA 4.0)
 - [But what is a GPT? Visual intro to Transformers](https://www.3blue1brown.com/lessons/gpt/) — 3Blue1Brown
 - [The Illustrated GPT-2](https://jalammar.github.io/illustrated-gpt2/) — Jay Alammar(Decoder-only 视角补充)
-

@@ -1,3 +1,9 @@
+---
+title: annotation-guideline
+type: note
+permalink: aipmwiki/docs/02-pm-skills/data-annotation/annotation-guideline
+---
+
 # 标注规范怎么写:PM 写规范,标注质量就是产品质量
 
 ## 为什么这是 PM 的活儿,不是标注供应商的活儿

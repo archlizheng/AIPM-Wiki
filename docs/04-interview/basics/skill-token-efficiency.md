@@ -1,3 +1,9 @@
+---
+title: skill-token-efficiency
+type: note
+permalink: aipmwiki/docs/04-interview/basics/skill-token-efficiency
+---
+
 # 如何设计 Skill 来降低 token 消耗?
 
 **难度**:⭐⭐ 常规

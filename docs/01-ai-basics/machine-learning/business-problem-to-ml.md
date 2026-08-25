@@ -1,3 +1,9 @@
+---
+title: business-problem-to-ml
+type: note
+permalink: aipmwiki/docs/01-ai-basics/machine-learning/business-problem-to-ml
+---
+
 # 分类、回归、聚类:业务问题如何映射到 ML 问题
 
 ## 为什么 PM 要懂这个

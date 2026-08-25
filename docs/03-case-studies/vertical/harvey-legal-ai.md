@@ -1,3 +1,9 @@
+---
+title: harvey-legal-ai
+type: note
+permalink: aipmwiki/docs/03-case-studies/vertical/harvey-legal-ai
+---
+
 # Harvey 案例拆解:法律垂直的高合规企业 AI
 
 **分类**:垂直行业

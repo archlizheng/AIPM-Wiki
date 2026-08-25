@@ -1,3 +1,9 @@
+---
+title: rag-evolution-naive-to-agentic
+type: note
+permalink: aipmwiki/docs/01-ai-basics/llm/rag-evolution-naive-to-agentic
+---
+
 # RAG 没死:死的是 Naive 固定流水线
 
 2026 年这一年,社交媒体上时不时会冒出"RAG 已经死了"的论调,理由通常是"上下文窗口都到 1M 了,还检索个啥"或者"Coding Agent 用 grep 就能读懂整个仓库,不需要向量库"。这类标题足够抓眼球,但把"RAG"和"向量检索"划了等号,又把"检索"和"死"划了等号,两步都站不住。更贴近实情的判断是:**过时的是 2023 年那套"固定切块 → 固定 Top-K → 固定拼上下文"的入门版流水线,检索这件事本身从未退场,只是换了个更聪明的组织方式。**

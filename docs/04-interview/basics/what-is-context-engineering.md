@@ -1,3 +1,9 @@
+---
+title: what-is-context-engineering
+type: note
+permalink: aipmwiki/docs/04-interview/basics/what-is-context-engineering
+---
+
 # 什么是 Context Engineering？和 Prompt Engineering 有什么区别？
 
 **难度**:⭐⭐ 入门必备

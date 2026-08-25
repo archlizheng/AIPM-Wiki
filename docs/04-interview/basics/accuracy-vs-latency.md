@@ -1,3 +1,9 @@
+---
+title: accuracy-vs-latency
+type: note
+permalink: aipmwiki/docs/04-interview/basics/accuracy-vs-latency
+---
+
 # AI 产品中如何平衡准确性与响应速度?
 
 **难度**:⭐⭐ 入门必备

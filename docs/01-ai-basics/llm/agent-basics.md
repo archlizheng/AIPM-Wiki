@@ -1,3 +1,9 @@
+---
+title: agent-basics
+type: note
+permalink: aipmwiki/docs/01-ai-basics/llm/agent-basics
+---
+
 # Agent 入门:规划、记忆、工具调用
 
 2024-2025 年"Agent"还带着概念炒作的味道;到 2026 年年中,它已是日常工具——写代码用 Claude Code、Codex、Antigravity,做调研用 Deep Research,订票、填表单也开始交给能操作电脑的 Agent。理解 Agent 不是为了背定义,而是因为"这个功能该做成 Chatbot 还是 Agent"是几乎所有 AI 产品立项都要过的一道坎。

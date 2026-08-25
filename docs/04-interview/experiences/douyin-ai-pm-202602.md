@@ -1,3 +1,9 @@
+---
+title: douyin-ai-pm-202602
+type: note
+permalink: aipmwiki/docs/04-interview/experiences/douyin-ai-pm-202602
+---
+
 # 抖音 AI 产品 校招一面
 
 **来源**: 牛客 @Arancia_Arancione, 2026-02 | **岗位**: AI 产品 | **类型**: 校招

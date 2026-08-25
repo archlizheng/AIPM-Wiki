@@ -1,3 +1,9 @@
+---
+title: google-ai-mode
+type: note
+permalink: aipmwiki/docs/03-case-studies/search-and-rec/google-ai-mode
+---
+
 # Google AI Overviews 与 AI Mode:传统搜索的答案层防御
 
 **分类**:搜推

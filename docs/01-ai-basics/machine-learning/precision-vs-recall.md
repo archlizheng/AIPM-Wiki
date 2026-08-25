@@ -1,3 +1,9 @@
+---
+title: precision-vs-recall
+type: note
+permalink: aipmwiki/docs/01-ai-basics/machine-learning/precision-vs-recall
+---
+
 # 精确率 vs 召回率:PM 必须会做的权衡
 
 ## 为什么 PM 必须懂这两个指标

@@ -1,3 +1,9 @@
+---
+title: nl2sql-pitfalls
+type: note
+permalink: aipmwiki/docs/04-interview/basics/nl2sql-pitfalls
+---
+
 # 为什么 Text-to-SQL 在 Spider 上很高分,上线企业库却翻车?
 
 **难度**:⭐⭐⭐ 进阶

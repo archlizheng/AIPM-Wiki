@@ -1,3 +1,9 @@
+---
+title: design-ai-product-for-elderly
+type: note
+permalink: aipmwiki/docs/04-interview/product-design/design-ai-product-for-elderly
+---
+
 # 设计一个面向老年人的 AI 产品
 
 **难度**:⭐⭐⭐ 进阶

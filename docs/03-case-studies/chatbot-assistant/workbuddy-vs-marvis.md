@@ -1,3 +1,9 @@
+---
+title: workbuddy-vs-marvis
+type: note
+permalink: aipmwiki/docs/03-case-studies/chatbot-assistant/workbuddy-vs-marvis
+---
+
 # WorkBuddy 与 Marvis:腾讯的两条 Agent 产品线
 
 **分类**:对话助手

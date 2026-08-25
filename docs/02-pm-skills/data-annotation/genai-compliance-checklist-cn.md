@@ -1,3 +1,9 @@
+---
+title: genai-compliance-checklist-cn
+type: note
+permalink: aipmwiki/docs/02-pm-skills/data-annotation/genai-compliance-checklist-cn
+---
+
 # 生成式 AI 合规设计清单（中国为主，出海对照）
 
 > **本文不构成法律意见。** 法规与配套标准更新频繁，请以主管部门最新原文与你方法务意见为准。文中「事实」仅复述已公开的官方法规/解读要点；「建议」是产品设计与上线流程上的可操作动作，不等于强制法条。版权与权属争议标「需法务」处，禁止当作已定结论。

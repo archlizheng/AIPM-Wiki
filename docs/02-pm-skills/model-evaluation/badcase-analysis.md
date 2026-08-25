@@ -1,3 +1,9 @@
+---
+title: badcase-analysis
+type: note
+permalink: aipmwiki/docs/02-pm-skills/model-evaluation/badcase-analysis
+---
+
 # Badcase 分析方法论:收集、归因、分发、验证
 
 ## 为什么 Badcase 分析是 AI PM 的日常功课

@@ -1,3 +1,9 @@
+---
+title: baidu-llm-pm-202604
+type: note
+permalink: aipmwiki/docs/04-interview/experiences/baidu-llm-pm-202604
+---
+
 # 百度 AI 大模型产品 实习面经
 
 **来源**: 牛客 @吃个老橙子, 2026-04 | **岗位**: AI 大模型产品 | **类型**: 实习

@@ -1,3 +1,9 @@
+---
+title: spot-fake-ai-pm-role
+type: note
+permalink: aipmwiki/docs/04-interview/behavioral/spot-fake-ai-pm-role
+---
+
 # 如何判断一个 AI PM offer 是不是「伪 AI 岗」？
 
 **难度**:⭐⭐ 常规

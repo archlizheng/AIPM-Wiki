@@ -1,3 +1,9 @@
+---
+title: yuanbao
+type: note
+permalink: aipmwiki/docs/03-case-studies/chatbot-assistant/yuanbao
+---
+
 # 元宝（腾讯元宝）案例拆解：腾讯生态分发与免费 Agent
 
 **分类**:对话助手

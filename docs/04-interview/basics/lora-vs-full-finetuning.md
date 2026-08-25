@@ -1,3 +1,9 @@
+---
+title: lora-vs-full-finetuning
+type: note
+permalink: aipmwiki/docs/04-interview/basics/lora-vs-full-finetuning
+---
+
 # LoRA 和全量微调有什么区别?什么场景选哪个?
 
 **难度**:⭐⭐ 进阶

@@ -1,3 +1,9 @@
+---
+title: agentic-search-search-as-code
+type: note
+permalink: aipmwiki/docs/01-ai-basics/llm/agentic-search-search-as-code
+---
+
 # Agent-search 与 Search as Code:搜索栈如何可编程
 
 [《Agentic Retrieval:检索如何变成 Agent 的工具》](agentic-retrieval.md)提到,当检索对象从"你自己的知识库"扩展到"整个互联网",一部分前沿产品走得更远:不满足于"让模型调用搜索工具",而是把搜索栈本身拆开,让模型直接编排里面的原子操作。这就是本文要展开的 **Agent-search / Search as Code(SaC)**。

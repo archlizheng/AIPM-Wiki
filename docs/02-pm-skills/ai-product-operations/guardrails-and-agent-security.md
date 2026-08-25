@@ -1,3 +1,9 @@
+---
+title: guardrails-and-agent-security
+type: note
+permalink: aipmwiki/docs/02-pm-skills/ai-product-operations/guardrails-and-agent-security
+---
+
 # AI 安全与 Agent 权限：把“能做什么”变成可治理的边界
 
 > **信息状态**：方法论｜**最后核验**：2026-08-06
@@ -261,4 +267,3 @@ AI 安全不是「上线前找安全同事盖章」。PM 至少对**风险可见
 - [Safety settings](https://ai.google.dev/gemini-api/docs/safety-settings) —— Google Gemini API 官方文档，2026-08-06 访问
 - [Model Context Protocol specification](https://modelcontextprotocol.io/specification/latest) —— MCP 官方规范，2026-08-06 访问
 - 磊叔《关于 AI 产品经理的 100 个问题》Q44 / Q68–70 / Q82 — 仅作选题结构启发，[飞书链接](https://my.feishu.cn/wiki/Rl6zw6lp2ipOnnkBVxwc5urRnLc)
-

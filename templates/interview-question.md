@@ -1,3 +1,9 @@
+---
+title: interview-question
+type: note
+permalink: aipmwiki/templates/interview-question
+---
+
 # [题目原文]
 
 **难度**:⭐ ~ ⭐⭐⭐(入门 / 常规 / 进阶)

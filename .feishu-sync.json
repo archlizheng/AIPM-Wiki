@@ -626,6 +626,174 @@
     "docs/03-case-studies/vertical/openevidence.md": {
       "node_token": "ZGo8wxLPjisaTCkDh7xcGXnHnnd",
       "obj_token": "Eu7zdh0wioEfgNxnkh4cpQ99nyg"
+    },
+    "docs/00-roadmap/ai-pm-career-3-to-5-years.md": {
+      "node_token": "PbIYwazjSiNj0kkKnZBclLkvnnd",
+      "obj_token": "OFn8dW84IoiVXmxc3A8c7q62ntg"
+    },
+    "docs/00-roadmap/ai-pm-team-org-and-roles.md": {
+      "node_token": "LZC0wPxMvi0PDBkPFSacaAtEnxb",
+      "obj_token": "BcX8diRr2on0jDxuu88cKZLHnnd"
+    },
+    "docs/00-roadmap/multimodal-pm-skills.md": {
+      "node_token": "TdC4wN5ZRi8lp0k5Z9lc6yLznme",
+      "obj_token": "Ss0yd4A75ogfcpxKHKFce8U6n1f"
+    },
+    "docs/00-roadmap/spot-fake-ai-pm-jobs.md": {
+      "node_token": "SyWPw5u5yi8TdxkqpFDcdP5HnDf",
+      "obj_token": "Z4s7dqjV2oUjYMxTbiVc9h7Xn8f"
+    },
+    "docs/01-ai-basics/llm/agentic-retrieval.md": {
+      "node_token": "OhYqwF0ZViA8x5kMJK1cZBB9nNd",
+      "obj_token": "D2oBdjgTOoFmqFxrjmScpQgmnSd"
+    },
+    "docs/01-ai-basics/llm/agentic-search-search-as-code.md": {
+      "node_token": "H5U6wWKKHiulrikBGSdcFo6Fneh",
+      "obj_token": "OTlVdIOpIoHuPwxVSFHcnQvinue"
+    },
+    "docs/01-ai-basics/llm/long-context-vs-rag.md": {
+      "node_token": "JCeZwO7P8iExrGkldQHcmuWknI7",
+      "obj_token": "Larqds7VroAOK4xDeFJcGMA8noe"
+    },
+    "docs/01-ai-basics/llm/nl2sql-for-ai-pm.md": {
+      "node_token": "CuIrwV8Dhilty9kFMjYcxLQnnLe",
+      "obj_token": "AXKCdPXjRoPYXCx1DlScZoJTngb"
+    },
+    "docs/01-ai-basics/llm/production-rag-checklist.md": {
+      "node_token": "WI9KwpwIpiA3YukZeV9coWbkn2f",
+      "obj_token": "KAjldVNn8op7XtxE0pZciVN8ncc"
+    },
+    "docs/01-ai-basics/llm/rag-evolution-naive-to-agentic.md": {
+      "node_token": "OQSJw4iI0iEDwokbaqJc8fJlnlc",
+      "obj_token": "F0TFdWbYjoC40pxcmTbcqM0JnMg"
+    },
+    "docs/01-ai-basics/prompt-engineering/context-engineering.md": {
+      "node_token": "PVemwcJrliGCX4kUCDTcfN7InCe",
+      "obj_token": "MYWKdH40lono0pxnXqQchbJRnzd"
+    },
+    "docs/02-pm-skills/ai-product-operations/ai-feature-retention-and-success-metrics.md": {
+      "node_token": "L8mPwFhdYim1nBk62rWczvUenld",
+      "obj_token": "Dc3ydge4Go5p38xNel7cxA9vnad"
+    },
+    "docs/02-pm-skills/ai-product-operations/when-not-to-use-multi-agent.md": {
+      "node_token": "BVf4whnB1iocyqkBfY1cl5MDn9g",
+      "obj_token": "Fpdfdc3XUoaAxnx1n7JcWQPynQV"
+    },
+    "docs/02-pm-skills/cost-and-tech/ai-pricing-and-monetization.md": {
+      "node_token": "K3nwwvCZ9iYttHkMPO5ctKjHnuh",
+      "obj_token": "W9s0dXTHGoo9y6xdqiKcBuNunqd"
+    },
+    "docs/02-pm-skills/data-annotation/genai-compliance-checklist-cn.md": {
+      "node_token": "Vk0YwZk2ai7BfXkXwcKckS6wn7g",
+      "obj_token": "OLWhdWd3roj8quxoPNGcVdVXnch"
+    },
+    "docs/02-pm-skills/model-evaluation/ab-testing-for-ai-products.md": {
+      "node_token": "DePTwkyeNiSwU6k6CzmcEMeAnvh",
+      "obj_token": "EPufdma2gos20DxCuP1cTdJInHc"
+    },
+    "docs/02-pm-skills/prd-and-design/agentic-ux-and-trust-calibration.md": {
+      "node_token": "CE32wIKGIinARJkywQxcdz4rnLd",
+      "obj_token": "ZtcCdQJlFokv0ExBEfycc7bhn5g"
+    },
+    "docs/02-pm-skills/prd-and-design/ai-native-vs-plus-ai.md": {
+      "node_token": "DkNawrh5xieC9ekVHN3cOB3qnlf",
+      "obj_token": "JIYHduLAUoSGYWx5958ccCHGndf"
+    },
+    "docs/04-interview/basics/agent-routing-and-large-files.md": {
+      "node_token": "TgLFwoE2niTXW7kbhvJci882nvS",
+      "obj_token": "RCiUd5wN3oHYhnxSszicsJCyn9e"
+    },
+    "docs/04-interview/basics/ai-ab-testing-difference.md": {
+      "node_token": "Dr4jwLZtOii9SBkoYgHc9fTJnch",
+      "obj_token": "MsUTdknNEofGFjxEMoCc49H6n3g"
+    },
+    "docs/04-interview/basics/cli-vs-mcp.md": {
+      "node_token": "Z8aGwW7uliUOlWkuu42cAOVTnbe",
+      "obj_token": "XZuDdEeSgovTklxo0CxcWiqxnnf"
+    },
+    "docs/04-interview/basics/genai-compliance-for-pm.md": {
+      "node_token": "GDDrw6x7wiVctakCOHwcERWbnwb",
+      "obj_token": "CpTLdY8M7oMLhzx295gcoEaCn5f"
+    },
+    "docs/04-interview/basics/is-rag-dead.md": {
+      "node_token": "IMCuwmozAiyHnpkZDuQcUvQWndf",
+      "obj_token": "V3k0dRSNUof8sLx3kORcSsBFnzc"
+    },
+    "docs/04-interview/basics/multimodal-pm-capabilities.md": {
+      "node_token": "Rr36wSlXtijoNdkcHfyc5xHpnne",
+      "obj_token": "QSpLdocYkoRuLzxDnYdcxlIbn0b"
+    },
+    "docs/04-interview/basics/nl2sql-pitfalls.md": {
+      "node_token": "PdCswZxxbizfr2kZEwLcU19knru",
+      "obj_token": "XIz7dUl8QojhToxg9HncoCGxnoh"
+    },
+    "docs/04-interview/basics/offline-eval-online-gap.md": {
+      "node_token": "ZKRuwdxMki60gykUDOpcPPIXnxh",
+      "obj_token": "H4Z1d7IuooprRMxPsAMc8PwznVe"
+    },
+    "docs/04-interview/basics/rag-multi-retrieval-paths.md": {
+      "node_token": "K6OFwebhcitj73k2QRzcpJZ5npg",
+      "obj_token": "Qs1KdfVYwoEWovxLP2hcolionod"
+    },
+    "docs/04-interview/basics/reranker-with-long-context.md": {
+      "node_token": "J9twwA9K6ii9SPkeENmc0qmDnMe",
+      "obj_token": "XvvidiIbUojwMSx2wfJcEwtdnuX"
+    },
+    "docs/04-interview/basics/skill-token-efficiency.md": {
+      "node_token": "SOSXwS4PHiaCxtkbjH4c2rtPn6g",
+      "obj_token": "KOhUdmutuos8VVxpDawci5SZnwz"
+    },
+    "docs/04-interview/basics/skill-versioning-and-dependencies.md": {
+      "node_token": "Ab7wwBbrfidzbGkhZMlcknO2n5c",
+      "obj_token": "Hz8JdS4YHoCbLmxUJOMcI5binfc"
+    },
+    "docs/04-interview/basics/skill-vs-rules.md": {
+      "node_token": "GGHcwgeNyihMvqkAT0scRzdEnTf",
+      "obj_token": "TIXjdobnnoXzj6xubedcHgoFnBc"
+    },
+    "docs/04-interview/basics/what-is-agents-md.md": {
+      "node_token": "Ch96wys9Fim105kaNCMcGfdnn7d",
+      "obj_token": "HltLdJEhBo4RiTxUTSuckxBonFd"
+    },
+    "docs/04-interview/basics/what-is-context-engineering.md": {
+      "node_token": "YQUewk7RGiqsK2kFga1cPqYkngb",
+      "obj_token": "DaxpdBOzToWKg2xmgPBclMDznOd"
+    },
+    "docs/04-interview/basics/when-agent-vs-rag.md": {
+      "node_token": "KXbzwP2MmiHLiekbpPTccQHpnQg",
+      "obj_token": "IpH0dKydToe4tJxPp9Rc6dMAnVd"
+    },
+    "docs/04-interview/basics/when-not-to-use-agent.md": {
+      "node_token": "HpLKwdUGkiRri3kIX4ScdeNrnph",
+      "obj_token": "CbVMdUkV1oLAyZxeSxjcdUzfn1J"
+    },
+    "docs/04-interview/behavioral/pm-vs-algo-model-selection.md": {
+      "node_token": "Xttbw7M7uioM4fk7GK1c3kr0nUh",
+      "obj_token": "HKBsd8ZS3o02BNx5vCScPDkmnQ9"
+    },
+    "docs/04-interview/behavioral/spot-fake-ai-pm-role.md": {
+      "node_token": "X3EjwYJl0iFl8JkVv2lcuqiYn8d",
+      "obj_token": "ECcLd281mowIpnxyl5CcJebQnBa"
+    },
+    "docs/04-interview/case-analysis/ai-feature-retention-diagnosis.md": {
+      "node_token": "BsqUw5QluiclChkN0vjc0CHenGd",
+      "obj_token": "IYasdxXCeoLIOOxpd1fc6ze2n5g"
+    },
+    "docs/04-interview/preparation/llm-familiarity-three-levels.md": {
+      "node_token": "PTy1w3Ds0iNilEkbghmcxapFnOc",
+      "obj_token": "QH93ddfabotAxvxgpw8cGFyWnPe"
+    },
+    "docs/04-interview/product-design/agent-behavior-boundary-in-prd.md": {
+      "node_token": "GHfAwu8QNiArrIkL0rpcrpDAnke",
+      "obj_token": "Yb8pdiMK7oJyqgxH6mTcUBP2nJc"
+    },
+    "docs/04-interview/product-design/agent-trust-calibration-design.md": {
+      "node_token": "AYZvwiMqWif27vkVIB4chOw0nDc",
+      "obj_token": "FdC0d4QmzoZFkhxPKsUctNKOnjh"
+    },
+    "docs/04-interview/product-design/design-ai-cs-four-judgements.md": {
+      "node_token": "WCZYwFZ0oiwLrmk6kX7c4PGdnxb",
+      "obj_token": "HKZbdol4ioMfbKx0Hq8cnRtUnJb"
     }
   }
 }

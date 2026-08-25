@@ -1,3 +1,9 @@
+---
+title: ai-search-north-star-metric
+type: note
+permalink: aipmwiki/docs/04-interview/case-analysis/ai-search-north-star-metric
+---
+
 # 如果你是某 AI 搜索产品的 PM,你的北极星指标是什么?
 
 **难度**:⭐⭐⭐ 进阶

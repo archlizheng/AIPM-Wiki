@@ -1,3 +1,9 @@
+---
+title: ai-native-vs-plus-ai
+type: note
+permalink: aipmwiki/docs/02-pm-skills/prd-and-design/ai-native-vs-plus-ai
+---
+
 # AI Native vs +AI：怎么判断该怎么做
 
 > **选题启发**：磊叔《关于 AI 产品经理的 100 个问题》Q95（仅选题结构，正文为原创）。

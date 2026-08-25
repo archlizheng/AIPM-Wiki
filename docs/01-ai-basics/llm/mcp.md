@@ -1,3 +1,9 @@
+---
+title: mcp
+type: note
+permalink: aipmwiki/docs/01-ai-basics/llm/mcp
+---
+
 # MCP:给 Agent 接上外部世界的「USB-C」
 
 > 时效说明:协议角色与三大原语相对稳定;公开服务器数量、厂商目录与企业鉴权能力截至 **2026-07**,请以 [modelcontextprotocol.io](https://modelcontextprotocol.io/) 与各厂商文档为准。

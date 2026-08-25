@@ -1,3 +1,9 @@
+---
+title: agent-vs-chatbot
+type: note
+permalink: aipmwiki/docs/04-interview/basics/agent-vs-chatbot
+---
+
 # 什么是 Agent?它和 Chatbot 的区别是什么?
 
 **难度**:⭐⭐ 入门必备

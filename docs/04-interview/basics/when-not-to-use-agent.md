@@ -1,3 +1,9 @@
+---
+title: when-not-to-use-agent
+type: note
+permalink: aipmwiki/docs/04-interview/basics/when-not-to-use-agent
+---
+
 # 所有人都在卷 Agent，什么场景不该用？怎么说服老板？
 
 **难度**:⭐⭐⭐ 进阶

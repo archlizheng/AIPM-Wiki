@@ -1,3 +1,9 @@
+---
+title: multimodal-pm-skills
+type: note
+permalink: aipmwiki/docs/00-roadmap/multimodal-pm-skills
+---
+
 # 多模态 AI PM 能力清单：交互、评估、数据、成本与合规
 
 > 写给谁：已对照 [AI 产品经理能力模型](ai-pm-capability-model.md) 有基础自查，准备进入**图像 / 音频 / 视频**相关产品线，或 JD 明确写「多模态」的同学。

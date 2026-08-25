@@ -1,3 +1,9 @@
+---
+title: startup-ai-pm-interview-202605
+type: note
+permalink: aipmwiki/docs/04-interview/experiences/startup-ai-pm-interview-202605
+---
+
 # 中小厂与初创 AI 产品面试经验摘录（2026 年 05 月）
 
 **出处**：小红书 @Xxii，《近期中小厂/初创Ai产品面经》，2026-05-31。 [原文链接](https://www.xiaohongshu.com/search_result/6a1bcb3b0000000035028255?xsec_token=ABUy_G0S7l_zXKQYt9qWjhiPMp_RSlgxB_c8QtYKH5N-Q=&xsec_source=)

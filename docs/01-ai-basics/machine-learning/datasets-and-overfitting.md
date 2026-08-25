@@ -1,3 +1,9 @@
+---
+title: datasets-and-overfitting
+type: note
+permalink: aipmwiki/docs/01-ai-basics/machine-learning/datasets-and-overfitting
+---
+
 # 训练集/验证集/测试集与过拟合:为什么 demo 惊艳、上线拉胯
 
 ## 一个常见场景

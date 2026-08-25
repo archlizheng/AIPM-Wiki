@@ -1,3 +1,9 @@
+---
+title: ai-pm-career-3-to-5-years
+type: note
+permalink: aipmwiki/docs/00-roadmap/ai-pm-career-3-to-5-years
+---
+
 # AI PM 的 3–5 年：分水岭、常见误判与出路
 
 > 写给谁：已经完成入门 / 转型冲刺，准备在 AI 产品岗位上干满数年、想少走弯路的人。

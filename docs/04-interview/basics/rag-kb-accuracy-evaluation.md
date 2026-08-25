@@ -1,3 +1,9 @@
+---
+title: rag-kb-accuracy-evaluation
+type: note
+permalink: aipmwiki/docs/04-interview/basics/rag-kb-accuracy-evaluation
+---
+
 # 如何评估 RAG 知识库的准确率?
 
 **难度**:⭐⭐⭐ 进阶

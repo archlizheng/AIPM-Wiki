@@ -1,3 +1,9 @@
+---
+title: nl2sql-for-ai-pm
+type: note
+permalink: aipmwiki/docs/01-ai-basics/llm/nl2sql-for-ai-pm
+---
+
 # NL2SQL:自然语言查库,为什么学术高分上不了生产
 
 "帮我查一下上个月华东区的复购率"——这句话背后不是一次文档检索,而是一次**自然语言转 SQL**(NL2SQL / Text-to-SQL)。很多团队把它当成"顺手接一个功能",直到上线才发现:学术榜单上 90% 起步的模型,一进企业数据库就经常连表都选不对。这篇文章接着[《RAG 没死:死的是 Naive 固定流水线》](rag-evolution-naive-to-agentic.md)的框架往下拆——NL2SQL 不是 RAG 的旁支,而是"结构化世界"里的另一条证据获取路径。

@@ -1,3 +1,9 @@
+---
+title: genai-compliance-for-pm
+type: note
+permalink: aipmwiki/docs/04-interview/basics/genai-compliance-for-pm
+---
+
 # 生成式 AI 产品上线前，PM 的合规清单有哪些？
 
 **难度**:⭐⭐⭐ 进阶

@@ -1,3 +1,9 @@
+---
+title: offline-eval-online-gap
+type: note
+permalink: aipmwiki/docs/04-interview/basics/offline-eval-online-gap
+---
+
 # 离线 Evals 全绿、线上「时灵时不灵」，Gap 怎么填？
 
 **难度**:⭐⭐⭐ 进阶

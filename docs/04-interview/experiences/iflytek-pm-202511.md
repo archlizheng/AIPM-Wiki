@@ -1,3 +1,9 @@
+---
+title: iflytek-pm-202511
+type: note
+permalink: aipmwiki/docs/04-interview/experiences/iflytek-pm-202511
+---
+
 # 科大讯飞 产品经理 面经
 
 **来源**: 牛客 @Felicità_Luce, 2025-11 | **岗位**: 产品经理（消费者 BG，交付方向） | **类型**: 校招/实习

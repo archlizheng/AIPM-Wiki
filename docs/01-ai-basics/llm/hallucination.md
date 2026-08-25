@@ -1,3 +1,9 @@
+---
+title: hallucination
+type: note
+permalink: aipmwiki/docs/01-ai-basics/llm/hallucination
+---
+
 # 幻觉问题:成因与产品层面的缓解手段
 
 ## 一句话说清

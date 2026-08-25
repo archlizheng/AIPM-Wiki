@@ -1,3 +1,9 @@
+---
+title: ai-customer-service-resolution-rate
+type: note
+permalink: aipmwiki/docs/04-interview/product-design/ai-customer-service-resolution-rate
+---
+
 # AI 客服产品解决率停在 70% 上不去,怎么办?
 
 **难度**:⭐⭐⭐ 进阶

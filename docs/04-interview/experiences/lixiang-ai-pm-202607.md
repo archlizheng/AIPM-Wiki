@@ -1,3 +1,9 @@
+---
+title: lixiang-ai-pm-202607
+type: note
+permalink: aipmwiki/docs/04-interview/experiences/lixiang-ai-pm-202607
+---
+
 # 理想 AI 产品 面经
 
 **来源**: 牛客 @山姆牛（整理牛客原帖 @Arancia_Arancione 二面实录）, 2026-05 | **岗位**: AI 产品 | **类型**: 校招/社招（二面业务面，约 40 分钟）

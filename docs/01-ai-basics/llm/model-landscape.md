@@ -1,3 +1,9 @@
+---
+title: model-landscape
+type: note
+permalink: aipmwiki/docs/01-ai-basics/llm/model-landscape
+---
+
 # 主流大模型盘点与选型思路(2026 年中)
 
 > **信息状态**：动态快照｜**最后核验**：2026-07

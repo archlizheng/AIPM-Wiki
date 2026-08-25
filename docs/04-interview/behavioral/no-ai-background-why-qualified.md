@@ -1,3 +1,9 @@
+---
+title: no-ai-background-why-qualified
+type: note
+permalink: aipmwiki/docs/04-interview/behavioral/no-ai-background-why-qualified
+---
+
 # 你没有 AI 背景,凭什么胜任 AI 产品经理?
 
 **难度**:⭐⭐ 常规

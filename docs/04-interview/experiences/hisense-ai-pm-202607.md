@@ -1,3 +1,9 @@
+---
+title: hisense-ai-pm-202607
+type: note
+permalink: aipmwiki/docs/04-interview/experiences/hisense-ai-pm-202607
+---
+
 # 海信集团 AI 产品 校招面经
 
 **来源**: 牛客 @我是一个粉刷匠粉刷本领强, 2026-06 | **岗位**: AI 产品 | **类型**: 校招（27 届）

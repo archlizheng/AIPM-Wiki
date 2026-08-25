@@ -1,3 +1,9 @@
+---
+title: kling-vs-jimeng
+type: note
+permalink: aipmwiki/docs/03-case-studies/aigc/kling-vs-jimeng
+---
+
 # 可灵与即梦:视频生成两条商业化路径
 
 **分类**:AIGC

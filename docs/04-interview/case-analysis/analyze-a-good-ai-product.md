@@ -1,3 +1,9 @@
+---
+title: analyze-a-good-ai-product
+type: note
+permalink: aipmwiki/docs/04-interview/case-analysis/analyze-a-good-ai-product
+---
+
 # 分析一个你最近觉得做得好的 AI 产品,好在哪里?
 
 **难度**:⭐⭐ 常规

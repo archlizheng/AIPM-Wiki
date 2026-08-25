@@ -1,3 +1,9 @@
+---
+title: README
+type: note
+permalink: aipmwiki/docs/03-case-studies/search-and-rec/readme
+---
+
 # 搜索与推荐类案例
 
 AI 搜索、答案引擎、个性化推荐中的 AI 应用。

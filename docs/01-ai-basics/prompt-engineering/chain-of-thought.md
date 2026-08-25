@@ -1,3 +1,9 @@
+---
+title: chain-of-thought
+type: note
+permalink: aipmwiki/docs/01-ai-basics/prompt-engineering/chain-of-thought
+---
+
 # 思维链(CoT):让模型先想再答
 
 直接问模型「答案是什么」,它往往会「脱口而出」——对简单事实还行,一遇到多步计算、规则嵌套、因果分析,就容易在中间悄悄跳步、算错或自相矛盾。思维链(Chain of Thought, CoT)要做的事很简单:**让模型在给出最终答案之前,先把中间推理步骤写出来**。

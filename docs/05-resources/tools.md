@@ -1,3 +1,9 @@
+---
+title: tools
+type: note
+permalink: aipmwiki/docs/05-resources/tools
+---
+
 # 值得上手的 AI 工具与平台
 
 > 对 AI PM 来说，「用过」比「听过」重要十倍。这里收录建议亲自上手的工具。  
@@ -52,4 +58,3 @@ npx skills add archlizheng/interview-assessment
 - 个人学习：先固定 2 个对话助手 + 1 个检索工具，避免来回切换导致方法不成型。
 - 团队协作：优先统一文档、会议、知识沉淀工具，再考虑引入复杂 Agent 平台。
 - 工具评估：先做 1 个真实场景 A/B 试用，再决定是否长期采购。
-

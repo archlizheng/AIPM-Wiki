@@ -1,3 +1,9 @@
+---
+title: ai-optimize-fresh-inventory
+type: note
+permalink: aipmwiki/docs/04-interview/case-analysis/ai-optimize-fresh-inventory
+---
+
 # 如何用 AI 优化生鲜电商的库存周转?
 
 **难度**:⭐⭐⭐ 进阶

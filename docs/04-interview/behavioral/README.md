@@ -1,3 +1,9 @@
+---
+title: README
+type: note
+permalink: aipmwiki/docs/04-interview/behavioral/readme
+---
+
 # 行为面与转行动机
 
 考察动机真实性和学习能力——转行者的必答关卡。

@@ -1,3 +1,9 @@
+---
+title: README
+type: note
+permalink: aipmwiki/docs/02-pm-skills/prd-and-design/readme
+---
+
 # AI 产品的 PRD 与交互设计
 
 ## 目录

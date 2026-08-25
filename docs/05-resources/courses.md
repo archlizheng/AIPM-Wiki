@@ -1,3 +1,9 @@
+---
+title: courses
+type: note
+permalink: aipmwiki/docs/05-resources/courses
+---
+
 # 课程与视频
 
 > 优先收录免费、系统的课程。付费课程需注明价格，禁止软广。  

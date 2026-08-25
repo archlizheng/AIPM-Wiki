@@ -1,3 +1,9 @@
+---
+title: answer-engine-citation-trust
+type: note
+permalink: aipmwiki/docs/03-case-studies/search-and-rec/answer-engine-citation-trust
+---
+
 # 答案引擎的引用与信任设计
 
 **分类**:搜推

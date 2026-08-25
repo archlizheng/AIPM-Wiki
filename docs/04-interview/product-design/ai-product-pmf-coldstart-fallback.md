@@ -1,3 +1,9 @@
+---
+title: ai-product-pmf-coldstart-fallback
+type: note
+permalink: aipmwiki/docs/04-interview/product-design/ai-product-pmf-coldstart-fallback
+---
+
 # AI 产品如何判断 PMF、如何冷启动、兜底策略怎么设计?
 
 **难度**:⭐⭐⭐ 进阶

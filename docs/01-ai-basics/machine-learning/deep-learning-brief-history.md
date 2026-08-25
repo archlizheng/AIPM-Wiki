@@ -1,3 +1,9 @@
+---
+title: deep-learning-brief-history
+type: note
+permalink: aipmwiki/docs/01-ai-basics/machine-learning/deep-learning-brief-history
+---
+
 # 深度学习与神经网络:从感知机到 Transformer 的极简史
 
 ## 为什么 PM 要了解这段历史

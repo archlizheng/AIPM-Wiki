@@ -1,3 +1,9 @@
+---
+title: what-is-agents-md
+type: note
+permalink: aipmwiki/docs/04-interview/basics/what-is-agents-md
+---
+
 # 什么是 AGENTS.md / Agent.md?产品经理为什么要关心?
 
 **难度**:⭐⭐ 入门必备

@@ -1,3 +1,9 @@
+---
+title: ai-search-vs-traditional-search
+type: note
+permalink: aipmwiki/docs/03-case-studies/search-and-rec/ai-search-vs-traditional-search
+---
+
 # AI 搜索 vs 传统搜索:交互范式与商业模式的双重颠覆
 
 **分类**:搜推

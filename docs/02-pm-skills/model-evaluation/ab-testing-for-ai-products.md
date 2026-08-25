@@ -1,3 +1,9 @@
+---
+title: ab-testing-for-ai-products
+type: note
+permalink: aipmwiki/docs/02-pm-skills/model-evaluation/ab-testing-for-ai-products
+---
+
 # AI 产品的 A/B 测试：概率性输出下如何做实验
 
 > **选题启发**：磊叔《关于 AI 产品经理的 100 个问题》Q54、Q65（实验为何易误判、与传统 A/B 的差异）。正文为原创方法论，不复述 PDF 中的具体数字与轶事。

@@ -1,3 +1,9 @@
+---
+title: project-deep-dive
+type: note
+permalink: aipmwiki/docs/04-interview/preparation/project-deep-dive
+---
+
 # AI PM 项目深挖的准备方法
 
 项目深挖不是把项目介绍再讲一遍，而是证明你能对一个 AI 产品结果负责：知道问题从哪里来，为什么选这个方案，自己真正做了什么，如何判断效果，哪里失败过，以及下一次会怎么做得更好。面试官通常会从你的第一段概述中挑一个细节继续追问，准备的目标是让每个关键判断都有事实、证据和边界。
@@ -210,4 +216,3 @@ AI PM 高频取舍包括：
 - [A practical guide to building AI agents](https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/) —— OpenAI 官方指南，2026-07 访问
 - [Define success criteria and build evaluations](https://platform.claude.com/docs/en/test-and-evaluate/develop-tests) —— Anthropic 官方文档，2026-07 访问
 - [Evaluation best practices](https://developers.openai.com/api/docs/guides/evaluation-best-practices) —— OpenAI 官方文档，2026-07 访问
-

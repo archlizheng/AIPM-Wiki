@@ -1,3 +1,9 @@
+---
+title: multimodal-pm-capabilities
+type: note
+permalink: aipmwiki/docs/04-interview/basics/multimodal-pm-capabilities
+---
+
 # 多模态 AI 产品的 PM，需要补哪些能力？
 
 **难度**:⭐⭐ 常规

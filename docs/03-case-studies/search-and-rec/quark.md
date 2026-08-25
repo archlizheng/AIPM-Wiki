@@ -1,3 +1,9 @@
+---
+title: quark
+type: note
+permalink: aipmwiki/docs/03-case-studies/search-and-rec/quark
+---
+
 # 夸克 AI 搜索与答案引擎案例拆解
 
 **分类**:搜推

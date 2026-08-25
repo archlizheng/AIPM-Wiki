@@ -1,3 +1,9 @@
+---
+title: case-study
+type: note
+permalink: aipmwiki/templates/case-study
+---
+
 # [产品名] 案例拆解
 
 **分类**:<!-- 对话助手 / AIGC / 搜推 / 垂直行业 -->

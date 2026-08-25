@@ -1,3 +1,9 @@
+---
+title: llm-as-a-judge
+type: note
+permalink: aipmwiki/docs/02-pm-skills/model-evaluation/llm-as-a-judge
+---
+
 # 主观任务怎么评:人工评估与 LLM-as-a-Judge
 
 ## 主观任务为什么难评

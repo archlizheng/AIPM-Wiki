@@ -1,3 +1,9 @@
+---
+title: ai-pm-interview-30-summary-202604
+type: note
+permalink: aipmwiki/docs/04-interview/basics/ai-pm-interview-30-summary-202604
+---
+
 # AI 产品经理 30 多次面试经验总结（2026 年 04 月）
 
 **出处**：小红书 @KnightX，《面试AI产品经理30多次，我的经验总结（上）》，2026-04-16。 [原文链接](https://www.xiaohongshu.com/search_result/69e0a954000000002301c691?xsec_token=ABI6ZBGNP5PKTQLBrWnxhr5hg6LItxCT6KrJUla2cedrs=&xsec_source=)

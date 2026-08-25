@@ -1,3 +1,9 @@
+---
+title: claude-anthropic
+type: note
+permalink: aipmwiki/docs/03-case-studies/chatbot-assistant/claude-anthropic
+---
+
 # Claude 案例拆解:知识工作协作的深度优先路线
 
 **分类**:对话助手

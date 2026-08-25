@@ -1,3 +1,9 @@
+---
+title: getting-started
+type: note
+permalink: aipmwiki/docs/00-roadmap/getting-started
+---
+
 # AI 产品经理入门路径
 
 > 目标读者:没有 AI 背景的产品经理、应届生、想转行的其他岗位同学。

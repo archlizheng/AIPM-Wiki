@@ -1,3 +1,9 @@
+---
+title: is-rag-dead
+type: note
+permalink: aipmwiki/docs/04-interview/basics/is-rag-dead
+---
+
 # 你怎么看「RAG 已死」这说法?
 
 **难度**:⭐⭐ 常规

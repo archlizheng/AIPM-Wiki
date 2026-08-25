@@ -1,3 +1,9 @@
+---
+title: build-your-eval-set
+type: note
+permalink: aipmwiki/docs/02-pm-skills/model-evaluation/build-your-eval-set
+---
+
 # 从零建设评测集:用例从哪来、标准答案怎么定
 
 ## 为什么"没有评测集就没有迭代"

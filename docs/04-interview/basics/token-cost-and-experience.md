@@ -1,3 +1,9 @@
+---
+title: token-cost-and-experience
+type: note
+permalink: aipmwiki/docs/04-interview/basics/token-cost-and-experience
+---
+
 # 什么是 token?它如何影响产品的成本和体验?
 
 **难度**:⭐⭐ 入门必备

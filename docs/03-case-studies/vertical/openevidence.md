@@ -1,3 +1,9 @@
+---
+title: openevidence
+type: note
+permalink: aipmwiki/docs/03-case-studies/vertical/openevidence
+---
+
 # OpenEvidence 案例拆解:医疗 AI 的证据分级设计
 
 **分类**:垂直行业

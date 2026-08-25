@@ -1,3 +1,9 @@
+---
+title: data-flywheel
+type: note
+permalink: aipmwiki/docs/04-interview/basics/data-flywheel
+---
+
 # 什么是数据飞轮?对 AI 产品为什么重要?
 
 **难度**:⭐⭐ 入门必备

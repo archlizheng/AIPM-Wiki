@@ -1,3 +1,9 @@
+---
+title: when-to-use-ai
+type: note
+permalink: aipmwiki/docs/04-interview/basics/when-to-use-ai
+---
+
 # 如何判断一个业务问题是否适合用 AI 解决?
 
 **难度**:⭐⭐ 入门必备

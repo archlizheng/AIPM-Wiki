@@ -1,3 +1,9 @@
+---
+title: reranker-with-long-context
+type: note
+permalink: aipmwiki/docs/04-interview/basics/reranker-with-long-context
+---
+
 # 上下文都到 1M 了,Re-Ranker 还有用吗?
 
 **难度**:⭐⭐⭐ 进阶

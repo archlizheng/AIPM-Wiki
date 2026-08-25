@@ -1,3 +1,9 @@
+---
+title: pretrain-finetune-sft
+type: note
+permalink: aipmwiki/docs/04-interview/basics/pretrain-finetune-sft
+---
+
 # 预训练、微调、SFT 的区别与应用场景
 
 **难度**:⭐⭐ 入门必备

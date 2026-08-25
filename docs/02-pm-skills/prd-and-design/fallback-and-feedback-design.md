@@ -1,3 +1,9 @@
+---
+title: fallback-and-feedback-design
+type: note
+permalink: aipmwiki/docs/02-pm-skills/prd-and-design/fallback-and-feedback-design
+---
+
 # 兜底、反馈与预期管理:AI 产品的交互设计三件套
 
 ## 为什么这三件事要放在一起说

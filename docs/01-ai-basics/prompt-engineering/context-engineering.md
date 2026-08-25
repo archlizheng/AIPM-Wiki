@@ -1,3 +1,9 @@
+---
+title: context-engineering
+type: note
+permalink: aipmwiki/docs/01-ai-basics/prompt-engineering/context-engineering
+---
+
 # Context Engineering：从写 Prompt 到拼上下文系统
 
 > 选题启发自磊叔《关于 AI 产品经理的 100 个问题》Q4 / Q10；正文为本库原创，未摘录该 PDF 答案原文。

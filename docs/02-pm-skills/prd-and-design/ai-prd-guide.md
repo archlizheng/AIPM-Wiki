@@ -1,3 +1,9 @@
+---
+title: ai-prd-guide
+type: note
+permalink: aipmwiki/docs/02-pm-skills/prd-and-design/ai-prd-guide
+---
+
 # AI 产品 PRD 怎么写:与传统 PRD 的核心差异
 
 ## 一句话核心差异

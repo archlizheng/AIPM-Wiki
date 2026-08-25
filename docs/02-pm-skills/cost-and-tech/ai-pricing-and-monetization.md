@@ -1,3 +1,9 @@
+---
+title: ai-pricing-and-monetization
+type: note
+permalink: aipmwiki/docs/02-pm-skills/cost-and-tech/ai-pricing-and-monetization
+---
+
 # AI 产品定价与商业化：订阅、Token、按结果怎么选
 
 > **信息状态**：决策框架｜**最后核验**：2026-08-06  

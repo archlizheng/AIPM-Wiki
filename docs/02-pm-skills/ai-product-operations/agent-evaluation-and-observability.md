@@ -1,3 +1,9 @@
+---
+title: agent-evaluation-and-observability
+type: note
+permalink: aipmwiki/docs/02-pm-skills/ai-product-operations/agent-evaluation-and-observability
+---
+
 # Agent 评测与可观测性：从最终答案追到完整轨迹
 
 单轮问答可以只看最终输出，Agent 产品不能。一个 Agent 可能最终给出看似合理的答案，却在中间调用了错误工具、读取了不该读的数据、重复执行了动作，或者靠多轮重试把成本和延迟推高。AI PM 需要把“任务有没有完成”拆成**结果、步骤、工具、风险、成本和体验**几层，并让每一次线上执行都能被追踪和复盘。

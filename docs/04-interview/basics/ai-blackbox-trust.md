@@ -1,3 +1,9 @@
+---
+title: ai-blackbox-trust
+type: note
+permalink: aipmwiki/docs/04-interview/basics/ai-blackbox-trust
+---
+
 # AI 产品的黑箱问题如何影响用户信任?产品层面怎么做?
 
 **难度**:⭐⭐ 入门必备

@@ -1,3 +1,9 @@
+---
+title: ai-feature-retention-and-success-metrics
+type: note
+permalink: aipmwiki/docs/02-pm-skills/ai-product-operations/ai-feature-retention-and-success-metrics
+---
+
 # AI 功能留存与成功指标：死亡路径与 DAU 误判
 
 > **选题启发**：磊叔《关于 AI 产品经理的 100 个问题》Q50、Q61、Q62、Q64（仅选题结构，正文为原创）。

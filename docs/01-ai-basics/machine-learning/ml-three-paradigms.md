@@ -1,3 +1,9 @@
+---
+title: ml-three-paradigms
+type: note
+permalink: aipmwiki/docs/01-ai-basics/machine-learning/ml-three-paradigms
+---
+
 # 机器学习三大范式:监督学习 / 无监督学习 / 强化学习
 
 ## 一句话区分

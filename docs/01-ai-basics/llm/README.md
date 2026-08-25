@@ -1,3 +1,9 @@
+---
+title: README
+type: note
+permalink: aipmwiki/docs/01-ai-basics/llm/readme
+---
+
 # 大语言模型(LLM)
 
 AI PM 的核心必修课:大模型的原理、能力边界、应用架构。

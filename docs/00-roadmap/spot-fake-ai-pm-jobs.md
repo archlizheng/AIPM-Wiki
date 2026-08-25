@@ -1,3 +1,9 @@
+---
+title: spot-fake-ai-pm-jobs
+type: note
+permalink: aipmwiki/docs/00-roadmap/spot-fake-ai-pm-jobs
+---
+
 # 如何识别「挂羊头卖狗肉」的 AI PM 岗位
 
 > 写给谁：正在投递 / 面试 AI PM，担心入职后发现「标题很 AI、日常很传统」的同学。

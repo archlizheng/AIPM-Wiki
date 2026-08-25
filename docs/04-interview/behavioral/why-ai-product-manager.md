@@ -1,3 +1,9 @@
+---
+title: why-ai-product-manager
+type: note
+permalink: aipmwiki/docs/04-interview/behavioral/why-ai-product-manager
+---
+
 # 你为什么想做 AI 产品经理?
 
 **难度**:⭐⭐ 常规

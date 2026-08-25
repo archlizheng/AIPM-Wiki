@@ -1,3 +1,9 @@
+---
+title: what-is-rag
+type: note
+permalink: aipmwiki/docs/01-ai-basics/llm/what-is-rag
+---
+
 # 什么是 RAG:检索增强生成入门
 
 ## 一句话解释

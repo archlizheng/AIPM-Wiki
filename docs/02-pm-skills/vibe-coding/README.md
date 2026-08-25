@@ -1,3 +1,9 @@
+---
+title: README
+type: note
+permalink: aipmwiki/docs/02-pm-skills/vibe-coding/readme
+---
+
 # Vibe Coding:AI PM 亲手做原型
 
 不用会写代码,也能用 AI 编程工具把想法做成能点、能跑的原型——这项能力正在从"加分项"变成 AI PM 的核心竞争力之一。

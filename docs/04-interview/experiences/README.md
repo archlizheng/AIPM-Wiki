@@ -1,3 +1,9 @@
+---
+title: README
+type: note
+permalink: aipmwiki/docs/04-interview/experiences/readme
+---
+
 # 真实面经
 
 按公司归档的一手面试经历。投稿请使用 [面经模板](../../../templates/interview-experience.md)。

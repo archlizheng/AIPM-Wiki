@@ -1,3 +1,9 @@
+---
+title: ai-pm-vs-traditional-pm
+type: note
+permalink: aipmwiki/docs/04-interview/behavioral/ai-pm-vs-traditional-pm
+---
+
 # AI 产品经理和传统产品经理最大的区别是什么?
 
 **难度**:⭐⭐ 常规

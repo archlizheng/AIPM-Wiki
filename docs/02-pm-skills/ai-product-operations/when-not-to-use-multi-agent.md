@@ -1,3 +1,9 @@
+---
+title: when-not-to-use-multi-agent
+type: note
+permalink: aipmwiki/docs/02-pm-skills/ai-product-operations/when-not-to-use-multi-agent
+---
+
 # 何时不该上多 Agent：延迟、成本、工具膨胀与劝退
 
 多 Agent 很适合写进路线图，却不适合默认当成「更先进的架构」。生产里常见的真相是：多 Agent 用更多 token、更多跳数、更多协调状态，换取并行覆盖与上下文隔离；**若任务并不卡在单 Agent 的硬约束上，协调税往往大于收益。**

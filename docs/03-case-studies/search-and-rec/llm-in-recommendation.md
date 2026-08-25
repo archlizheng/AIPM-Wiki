@@ -1,3 +1,9 @@
+---
+title: llm-in-recommendation
+type: note
+permalink: aipmwiki/docs/03-case-studies/search-and-rec/llm-in-recommendation
+---
+
 # 推荐系统中大模型的实际落地位置
 
 **分类**:搜推

@@ -1,3 +1,9 @@
+---
+title: portfolio-and-demo
+type: note
+permalink: aipmwiki/docs/04-interview/preparation/portfolio-and-demo
+---
+
 # AI PM 作品集与 Demo 准备
 
 AI PM 作品集的价值不是展示“我会调用模型”，而是让面试官看到你如何把一个问题变成可验证的产品：范围怎么定、方案为什么成立、效果如何评估、成本是否算过、风险怎么兜底、现场演示失败时还能不能讲清楚。
@@ -190,4 +196,3 @@ Vibe Coding 项目最适合展示“从一句话需求到可验证原型”的�
 - [Evaluation best practices](https://developers.openai.com/api/docs/guides/evaluation-best-practices) —— OpenAI 官方文档，2026-07 访问
 - [Define success criteria and build evaluations](https://platform.claude.com/docs/en/test-and-evaluate/develop-tests) —— Anthropic 官方文档，2026-07 访问
 - [A practical guide to building AI agents](https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/) —— OpenAI 官方指南，2026-07 访问
-

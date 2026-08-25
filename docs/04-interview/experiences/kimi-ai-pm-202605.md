@@ -1,3 +1,9 @@
+---
+title: kimi-ai-pm-202605
+type: note
+permalink: aipmwiki/docs/04-interview/experiences/kimi-ai-pm-202605
+---
+
 # Kimi AI 产品经理面经复盘（2026 年 05 月）
 
 **出处**：小红书 @黑洞甜甜圈（AI版），《Kimi AI产品经理面经复盘（卷王笔记）》，2026-05-21。 [原文链接](https://www.xiaohongshu.com/search_result/6a0e9b10000000003700ce69?xsec_token=ABtTM2PZS20io4FTSDSg0ph5b7JVCOR-7Fw-XMAOfyj2g=&xsec_source=)

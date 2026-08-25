@@ -1,3 +1,9 @@
+---
+title: llm-cost-101
+type: note
+permalink: aipmwiki/docs/02-pm-skills/cost-and-tech/llm-cost-101
+---
+
 # AI 产品成本测算入门:token、并发与人力
 
 > **信息状态**：动态快照｜**最后核验**：2026-07

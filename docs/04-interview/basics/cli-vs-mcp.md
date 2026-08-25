@@ -1,3 +1,9 @@
+---
+title: cli-vs-mcp
+type: note
+permalink: aipmwiki/docs/04-interview/basics/cli-vs-mcp
+---
+
 # 大厂为什么都在推 CLI?CLI 会取代 MCP 吗?
 
 **难度**:⭐⭐⭐ 进阶

@@ -1,3 +1,9 @@
+---
+title: README
+type: note
+permalink: aipmwiki/docs/01-ai-basics/readme
+---
+
 # 01 · AI 基础知识
 
 面向产品经理的 AI 技术认知,不堆公式,只讲「这个技术能做什么、边界在哪、成本如何」。

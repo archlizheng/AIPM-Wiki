@@ -1,3 +1,9 @@
+---
+title: follow-ai-trends
+type: note
+permalink: aipmwiki/docs/04-interview/behavioral/follow-ai-trends
+---
+
 # 你最近在关注 AI 领域的什么进展?
 
 **难度**:⭐⭐ 常规

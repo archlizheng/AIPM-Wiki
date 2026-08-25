@@ -1,3 +1,9 @@
+---
+title: perplexity
+type: note
+permalink: aipmwiki/docs/03-case-studies/search-and-rec/perplexity
+---
+
 # Perplexity 案例拆解:AI 搜索的答案引擎范式
 
 **分类**:搜推

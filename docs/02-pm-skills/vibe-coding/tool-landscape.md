@@ -1,3 +1,9 @@
+---
+title: tool-landscape
+type: note
+permalink: aipmwiki/docs/02-pm-skills/vibe-coding/tool-landscape
+---
+
 # Vibe Coding 工具盘点与选型(2026 年中)
 
 > **信息状态**：动态快照｜**最后核验**：2026-07

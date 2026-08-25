@@ -1,3 +1,9 @@
+---
+title: changjietong-ai-pm-202607
+type: note
+permalink: aipmwiki/docs/04-interview/experiences/changjietong-ai-pm-202607
+---
+
 # 畅捷通 AI 产品经理 一面
 
 **来源**: 牛客 @大美女一号, 2026（具体月份未标注，产品背景为 2026 年畅龙虾平台） | **岗位**: AI 产品经理 | **类型**: 实习/校招（帖中未区分）

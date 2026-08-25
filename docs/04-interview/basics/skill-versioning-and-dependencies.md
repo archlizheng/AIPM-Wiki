@@ -1,3 +1,9 @@
+---
+title: skill-versioning-and-dependencies
+type: note
+permalink: aipmwiki/docs/04-interview/basics/skill-versioning-and-dependencies
+---
+
 # Skill 怎么做版本管理?Skill 之间的依赖怎么解?
 
 **难度**:⭐⭐⭐ 进阶

@@ -1,3 +1,9 @@
+---
+title: claude-code-vs-codex
+type: note
+permalink: aipmwiki/docs/03-case-studies/aigc/claude-code-vs-codex
+---
+
 # Claude Code 与 OpenAI Codex：AI 编程 Agent 的运行环境与执行闭环对比
 
 > **核验时间：2026 年 7 月 13 日。** 本文主要依据 Anthropic Claude Code 文档、OpenAI Codex 开发者文档与官方帮助页整理。两款产品更新很快，价格、模型、额度、计划权益和地区可用性只代表核验日页面；官方没有确认的内容标为“未披露”或“推测”，不把单次体验推断成官方承诺。

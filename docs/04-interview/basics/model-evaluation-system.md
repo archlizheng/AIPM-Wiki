@@ -1,3 +1,9 @@
+---
+title: model-evaluation-system
+type: note
+permalink: aipmwiki/docs/04-interview/basics/model-evaluation-system
+---
+
 # 如何构建大模型效果评测体系?
 
 **难度**:⭐⭐⭐ 进阶

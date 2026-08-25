@@ -1,3 +1,9 @@
+---
+title: llm-output-randomness
+type: note
+permalink: aipmwiki/docs/04-interview/basics/llm-output-randomness
+---
+
 # 为什么大模型的输出每次都不一样?
 
 **难度**:⭐ 入门

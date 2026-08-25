@@ -1,3 +1,9 @@
+---
+title: amazon-alexa-shopping
+type: note
+permalink: aipmwiki/docs/03-case-studies/search-and-rec/amazon-alexa-shopping
+---
+
 # Amazon Alexa for Shopping:电商推荐里的大模型落地
 
 **分类**:搜推

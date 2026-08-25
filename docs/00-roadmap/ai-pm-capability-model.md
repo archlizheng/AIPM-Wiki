@@ -1,3 +1,9 @@
+---
+title: ai-pm-capability-model
+type: note
+permalink: aipmwiki/docs/00-roadmap/ai-pm-capability-model
+---
+
 # AI 产品经理能力模型
 
 > 这份能力模型回答一个问题:"AI 产品经理到底需要具备什么,到什么程度算合格,到什么程度算优秀?"

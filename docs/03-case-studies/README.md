@@ -1,3 +1,9 @@
+---
+title: README
+type: note
+permalink: aipmwiki/docs/03-case-studies/readme
+---
+
 # 03 · AI 应用案例拆解
 
 通过拆解真实产品建立 sense:它解决什么问题?技术方案大概是什么?怎么赚钱?有什么可借鉴的?

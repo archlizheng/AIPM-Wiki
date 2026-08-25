@@ -1,3 +1,9 @@
+---
+title: cold-start-and-data-flywheel
+type: note
+permalink: aipmwiki/docs/02-pm-skills/data-annotation/cold-start-and-data-flywheel
+---
+
 # 冷启动与数据飞轮:没有数据时产品怎么起步
 
 ## 冷启动困境:先有鸡还是先有蛋

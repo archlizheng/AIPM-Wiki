@@ -1,3 +1,9 @@
+---
+title: ai-business-model-and-pricing
+type: note
+permalink: aipmwiki/docs/04-interview/case-analysis/ai-business-model-and-pricing
+---
+
 # DeepSeek 开始峰谷定价,你怎么看 AI 产品的商业模式?
 
 **难度**:⭐⭐⭐ 进阶

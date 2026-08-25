@@ -1,3 +1,9 @@
+---
+title: agent-product-design
+type: note
+permalink: aipmwiki/docs/02-pm-skills/ai-product-operations/agent-product-design
+---
+
 # Agent 产品生产化：从会执行到可负责地完成任务
 
 > **选题启发**：磊叔《关于 AI 产品经理的 100 个问题》Q14、Q18、Q19（非确定性流程兜底、「少能力多可靠」、人介入决策点；仅选题结构，正文为原创）。
@@ -270,4 +276,3 @@ Agent 演示容易比拼「还能多干一件事」；生产验收更该问：**
 - [Function calling](https://developers.openai.com/api/docs/guides/function-calling) —— OpenAI 开发者文档，2026-07 访问
 - [Model Context Protocol specification](https://modelcontextprotocol.io/specification/latest) —— MCP 官方规范，2026-07 访问
 - 选题启发：磊叔 / AIRay1015《关于 AI 产品经理的 100 个问题》Q14、Q18、Q19（[飞书链接](https://my.feishu.cn/wiki/Rl6zw6lp2ipOnnkBVxwc5urRnLc)）；**不摘录答案正文**
-

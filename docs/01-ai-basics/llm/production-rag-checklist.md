@@ -1,3 +1,9 @@
+---
+title: production-rag-checklist
+type: note
+permalink: aipmwiki/docs/01-ai-basics/llm/production-rag-checklist
+---
+
 # 工业级 RAG 清单:混合检索、重排、评测与知识治理
 
 "接个向量库,跑通一个 Demo"和"这套检索系统能稳定支撑生产流量"之间,中间隔着一整条容易被低估的工程与治理链路。Demo 阶段大多只验证了"问题问得标准、知识库很干净"这一种情况;生产环境要面对切片切坏了、文档过期了、权限混了、评测样本不够代表真实分布等一堆"非理想情况"。本文把这条链路拆成可核对的清单,接着[《RAG 没死:死的是 Naive 固定流水线》](rag-evolution-naive-to-agentic.md)往细节走。

@@ -1,3 +1,9 @@
+---
+title: README
+type: note
+permalink: aipmwiki/readme
+---
+
 <div align="center">
 
 # 🧱 AIPM Wiki

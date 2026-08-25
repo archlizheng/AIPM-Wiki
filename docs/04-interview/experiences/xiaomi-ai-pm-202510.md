@@ -1,3 +1,9 @@
+---
+title: xiaomi-ai-pm-202510
+type: note
+permalink: aipmwiki/docs/04-interview/experiences/xiaomi-ai-pm-202510
+---
+
 # 小米 AI 产品经理 面经
 
 **来源**: 牛客 @_Sparkle_Starlet, 2025-10 | **岗位**: AI 产品经理 | **类型**: 校招/实习（帖中未区分，以智能体平台项目为主）

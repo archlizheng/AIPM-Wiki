@@ -1,3 +1,9 @@
+---
+title: when-agent-vs-rag
+type: note
+permalink: aipmwiki/docs/04-interview/basics/when-agent-vs-rag
+---
+
 # 企业知识库问答和 Coding Agent,检索架构该怎么选?
 
 **难度**:⭐⭐⭐ 进阶

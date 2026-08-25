@@ -1,3 +1,9 @@
+---
+title: ai-pm-job-types
+type: note
+permalink: aipmwiki/docs/00-roadmap/ai-pm-job-types
+---
+
 # AI PM 岗位类型盘点:大模型 / 应用 / 平台 / 行业
 
 > "AI 产品经理"是一个笼统的说法,实际岗位形态差异很大——在 Anthropic 做模型行为评估,和在一家电商公司做智能客服,虽然都叫 AI PM,但日常工作、能力要求、入行难度完全不同。这篇文章把 AI PM 拆成四类:**大模型厂商 PM、AI 应用 PM、AI 平台(基础设施)PM、行业(垂直)AI PM**,帮你判断自己适合哪一类、该往哪个方向准备。

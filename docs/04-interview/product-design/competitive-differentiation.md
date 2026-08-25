@@ -1,3 +1,9 @@
+---
+title: competitive-differentiation
+type: note
+permalink: aipmwiki/docs/04-interview/product-design/competitive-differentiation
+---
+
 # 市面上已有成熟竞品,你的产品核心优势是什么?
 
 **难度**:⭐⭐⭐ 进阶

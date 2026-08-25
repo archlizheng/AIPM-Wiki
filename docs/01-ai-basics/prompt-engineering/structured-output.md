@@ -1,3 +1,9 @@
+---
+title: structured-output
+type: note
+permalink: aipmwiki/docs/01-ai-basics/prompt-engineering/structured-output
+---
+
 # 结构化输出:让模型稳定吐出 JSON
 
 ## 为什么产品化必须要结构化输出

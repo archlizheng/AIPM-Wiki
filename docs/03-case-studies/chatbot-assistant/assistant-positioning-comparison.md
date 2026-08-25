@@ -1,3 +1,9 @@
+---
+title: assistant-positioning-comparison
+type: note
+permalink: aipmwiki/docs/03-case-studies/chatbot-assistant/assistant-positioning-comparison
+---
+
 # 头部通用助手的差异化定位对比
 
 **分类**:对话助手（横向对比）

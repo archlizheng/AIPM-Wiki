@@ -1,3 +1,9 @@
+---
+title: skill-vs-rules
+type: note
+permalink: aipmwiki/docs/04-interview/basics/skill-vs-rules
+---
+
 # Skill 和 Rules 到底有什么区别?
 
 **难度**:⭐⭐ 入门必备

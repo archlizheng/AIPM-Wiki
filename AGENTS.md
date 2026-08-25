@@ -1,3 +1,9 @@
+---
+title: AGENTS
+type: note
+permalink: aipmwiki/agents
+---
+
 # AGENTS.md
 
 This file provides guidance to Codex (Codex.ai/code) when working with code in this repository.

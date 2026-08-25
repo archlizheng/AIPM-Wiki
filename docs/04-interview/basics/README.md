@@ -1,3 +1,9 @@
+---
+title: README
+type: note
+permalink: aipmwiki/docs/04-interview/basics/readme
+---
+
 # 基础概念题
 
 考察对 AI 技术的理解深度——不要求会实现,但要求能讲清原理、边界和产品含义。

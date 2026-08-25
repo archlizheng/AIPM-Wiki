@@ -1,3 +1,9 @@
+---
+title: long-context-vs-rag
+type: note
+permalink: aipmwiki/docs/01-ai-basics/llm/long-context-vs-rag
+---
+
 # 长上下文 vs RAG:什么时候塞全库,什么时候检索
 
 模型的上下文窗口一路涨到百万 token 级别之后,一个自然的产品问题冒出来了:知识库不大的话,是不是直接把全部资料塞进 Prompt 就行,不用再折腾检索链路?答案不是简单的"是"或"否",而是要按知识库规模、更新频率、并发量、权限模型这几个维度分别算账。本文接着[《RAG 没死:死的是 Naive 固定流水线》](rag-evolution-naive-to-agentic.md)的话题,专门拆这道选型题。

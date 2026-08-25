@@ -1,3 +1,9 @@
+---
+title: README
+type: note
+permalink: aipmwiki/skills/readme
+---
+
 # AIPM Wiki 配套 Skills
 
 本目录是面试 Skill 的注册与分发入口。目前不复制 Skill 的完整内容，官方仓库保持独立维护；克隆本项目后，按需安装即可。

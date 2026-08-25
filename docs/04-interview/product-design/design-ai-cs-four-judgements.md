@@ -1,3 +1,9 @@
+---
+title: design-ai-cs-four-judgements
+type: note
+permalink: aipmwiki/docs/04-interview/product-design/design-ai-cs-four-judgements
+---
+
 # 面试官让你「设计一个 AI 客服」，3 分钟内必须说清哪些判断点？
 
 **难度**:⭐⭐ 常规

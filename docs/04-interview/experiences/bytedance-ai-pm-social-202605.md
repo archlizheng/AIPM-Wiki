@@ -1,3 +1,9 @@
+---
+title: bytedance-ai-pm-social-202605
+type: note
+permalink: aipmwiki/docs/04-interview/experiences/bytedance-ai-pm-social-202605
+---
+
 # 字节跳动 AI 产品经理（社招）面经（2026 年 05 月）
 
 **出处**：小红书 @行。，《字节AI产品社招时间线记录》，2026-05-05。 [原文链接](https://www.xiaohongshu.com/search_result/69f9cc3e000000002202a454?xsec_token=AB8LL0VHM7I8ta4JRtA2nfY1ZFEvql4jwNiHiWetad2Xw=&xsec_source=)

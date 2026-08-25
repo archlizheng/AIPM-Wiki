@@ -1,3 +1,9 @@
+---
+title: design-ecommerce-ai-shopping-guide
+type: note
+permalink: aipmwiki/docs/04-interview/product-design/design-ecommerce-ai-shopping-guide
+---
+
 # 为电商 App 设计一个 AI 导购
 
 **难度**:⭐⭐⭐ 进阶

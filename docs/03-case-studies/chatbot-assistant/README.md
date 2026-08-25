@@ -1,3 +1,9 @@
+---
+title: README
+type: note
+permalink: aipmwiki/docs/03-case-studies/chatbot-assistant/readme
+---
+
 # 对话助手类案例
 
 通用对话助手与效率工具:ChatGPT、Claude、豆包、Kimi、元宝等。

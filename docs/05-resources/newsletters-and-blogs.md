@@ -1,3 +1,9 @@
+---
+title: newsletters-and-blogs
+type: note
+permalink: aipmwiki/docs/05-resources/newsletters-and-blogs
+---
+
 # 信息源：Newsletter、博客、播客
 
 > AI 行业变化快，好的信息源比囤课更重要。每个条目附一句话说明「它好在哪」。  

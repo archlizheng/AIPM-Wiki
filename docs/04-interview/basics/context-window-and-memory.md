@@ -1,3 +1,9 @@
+---
+title: context-window-and-memory
+type: note
+permalink: aipmwiki/docs/04-interview/basics/context-window-and-memory
+---
+
 # 大模型的上下文窗口和记忆机制是什么?
 
 **难度**:⭐⭐ 入门必备

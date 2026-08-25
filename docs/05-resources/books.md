@@ -1,3 +1,9 @@
+---
+title: books
+type: note
+permalink: aipmwiki/docs/05-resources/books
+---
+
 # 书籍推荐
 
 > 格式：书名 + 一句话推荐理由。欢迎 PR 补充，但请确保自己读过。  

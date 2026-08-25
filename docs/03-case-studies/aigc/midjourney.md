@@ -1,3 +1,9 @@
+---
+title: midjourney
+type: note
+permalink: aipmwiki/docs/03-case-studies/aigc/midjourney
+---
+
 # Midjourney 案例拆解:文生图的用户分层与 GPU 定价
 
 **分类**:AIGC

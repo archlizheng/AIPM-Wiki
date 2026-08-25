@@ -1,3 +1,9 @@
+---
+title: bytedance-kol-agent-pm-202607
+type: note
+permalink: aipmwiki/docs/04-interview/experiences/bytedance-kol-agent-pm-202607
+---
+
 # 字节 社区 KOL Agent 产品经理 面经
 
 **来源**: 牛客 @山姆牛（整理社区 KOL Agent 岗实录）, 2026-05 | **岗位**: 社区 KOL Agent 产品经理 | **类型**: 社招/实习（帖中未明确，以项目深挖为主）

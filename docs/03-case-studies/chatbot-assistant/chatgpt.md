@@ -1,3 +1,9 @@
+---
+title: chatgpt
+type: note
+permalink: aipmwiki/docs/03-case-studies/chatbot-assistant/chatgpt
+---
+
 # ChatGPT 案例拆解
 
 **分类**:对话助手

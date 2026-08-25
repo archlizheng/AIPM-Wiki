@@ -1,3 +1,9 @@
+---
+title: doubao
+type: note
+permalink: aipmwiki/docs/03-case-studies/chatbot-assistant/doubao
+---
+
 # 豆包案例拆解:3 亿月活之后如何收费
 
 **分类**:对话助手

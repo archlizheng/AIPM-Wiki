@@ -1,3 +1,9 @@
+---
+title: transition-guide
+type: note
+permalink: aipmwiki/docs/00-roadmap/transition-guide
+---
+
 # 传统 PM 转型 AI PM 指南
 
 > 这篇文章写给谁:已经有 1-3 年及以上产品经理经验、想转向 AI 方向的同学;也覆盖**算法/工程背景转 AI PM**,以及**公司暂时没有 AI 业务**时如何自己攒可验证经验。

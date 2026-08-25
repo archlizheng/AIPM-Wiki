@@ -1,3 +1,9 @@
+---
+title: rag-vs-finetuning
+type: note
+permalink: aipmwiki/docs/04-interview/basics/rag-vs-finetuning
+---
+
 # RAG 和微调有什么区别?什么场景该用哪个?
 
 **难度**:⭐⭐ 入门必备

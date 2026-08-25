@@ -1,3 +1,9 @@
+---
+title: README
+type: note
+permalink: aipmwiki/docs/02-pm-skills/readme
+---
+
 # 02 · AI 产品经理核心技能
 
 AI PM 和传统 PM 的差异集中在这里:你需要为「不确定性」做产品——模型输出是概率性的,效果需要定义、评估和持续迭代。

@@ -1,3 +1,9 @@
+---
+title: ai-video-generation
+type: note
+permalink: aipmwiki/docs/03-case-studies/aigc/ai-video-generation
+---
+
 # AI 视频生成案例拆解:Sora 与 Veo 的两条路线
 
 **分类**:AIGC

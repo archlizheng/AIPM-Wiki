@@ -1,3 +1,9 @@
+---
+title: reduce-llm-cost-10x
+type: note
+permalink: aipmwiki/docs/04-interview/case-analysis/reduce-llm-cost-10x
+---
+
 # 某功能接入大模型后成本涨了 10 倍,如何降本?
 
 **难度**:⭐⭐⭐ 进阶

@@ -1,3 +1,9 @@
+---
+title: agent-routing-and-large-files
+type: note
+permalink: aipmwiki/docs/04-interview/basics/agent-routing-and-large-files
+---
+
 # Agent 路由选错了怎么办?超大文件(如 1G)又该怎么接?
 
 **难度**:⭐⭐⭐ 进阶

@@ -1,3 +1,9 @@
+---
+title: ai-product-metrics
+type: note
+permalink: aipmwiki/docs/02-pm-skills/ai-product-operations/ai-product-metrics
+---
+
 # AI 产品指标体系：从业务结果到成本与风险
 
 AI 产品不能用一个“准确率”概括好坏。用户是否愿意使用、任务是否真的完成、模型是否遵守边界、系统是否足够快、每项任务是否负担得起，分别属于不同层级。AI PM 的工作是把这些指标组织成一棵能解释因果、发现问题、支持决策的指标树。
@@ -265,4 +271,3 @@ AI 产品的指标经常互相拉扯：
 - [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents) —— Anthropic 官方工程文章，2026-07 访问
 - [Your Mouse and Eyes Secretly Leak Your Preference: LLM Alignment using Implicit Feedback from Users](https://arxiv.org/html/2606.20482) —— 讨论显式反馈覆盖有限、隐式行为可用于对齐；文中引用约 1%–3% 显式反馈量级（Wang et al.），作区间参考而非产品基线，2026-08-06 访问
 - 第七–九节选题启发自磊叔《关于 AI 产品经理的 100 个问题》Q28、Q49、Q63；正文为原创重写，未摘录原书答案
-

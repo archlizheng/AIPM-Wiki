@@ -1,3 +1,9 @@
+---
+title: assistant-monetization-paths
+type: note
+permalink: aipmwiki/docs/03-case-studies/chatbot-assistant/assistant-monetization-paths
+---
+
 # 助手类产品的商业化路径:订阅、广告、还是 API
 
 **分类**:对话助手(横向合集)

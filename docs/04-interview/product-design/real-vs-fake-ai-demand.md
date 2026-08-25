@@ -1,3 +1,9 @@
+---
+title: real-vs-fake-ai-demand
+type: note
+permalink: aipmwiki/docs/04-interview/product-design/real-vs-fake-ai-demand
+---
+
 # 如何判断一个 AI 需求是真需求还是伪需求?
 
 **难度**:⭐⭐ 常规

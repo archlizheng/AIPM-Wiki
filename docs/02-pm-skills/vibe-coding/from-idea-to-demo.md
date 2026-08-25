@@ -1,3 +1,9 @@
+---
+title: from-idea-to-demo
+type: note
+permalink: aipmwiki/docs/02-pm-skills/vibe-coding/from-idea-to-demo
+---
+
 # 从一句话需求到能跑的原型:AI PM 的 Vibe Coding 实战方法论
 
 ## 为什么这是一项硬技能

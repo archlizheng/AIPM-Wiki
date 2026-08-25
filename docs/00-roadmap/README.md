@@ -1,3 +1,9 @@
+---
+title: README
+type: note
+permalink: aipmwiki/docs/00-roadmap/readme
+---
+
 # 00 · 学习路线
 
 新人第一站。这里回答三个问题:AI 产品经理是做什么的?我适不适合转?应该按什么路径学?

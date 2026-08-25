@@ -1,3 +1,9 @@
+---
+title: prompt-rag-finetuning
+type: note
+permalink: aipmwiki/docs/01-ai-basics/llm/prompt-rag-finetuning
+---
+
 # Prompt / RAG / 微调:三种让模型更懂你的方式怎么选
 
 大模型出厂时是"通才":不懂你的业务、不知道昨天发的公告、也不一定按你要的格式说话。让模型"更懂你"的手段主要有三种,选错了会白花预算,甚至练出一个"记住错误答案"的模型。

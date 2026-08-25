@@ -1,3 +1,9 @@
+---
+title: README
+type: note
+permalink: aipmwiki/docs/02-pm-skills/ai-product-operations/readme
+---
+
 # AI 产品运营：Agent 与 AI 功能的生产化
 
 AI 功能从 Demo 走到生产，难点不只是把模型接进来，而是把不确定的模型行为包进一套**可完成、可观察、可约束、可复盘**的产品系统。本板块聚焦 AI PM 在上线前后需要持续负责的生产化问题。
@@ -23,4 +29,3 @@ AI 功能从 Demo 走到生产，难点不只是把模型接进来，而是把�
 - [模型与产品效果评估](../model-evaluation/README.md)负责评测集、人工评分和 Badcase 闭环；本板块补充 Agent 的步骤、工具和轨迹维度。
 - [成本测算与技术协作](../cost-and-tech/README.md)负责模型调用和基础设施成本；本板块把成本上限、任务预算和成本告警放回 Agent 生命周期。
 - [Vibe Coding](../vibe-coding/README.md)适合验证原型假设；涉及真实用户、真实数据和持续稳定性时，仍需回到生产化的权限、评测和监控要求。
-

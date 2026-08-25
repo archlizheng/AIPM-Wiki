@@ -1,3 +1,9 @@
+---
+title: agent-skills
+type: note
+permalink: aipmwiki/docs/01-ai-basics/llm/agent-skills
+---
+
 # Agent Skills:给 Agent 装上可复用的「操作手册」
 
 > 时效说明:本文机制与选型框架相对稳定;客户端名单、预置 Skills 目录等细节截至 **2026-07**,请以 [agentskills.io](https://agentskills.io/) 与各厂商文档为准。

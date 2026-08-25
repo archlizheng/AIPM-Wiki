@@ -1,3 +1,9 @@
+---
+title: interview-experience
+type: note
+permalink: aipmwiki/templates/interview-experience
+---
+
 # [公司] [岗位方向] 面经(YYYY 年 MM 月)
 
 **背景**:<!-- 你的背景一句话:如"3 年传统电商 PM,无 AI 经验" -->

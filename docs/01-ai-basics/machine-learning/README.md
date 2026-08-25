@@ -1,3 +1,9 @@
+---
+title: README
+type: note
+permalink: aipmwiki/docs/01-ai-basics/machine-learning/readme
+---
+
 # 机器学习与深度学习基础
 
 PM 视角的机器学习核心概念:不推公式,重点理解每类技术的能力边界和适用场景。

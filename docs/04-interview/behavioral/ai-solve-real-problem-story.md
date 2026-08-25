@@ -1,3 +1,9 @@
+---
+title: ai-solve-real-problem-story
+type: note
+permalink: aipmwiki/docs/04-interview/behavioral/ai-solve-real-problem-story
+---
+
 # 说一个你用 AI 解决实际问题的经历
 
 **难度**:⭐⭐ 常规

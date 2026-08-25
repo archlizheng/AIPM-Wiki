@@ -1,3 +1,9 @@
+---
+title: estimate-daily-active-chat-cost
+type: note
+permalink: aipmwiki/docs/04-interview/case-analysis/estimate-daily-active-chat-cost
+---
+
 # 估算日活 100 万的 AI 对话产品每月模型调用成本
 
 **难度**:⭐⭐ 常规

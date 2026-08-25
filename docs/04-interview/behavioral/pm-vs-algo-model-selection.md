@@ -1,3 +1,9 @@
+---
+title: pm-vs-algo-model-selection
+type: note
+permalink: aipmwiki/docs/04-interview/behavioral/pm-vs-algo-model-selection
+---
+
 # 模型选型该听算法还是 PM？你怎么协作？
 
 **难度**:⭐⭐ 常规

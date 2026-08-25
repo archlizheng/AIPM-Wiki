@@ -1,3 +1,9 @@
+---
+title: system-prompt-and-prompt-ops
+type: note
+permalink: aipmwiki/docs/01-ai-basics/prompt-engineering/system-prompt-and-prompt-ops
+---
+
 # 系统提示词设计与 Prompt 工程化:把玄学变工程
 
 前两篇讲的是"怎么写好一条 Prompt"([Prompt 基本功](prompt-basics.md))和"怎么让模型稳定吐出结构化数据"([结构化输出](structured-output.md))。但一个 AI 产品线上跑的从来不是"一条 Prompt",而是一套需要长期维护、反复修改、被无数次调用的**系统**。这篇要解决的是更进一层的问题:Prompt 从"一次写好就行"变成"持续迭代的产品资产"之后,该怎么管理。

@@ -1,3 +1,9 @@
+---
+title: agent-behavior-boundary-in-prd
+type: note
+permalink: aipmwiki/docs/04-interview/product-design/agent-behavior-boundary-in-prd
+---
+
 # 怎么在 PRD 里写清楚 Agent 的行为边界？
 
 **难度**:⭐⭐ 常规

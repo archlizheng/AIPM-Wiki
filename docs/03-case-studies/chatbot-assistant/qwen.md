@@ -1,3 +1,9 @@
+---
+title: qwen
+type: note
+permalink: aipmwiki/docs/03-case-studies/chatbot-assistant/qwen
+---
+
 # 千问案例拆解:对话入口抢交易履约
 
 **分类**:对话助手

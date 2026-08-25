@@ -1,3 +1,9 @@
+---
+title: cost-optimization
+type: note
+permalink: aipmwiki/docs/02-pm-skills/cost-and-tech/cost-optimization
+---
+
 # 降本手段盘点:缓存、批处理、路由与蒸馏
 
 > **信息状态**：动态快照｜**最后核验**：2026-08-06

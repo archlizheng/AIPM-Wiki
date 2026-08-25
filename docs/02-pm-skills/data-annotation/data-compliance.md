@@ -1,3 +1,9 @@
+---
+title: data-compliance
+type: note
+permalink: aipmwiki/docs/02-pm-skills/data-annotation/data-compliance
+---
+
 # 数据合规红线：用户数据能不能用来训练
 
 > **本文不构成法律意见。** 数据合规政策与法规更新频繁，请以厂商官方最新政策与国家最新法规原文为准；重大项目务必咨询法务或合规专业人士。文中「事实」仅复述已公开的官方法规/厂商政策要点；「建议」是产品设计与流程上的可操作动作，不等于强制法条。不确定处标「需法务 / 待核验」。

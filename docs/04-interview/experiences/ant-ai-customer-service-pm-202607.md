@@ -1,3 +1,9 @@
+---
+title: ant-ai-customer-service-pm-202607
+type: note
+permalink: aipmwiki/docs/04-interview/experiences/ant-ai-customer-service-pm-202607
+---
+
 # 蚂蚁 AI 客服产品经理 面经
 
 **来源**: 牛客 @哀妮N, 2026-04 | **岗位**: AI 客服产品经理 | **类型**: 校招/社招（投稿者背景为研发转产品）

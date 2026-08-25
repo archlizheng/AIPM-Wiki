@@ -1,3 +1,9 @@
+---
+title: meituan-ai-pm-second-round-202605
+type: note
+permalink: aipmwiki/docs/04-interview/experiences/meituan-ai-pm-second-round-202605
+---
+
 # 美团到店 AI 产品经理（二面）面经（2026 年 05 月）
 
 **出处**：小红书 @AI产品折木，《美团AI产品二面面经（十动然拒版）》，2026-05-09。 [原文链接](https://www.xiaohongshu.com/search_result/69fe17b9000000003502c138?xsec_token=ABUpmW3zkgJxqyK19sJgeJNS8lN-Fgx9mJLCcbfKMt2Tc=&xsec_source=)

@@ -1,3 +1,9 @@
+---
+title: khanmigo
+type: note
+permalink: aipmwiki/docs/03-case-studies/vertical/khanmigo
+---
+
 # Khanmigo 案例拆解:教育 AI 的成效指标与采纳教训
 
 **分类**:垂直行业

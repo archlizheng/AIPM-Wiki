@@ -1,3 +1,9 @@
+---
+title: rag-multi-retrieval-paths
+type: note
+permalink: aipmwiki/docs/04-interview/basics/rag-multi-retrieval-paths
+---
+
 # RAG 系统有哪几种检索路径?分别适合什么场景?
 
 **难度**:⭐⭐ 常规

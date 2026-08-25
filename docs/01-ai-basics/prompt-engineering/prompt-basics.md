@@ -1,3 +1,9 @@
+---
+title: prompt-basics
+type: note
+permalink: aipmwiki/docs/01-ai-basics/prompt-engineering/prompt-basics
+---
+
 # Prompt 基本功:角色、任务、约束、示例、输出格式
 
 Prompt(提示词)是 AI PM 最直接的生产工具:不用写一行代码,改一改 Prompt 就能让同一个模型的产出从"能用"变成"好用"。但很多人对 Prompt 的理解还停留在"多说几句废话让它听话",结果是反复试、反复改,全靠运气——这不是工程,是玄学。

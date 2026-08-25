@@ -1,3 +1,9 @@
+---
+title: design-ecommerce-customer-service-bot
+type: note
+permalink: aipmwiki/docs/04-interview/product-design/design-ecommerce-customer-service-bot
+---
+
 # 为主流电商平台设计智能客服问答机器人(含兜底机制)
 
 **难度**:⭐⭐⭐ 进阶

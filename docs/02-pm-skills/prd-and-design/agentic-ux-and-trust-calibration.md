@@ -1,3 +1,9 @@
+---
+title: agentic-ux-and-trust-calibration
+type: note
+permalink: aipmwiki/docs/02-pm-skills/prd-and-design/agentic-ux-and-trust-calibration
+---
+
 # Agentic UX 与信任校准：用户何时该信、何时该介入
 
 > **选题启发**：磊叔《关于 AI 产品经理的 100 个问题》Q15、Q33–35、Q51（仅选题结构，正文为原创）。

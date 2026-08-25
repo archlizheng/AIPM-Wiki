@@ -1,3 +1,9 @@
+---
+title: design-wechat-ai-feature
+type: note
+permalink: aipmwiki/docs/04-interview/product-design/design-wechat-ai-feature
+---
+
 # 为微信设计一个 AI 功能
 
 **难度**:⭐⭐⭐ 进阶

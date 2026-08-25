@@ -1,3 +1,9 @@
+---
+title: ai-ab-testing-difference
+type: note
+permalink: aipmwiki/docs/04-interview/basics/ai-ab-testing-difference
+---
+
 # AI 产品的 A/B 测试和传统产品差在哪？
 
 **难度**:⭐⭐ 常规

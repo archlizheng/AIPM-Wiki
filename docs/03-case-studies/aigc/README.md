@@ -1,3 +1,9 @@
+---
+title: README
+type: note
+permalink: aipmwiki/docs/03-case-studies/aigc/readme
+---
+
 # AIGC 内容生成类案例
 
 文生图、文生视频、音频生成、代码生成等。

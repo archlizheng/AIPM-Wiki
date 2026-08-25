@@ -1,3 +1,9 @@
+---
+title: README
+type: note
+permalink: aipmwiki/docs/02-pm-skills/cost-and-tech/readme
+---
+
 # 成本测算与技术协作
 
 ## 目录

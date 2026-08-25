@@ -1,3 +1,9 @@
+---
+title: CONTRIBUTING
+type: note
+permalink: aipmwiki/contributing
+---
+
 # 贡献指南
 
 感谢你愿意为 AIPM Wiki 做贡献!本仓库是内容型知识库,贡献门槛很低——修正一个错别字也是有价值的贡献。

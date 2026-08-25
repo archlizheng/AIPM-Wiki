@@ -1,3 +1,9 @@
+---
+title: sensetime-ai-pm-202607
+type: note
+permalink: aipmwiki/docs/04-interview/experiences/sensetime-ai-pm-202607
+---
+
 # 商汤科技 AI 产品经理 实习面经
 
 **来源**: 牛客 @Montagna_Neve / @Herbert_8, 2025-2026 | **岗位**: AI 产品经理实习生 | **类型**: 实习

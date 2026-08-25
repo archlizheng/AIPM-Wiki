@@ -1,3 +1,9 @@
+---
+title: README
+type: note
+permalink: aipmwiki/docs/05-resources/readme
+---
+
 # 05 · 资源导航
 
 经过筛选的学习资源。收录标准:自己看过、确实有用、附一句话推荐理由。

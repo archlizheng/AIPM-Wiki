@@ -1,3 +1,9 @@
+---
+title: README
+type: note
+permalink: aipmwiki/docs/04-interview/readme
+---
+
 # 04 · AI 产品经理面试题库
 
 按题型分类的面试题 + 真实面经,另有一个不属于题型的「面试准备方法」板块。所有题目遵循统一格式:**题目 → 考察点 → 参考答案 → 追问延伸 → 相关阅读**,投稿请使用 [面试题模板](../../templates/interview-question.md)。

@@ -1,3 +1,9 @@
+---
+title: agent-trust-calibration-design
+type: note
+permalink: aipmwiki/docs/04-interview/product-design/agent-trust-calibration-design
+---
+
 # 怎么设计 Agent 的信任校准，避免过度信任或不信任？
 
 **难度**:⭐⭐⭐ 进阶

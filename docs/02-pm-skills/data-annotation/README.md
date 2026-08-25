@@ -1,3 +1,9 @@
+---
+title: README
+type: note
+permalink: aipmwiki/docs/02-pm-skills/data-annotation/readme
+---
+
 # 数据标注与冷启动
 
 ## 目录

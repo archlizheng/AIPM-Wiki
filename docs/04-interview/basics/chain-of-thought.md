@@ -1,3 +1,9 @@
+---
+title: chain-of-thought
+type: note
+permalink: aipmwiki/docs/04-interview/basics/chain-of-thought
+---
+
 # 什么是 CoT(思维链)?有什么优势?
 
 **难度**:⭐⭐ 入门必备

@@ -1,3 +1,9 @@
+---
+title: how-llm-works
+type: note
+permalink: aipmwiki/docs/01-ai-basics/llm/how-llm-works
+---
+
 # 大模型是怎么"想"的:预测下一个 token 的直观解释
 
 ## 一句话说清
