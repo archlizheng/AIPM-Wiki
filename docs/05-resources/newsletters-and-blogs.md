@@ -5,6 +5,7 @@
 
 ## Newsletter
 
+- [AI Weekly](https://aiweekly.co/)：追踪有影响力的 AI 专家和机构正在阅读与分享的内容，并对模型、Agent、融资、政策和研究动态进行排序与解读。
 - [Lenny's Newsletter](https://www.lennysnewsletter.com/)：AI PM 访谈、岗位趋势和实战框架兼具，信息密度很高。
 - [Stratechery](https://stratechery.com/)：用商业战略视角解释科技变化，适合做中长期判断。
 - [One Useful Thing](https://www.oneusefulthing.org/)：Ethan Mollick 持续讨论 AI 对工作方式和组织协作的真实影响。
