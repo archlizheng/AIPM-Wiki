@@ -267,3 +267,37 @@ AI 安全不是「上线前找安全同事盖章」。PM 至少对**风险可见
 - [Safety settings](https://ai.google.dev/gemini-api/docs/safety-settings) —— Google Gemini API 官方文档，2026-08-06 访问
 - [Model Context Protocol specification](https://modelcontextprotocol.io/specification/latest) —— MCP 官方规范，2026-08-06 访问
 - 磊叔《关于 AI 产品经理的 100 个问题》Q44 / Q68–70 / Q82 — 仅作选题结构启发，[飞书链接](https://my.feishu.cn/wiki/Rl6zw6lp2ipOnnkBVxwc5urRnLc)
+
+## 2026-09 深化：运行时零信任的边界
+
+当 Agent 能写数据库、执行代码或调用外部 API 时，system prompt 只是软约束。Google 2026-08-17 的 ADK zero-trust 示例把防线放在模型上下文之外：写操作使用密码学签名，动态代码放进 gVisor 沙箱并禁止网络外连，输入输出经过确定性 semantic gateway。它是开源 demo 和工程指南，不是 ADK 默认安全能力。
+
+Anthropic 2026-08-31 的安全说明也强调纵深防御：披露的事件发生在为评测而运行、且第三方环境错误开放网络的场景，并非普通生产默认配置。产品可借鉴控制思路，不能把实验环境事件扩大成“生产 Agent 已普遍失控”。
+
+### 写操作的四道闸门
+
+| 闸门 | 必须回答 | 失败动作 |
+|---|---|---|
+| 身份 | 是哪个用户、租户和 Agent 发起？ | 拒绝并审计 |
+| 语义 | 目标对象、金额、范围和业务规则是否满足？ | 不执行，回到确认/人工 |
+| 环境 | 代码、文件、网络和密钥是否隔离？ | 进入沙箱或暂停 |
+| 结果 | 副作用是否真的完成、是否重复？ | 查询状态、补偿或转人工 |
+
+内部助手中，E01 的设备申请必须由业务服务端校验租户与角色；`request_key` 用于幂等，网络 request ID 不能替代它；超时先查询业务对象；已提交后不能把“撤回”称作成功，必须遵循业务撤回规则。管理员不能默认代员工提交，主管审批仍在业务系统由 M01 完成。
+
+练习：任选一个有副作用的工具，补齐身份来源、允许资源、参数上限、幂等键、确认内容、超时处理、审计字段、回滚/补偿和人工责任人。再写一条攻击用例：外部网页要求 Agent 忽略原规则并导出环境变量。通过标准不是模型拒答一句话，而是该文本无法获得工具权限、无法突破沙箱，且轨迹能定位拦截原因。
+
+### 模型、运行环境与工具服务端三层分工
+
+| 层 | 控制职责 | 即使上一层出错仍要成立的边界 |
+|---|---|---|
+| 模型行为 | 识别外部指令、说明不确定、请求所需确认 | 拒答本身不是最终安全保证 |
+| 运行环境 | 隔离文件/进程，限制网络、密钥和工具暴露 | 外部文档无法通过运行环境拿到任意网络与凭证 |
+| 工具服务端 | 当前用户/租户/资源鉴权，校验参数、确认、状态与幂等 | 被注入后的模型提出越权动作仍不产生副作用 |
+
+教学攻击链：D12材料夹带外传要求→模型误提出发送→运行环境没有该外站出网与发送工具→若改调内部工具，服务端仍按E01当前权限拒绝扩大范围→记录拦截原因并转IT。验收既查模型行为，也查网络/工具事件和最终业务对象；没有外传事件证据时不能只凭“模型说拒绝了”放行。[实践EV15](../practice/internal-service-evaluation.md)将此纳入所有用例共同的安全门槛。
+
+参考更新：
+
+- [Build zero-trust AI agents with Google's Agent Development Kit](https://developers.googleblog.com/build-zero-trust-ai-agents-with-googles-agent-development-kit/) — Google，2026-08-17，How-to/open-source demo，访问 2026-09-14。
+- [Improving our alignment and security efforts](https://www.anthropic.com/news/improving-alignment-security-efforts) — Anthropic，2026-08-31，事件披露与内部改进，访问 2026-09-14。

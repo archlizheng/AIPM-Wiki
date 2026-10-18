@@ -28,7 +28,7 @@ permalink: aipmwiki/docs/04-interview/behavioral/follow-ai-trends
 
 ### 示范回答 A:关注 Agent / 多步推理
 
-> 我最近重点关注 **AI Agent 从 demo 走向生产** 的进展。技术上,Claude 的 Computer Use、OpenAI 的 Operator 让模型能操作真实界面,不再是纯文本对话。
+> 我最近重点关注 **AI Agent 从 demo 走向生产** 的进展。可以用 Claude Computer Use、OpenAI Operator 这类产品作历史示例，但面试前必须核对当期官方名称、可用范围和能力边界，不能只背旧发布稿。
 >
 > 从产品视角,我认为关键变化是:AI 从"回答问题"进化到"完成任务"。这对 PM 意味着:
 > - 产品设计从对话流转向**任务流**——用户说目标,AI 自主规划步骤
@@ -39,12 +39,12 @@ permalink: aipmwiki/docs/04-interview/behavioral/follow-ai-trends
 
 ### 示范回答 B:关注推理成本下降
 
-> 我最近关注 **推理成本持续下降** 这个趋势。DeepSeek-R1、Qwen 等开源模型的性能逼近闭源,API 价格却在快速下降。
+> 我最近关注 **推理成本与模型选择持续变化** 这个趋势。DeepSeek、Qwen 等开源模型和各家 API 都需要按当期型号、价格页与任务评测比较；不能把“性能逼近闭源”或“API 价格快速下降”当作所有模型的普遍事实。
 >
 > 对产品的影响:
 > - 很多之前"算不过来账"的 AI 功能变得可行了——比如给每个用户提供个性化长文分析
 > - 竞争焦点从"能不能用 AI"转向"谁的产品体验更好"
-> - 峰谷定价、模型分级路由成为标配能力
+> - 峰谷定价、模型分级路由都可以作为候选产品机制，但是否适用要看任务时效、合同和成本实测
 >
 > 我的判断:成本下降是利好,但 PM 不应只依赖"等成本降低"——应该主动设计**成本可控的产品架构**,比如缓存、路由、异步处理,为规模化做准备。
 
@@ -94,6 +94,6 @@ permalink: aipmwiki/docs/04-interview/behavioral/follow-ai-trends
 
 ## 相关阅读
 
-- [DeepSeek 开始峰谷定价,你怎么看 AI 产品的商业模式?](../case-analysis/ai-business-model-and-pricing.md)
+- [AI 产品峰谷定价,你怎么看商业模式?](../case-analysis/ai-business-model-and-pricing.md)
 - [AI 产品经理和传统产品经理最大的区别是什么?](ai-pm-vs-traditional-pm.md)
 - [AI 术语速查表](../../01-ai-basics/glossary.md)

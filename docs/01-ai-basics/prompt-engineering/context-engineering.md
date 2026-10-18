@@ -62,7 +62,7 @@ Anthropic 在同文中强调：上下文是**有限且边际收益递减**的资
 
 **事实**：
 
-- **Anthropic**：通过 `cache_control` 等机制对稳定前缀做缓存；命中后可显著降低重复前缀的计费与延迟。官方文档给出的倍率口径包括：约 5 分钟 TTL 的 cache write 为基价输入的 **1.25×**，1 小时 TTL 的 write 为 **2×**，cache read 约为基价输入的 **0.1×**（截至 2026-08-06，见 Anthropic Prompt Caching 文档）。另有按模型区分的最低可缓存 token 门槛；未达门槛则不会真正缓存。
+- **Anthropic**：稳定前缀按模型规则缓存。2026-09-14官方定价页列5分钟写入1.25倍、1小时写入2倍；命中通常0.1倍，但Fable 5.1与Mythos 5.1为0.025倍。不能将通用倍率外推所有模型，最低长度、处理档和地区修饰也需分开。精确费率统一见[成本入门](../../02-pm-skills/cost-and-tech/llm-cost-101.md)与[官方定价](https://platform.claude.com/docs/en/about-claude/pricing)。
 - **OpenAI**：对符合条件的请求可对**精确前缀匹配**自动做 Prompt Caching；官方指南建议把稳定内容（指令、示例、工具定义等）放在靠前位置，可变内容靠后，以提高命中率。较新模型家族还提供显式 breakpoint / `prompt_cache_key` 等控制项（见 OpenAI Prompt Caching 指南；访问日期 2026-08-06）。
 
 **建议**：PM 侧把「哪些字段会每请求变化」（时间戳、用户 ID、随机会话噪声）从「应稳定缓存的系统层」里剔出去，当作产品约束写进 PRD；**不要**自己拍板具体 breakpoint 落在第几个 content block——那是工程实现。
@@ -133,3 +133,36 @@ Anthropic 在同文中强调：上下文是**有限且边际收益递减**的资
 - [Using tools](https://developers.openai.com/api/docs/guides/tools) — OpenAI 官方文档；**2026-08-06 访问**
 - [The rise of "context engineering"](https://www.langchain.com/blog/the-rise-of-context-engineering) — LangChain 对术语与「动态提供正确信息与工具」的业界表述；**2026-08-06 访问**
 - [Context Engineering](https://www.langchain.com/blog/context-engineering-for-agents) — LangChain 对 write / select / compress / isolate 等策略综述；**2026-08-06 访问**
+
+## 2026-09 深化：上下文是运行时状态，不是无限记事本
+
+长任务真正困难的地方不是窗口数字，而是状态如何跨窗口保持。OpenAI 2026-09-10 的 Agents API 把自动 compaction、tool search 和 programmatic tool calling 放进托管 Harness；其产品说明强调工具定义按需载入，工具结果可在代码中筛选后再带回上下文。PM 应把上下文拆成“必须精确保留、可摘要、可重新读取、禁止进入”四类。
+
+| 类型 | 例子 | 处理原则 |
+|---|---|---|
+| 精确保留 | 当前目标、用户确认、权限规则、request_key | 压缩后重载或保留原文 |
+| 可摘要 | 已完成步骤、普通日志、重复搜索结果 | 记录来源和摘要版本 |
+| 外部重读 | 最新申请状态、制度版本、库存、实时数据 | 每次从权威系统读取 |
+| 禁止进入 | 密钥、无关敏感原文、未经验证的模型猜测 | 过滤、脱敏或拒绝 |
+
+压缩不是“把旧对话缩短”这么简单。2026-08-24 的 arXiv 预印本《The Compaction Cliff》提示，在特定配置中安全规则会和普通事件一起被摘要而损失精度。该研究仍是预印本，不能把其中比例当行业常数；不可丢的安全规则应来自版本化策略源，不能只存在摘要里。
+
+工具上下文可按三步优化：稳定系统指令、工具 schema 和组织规则以提高缓存机会；按场景挂载或使用 tool search，不把所有 MCP 工具一次性暴露；大表格、日志和网页正文先在代码中筛选，支付回执、权限拒绝、业务申请 ID 等关键证据必须保留。
+
+练习：给“查询并提交设备申请”任务画上下文账单，分别标出系统规则、工具定义、D01/D02 文档、当前对话、用户确认、业务回执的 token 占用、可缓存性和权威来源。窗口触顶时，系统还应能说明已完成什么、丢失什么、为何暂停。
+
+### 压缩后的状态损失检查
+
+摘要前保存结构化检查点：当前意图ID、草稿版本、确认凭证引用与有效期、当前权限来源、已发工具调用、业务回执、取消标记、未决冲突和预算余额。摘要后逐字段比较，确认与权限只保存可校验引用，执行前重新核对，不能把摘要“用户答应过”当授权。
+
+- 丢失意图键或回执：先查询权威状态，不重新提交。
+- 丢失取消/未决冲突：暂停后续写入，恢复检查点或转人工。
+- 找不到有效政策版本：不沿用压缩摘要中的旧规格，重新检索或说明无法确认。
+- 只丢失可重读原始材料：根据来源ID按权限重载，不必原文塞满窗口。
+
+压缩的验收是关键约束与业务状态保真，不只是token变少。跨会话偏好如何纠错、删除和过期见[长期记忆设计](../../02-pm-skills/ai-product-operations/agent-memory-design.md)。
+
+参考更新：
+
+- [Introducing the Agents API](https://openai.com/index/introducing-the-agents-api/) — OpenAI，2026-09-10，Public Beta，访问 2026-09-14。
+- [The Compaction Cliff in Long-Running AI Agent Memory](https://arxiv.org/abs/2608.22752) — arXiv，2026-08-24，预印本，仅作风险提示，访问 2026-09-14。

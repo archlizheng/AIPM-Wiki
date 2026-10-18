@@ -23,7 +23,7 @@ permalink: aipmwiki/docs/00-roadmap/multimodal-pm-skills
 | 生成型多模态 | 文生图/视频、配音、口播成片 | 重点在**质量维度拆分、版权与标识、产能与排队** |
 | 实时多模态 | 语音通话、看画面边问边答 | 重点在**时序对齐、打断/接管、流式体验与成本爆炸** |
 
-**事实**：主流云厂商的多模态计费，通常把图像/音视频折算进 token 或按时长/张计费，单价与纯文本同量级请求往往不在一个数量级（见文末 OpenAI / Anthropic 官方文档，截至 2026-08-06）。  
+**已核实范围**：Anthropic 与 OpenAI 的官方文档分别说明了图像 token 或 `detail` 等输入参数会影响消耗；实时语音、视频与其他云厂商的计费公式必须回到对应供应商页面复核，不能据此代表所有云厂商（官方页面截至 2026-09-14 访问）。
 **建议**：入职或立项第一周，先画出「主路径模态组合」与「单位任务成本量级」，再谈功能清单。
 
 公开面经里，视频向多模态岗常会深挖 Prompt、音画同步、模型调研与 POC（见 [B 站多模态视频 AI 产品面经](../04-interview/experiences/bilibili-multimodal-ai-pm-202607.md)）。那是**面试题形态**；下文把它翻译成可自查的能力清单，不复述题面答案。
@@ -171,6 +171,9 @@ permalink: aipmwiki/docs/00-roadmap/multimodal-pm-skills
 - [生成式 AI 合规设计清单](../02-pm-skills/data-annotation/genai-compliance-checklist-cn.md)
 - [冷启动与数据飞轮](../02-pm-skills/data-annotation/cold-start-and-data-flywheel.md)
 - [Agentic UX 与信任校准](../02-pm-skills/prd-and-design/agentic-ux-and-trust-calibration.md)
+- [文档智能产品怎么设计](../02-pm-skills/prd-and-design/document-intelligence-design.md)
+- [实时语音 Agent 怎么设计](../02-pm-skills/prd-and-design/realtime-voice-agent-design.md)
+- [Computer Use 产品怎么设计](../02-pm-skills/prd-and-design/computer-use-product-design.md)
 - [多模态 AI 产品的 PM，需要补哪些能力？](../04-interview/basics/multimodal-pm-capabilities.md)（面试口述骨架）
 - [B 站多模态视频 AI 产品面经](../04-interview/experiences/bilibili-multimodal-ai-pm-202607.md)（面试题形态参考，非能力标准）
 

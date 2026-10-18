@@ -7,7 +7,7 @@ permalink: aipmwiki/docs/05-resources/courses
 # 课程与视频
 
 > 优先收录免费、系统的课程。付费课程需注明价格，禁止软广。  
-> 截至 2026-07，主榜以官方课程与高校公开课为主。
+> 截至 2026-09，主榜以官方课程与高校公开课为主；产品文档入口单列为实践材料，不把文档或预览能力包装成课程结业能力。
 
 ## 免费课程
 
@@ -65,3 +65,12 @@ permalink: aipmwiki/docs/05-resources/courses
 
 - Coursera 的 AI PM 证书课（Google/Microsoft/IBM）：体系化不错，但与主榜免费内容重合较高，建议按证书需求再选。
 - B 站「7 天就业」「内部课泄露」类视频：标题党和引流特征明显，不建议纳入本页主榜。
+
+## 近期实践材料
+
+这些入口适合配合课程做一次小型交付，状态与价格要以打开页面时的官方说明为准，访问日为 2026-09-14。
+
+- [OpenAI Building agents](https://developers.openai.com/tracks/building-agents)：按 tools、orchestration、guardrails 和 tracing 组织的官方学习路径。
+- [Anthropic computer use tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool)：以隔离容器、人工确认和 allowlist 为核心的 Computer Use 实践入口，属于 API 文档。
+- [Gemini API computer use](https://ai.google.dev/gemini-api/docs/computer-use)：当前文档标为 Preview，用于理解浏览器和桌面操作的官方 API 入口；是否可用、模型和计费需按账号与地区复核。
+- [GitHub Copilot Changelog](https://github.blog/changelog/category/copilot/)：跟踪 Agent Plugins、企业权限、语音和 recurring tasks 的 GA、Preview 与 Experimental 状态。

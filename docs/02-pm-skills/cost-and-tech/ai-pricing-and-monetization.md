@@ -6,7 +6,7 @@ permalink: aipmwiki/docs/02-pm-skills/cost-and-tech/ai-pricing-and-monetization
 
 # AI 产品定价与商业化：订阅、Token、按结果怎么选
 
-> **信息状态**：决策框架｜**最后核验**：2026-08-06  
+> **信息状态**：决策框架｜**最后核验**：2026-09-14
 > 产品/API 公开价目以官方页为准；毛利率无经审计财报支撑时只给框架与示意量级，不作行业红线。
 
 AI 产品的定价，本质不是「定一个好听的月费」，而是把**不确定的推理成本**，翻译成用户能理解、愿付费、你也算得清的商业契约。助手赛道怎么赚钱，见案例合集 [助手类产品的商业化路径](../../03-case-studies/chatbot-assistant/assistant-monetization-paths.md)；本文把那些结论升级成**可复用的选型决策树**，并回答三个 PM 常被追问的问题：五种模式怎么选、什么时候别对 C 端透传 Token 账单、成本底线怎么估。
@@ -41,14 +41,14 @@ AI 产品的定价，本质不是「定一个好听的月费」，而是把**不
 | 4 | **Freemium + 广告 / 交易导流** | 免费养规模；广告或订单/抽成补现金 | 超大免费盘，或自有履约中台 | 信任与公正性；有对话无订单 |
 | 5 | **企业：席位 + 用量（或封顶）** | 低席位费 + API 费率用量，或席位包额度 | 要 SSO/审计/数据驻留；用量方差大 | 销售周期长；包干被少数重度用户打穿 |
 
-### 公开产品锚点（截至 2026-08-06，以官方页为准）
+### 公开产品锚点（截至 2026-09-14，以官方页为准）
 
 **消费级订阅分层（额度/模型档，不是裸 Token 账单）**
 
 | 产品 | 公开分层（摘录） | 官方入口 |
 |------|------------------|----------|
 | ChatGPT | Free → Go → Plus → Pro（个人）；另有 Business / Enterprise | [ChatGPT Pricing](https://chatgpt.com/pricing/) |
-| Claude | Free → Pro（月付约 $20；年付折后约 $17/月）→ Max（From $100，5x/20x 用量）；Team 席位分档；Enterprise 常见 **$20/席 + API 费率用量** | [Claude Pricing](https://claude.com/pricing) |
+| Claude | Free / Pro / Max / Team / Enterprise 分层；Enterprise 官方说明席位费与实际用量分开计，具体价格和计划可能变化 | [Claude Pricing](https://claude.com/pricing) / [Enterprise plan](https://support.claude.com/en/articles/9797531-what-is-the-enterprise-plan) |
 
 具体美元档位、广告是否出现在某一档、模型名，会随官方页变更；评审以访问当日页为准，不要把媒体「ARR/转化率」当内部 KPI（助手合集已标存疑口径）。
 
@@ -56,14 +56,14 @@ AI 产品的定价，本质不是「定一个好听的月费」，而是把**不
 
 | 厂商 | 模型（示例） | 输入 | 输出 | 来源 |
 |------|--------------|------|------|------|
-| Anthropic | Claude Sonnet 5 | $2（引导价，至 2026-08-31）→ 其后 $3 | $10 → $15 | [Claude API Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |
+| Anthropic | Claude Sonnet 5 | $2（当前标准价） | $10（当前标准价） | [Claude API Pricing](https://platform.claude.com/docs/en/about-claude/pricing) |
 | Anthropic | Claude Opus 5 / 4.8 档 | $5 | $25 | 同上 |
 | Anthropic | Claude Haiku 4.5 | $1 | $5 | 同上 |
-| OpenAI | gpt-5.4 | $2.50 | $15.00 | [OpenAI API Pricing](https://developers.openai.com/api/docs/pricing) |
-| OpenAI | gpt-5.4-mini / nano | $0.75 / $0.20 | $4.50 / $1.25 | 同上 |
-| OpenAI | gpt-5.5 / gpt-5.6-sol（短上下文） | $5.00 | $30.00 | 同上 |
+| OpenAI | GPT-5.6 Terra | $2.00 | $12.00 | [OpenAI model comparison](https://developers.openai.com/api/docs/models/compare) |
+| OpenAI | GPT-5.6 Sol | $4.00 | $20.00 | 同上 |
+| OpenAI | GPT-6 Astra | $10.00 | $50.00 | 同上 |
 
-输出价普遍约为输入的数倍——对定价的含义是：**「让模型少说废话 / 少瞎跑 Agent 步数」**往往比抠一点点系统 Prompt 更能守毛利。Batch、Prompt Caching 等折扣见降本文，可叠用。
+输出价通常高于输入价；具体倍率、长上下文、缓存、区域和工具费用必须按当前模型页核算。对定价的含义是：控制无效输出和 Agent 步数，往往比只改一句 Prompt 更能守住单位经济。
 
 国内助手（豆包订阅档、千问交易履约等）路径对照见 [助手商业化路径](../../03-case-studies/chatbot-assistant/assistant-monetization-paths.md)，本文不重复单品叙事。
 
@@ -101,6 +101,18 @@ Q4  是否有超大免费流量，且必须长期维持「聊天不设墙」？
     └─ 否 → 回到成本模板：先砍范围/降本，再谈定价；不要用「先免费再想」代替决策
 ```
 
+### 三类“执行量”不要混叫结果
+
+近期企业产品把计量单位进一步拆开：
+
+| 单位 | 定义 | 适合计费的前提 |
+|---|---|---|
+| Credit / Token | 模型或深度 AI 消耗 | 成本可测，但用户未必能理解 |
+| Action / Step | Agent 执行一个动作或自动化步骤 | 需记录动作边界、失败和重试 |
+| Resolution / Outcome | Agent 完成请求或交付约定结果 | 需定义成功、人工升级、归因和退款 |
+
+Atlassian 2026-09-01 公告将 Rovo credits、automation steps 与 AI agent resolutions 分列，且 resolution 指无人工升级完成请求；相关 allowance/billing 计划于 2026-12-03 生效。这是已宣布的商业设计，不代表所有客户当日已按此收费。Docusign 2026-09-03 的财报披露 Agent Studio 和工作流能力，但 IAM ARR 不是 Agent 单独收入。设计定价时应保持“计量单位”和“业务价值”两张表，不能把 action 自动写成 outcome。
+
 ### 组合拳怎么打（避免左右互搏）
 
 | 主叙事 | 常见辅路径 | 产品上要统一的事 |
@@ -114,20 +126,20 @@ Q4  是否有超大免费流量，且必须长期维持「聊天不设墙」？
 
 ## 四、Token 计费劝退：什么时候别对用户透传
 
-**对平台/内部**：按 Token 算账几乎永远有用（预算、路由、降本）。  
+**对平台/内部**：按 Token 算账几乎永远有用（预算、路由、降本）。
 **对 C 端用户**：把「输入/输出百万 Token 单价」直接做成账单，常常是体验事故。
 
 出现以下任一条件，优先改成**额度包月、积分、按次、或结果价**，而不是裸 Token：
 
-1. **用户无法预估下一句要花多少**  
+1. **用户无法预估下一句要花多少**
    多轮历史、系统 Prompt、工具定义、RAG 片段都算输入；用户以为在「聊一句」，实际在烧上下文。账单抖动 → 退订与客诉。
-2. **输出单价显著高于输入，且产品鼓励长答/Agent 多步**  
-   公开 API 上输出常为输入的约 5–6 倍量级（见上表）。用户越「用得爽」，你越难用透明 Token 价解释「为什么这一下特别贵」。
-3. **任务边界模糊、失败要重试**  
+2. **输出单价显著高于输入，且产品鼓励长答/Agent 多步**
+   多数公开 API 价目会把输出和输入分开计价，倍率随模型与处理档变化，不能套用固定倍数。用户越「用得爽」，你越难用透明 Token 价解释「为什么这一下特别贵」。
+3. **任务边界模糊、失败要重试**
    重试、换模型、人工兜底若仍按 Token 向用户加价，等于惩罚探索行为。
-4. **采购决策者与使用者分离（常见 B 端）**  
+4. **采购决策者与使用者分离（常见 B 端）**
    业务要弹性，财务要封顶：更适合席位 + 共享额度池 / 支出上限，而不是每人一张浮动 Token 账单。
-5. **竞品心智已是「包月助手」**  
+5. **竞品心智已是「包月助手」**
    在 ChatGPT / Claude 式分层已教育市场的品类里，突然改成「看 Token 流水」会抬高理解成本，除非你明确卖的是开发者 API。
 
 **仍应对用户「用量可见」的做法**（不等于裸 Token 价）：进度条式额度、接近上限告警、高峰降速说明、企业支出 cap——面试追问里的「成本不可预期怎么办」同一套路，见 [商业模式面试题](../../04-interview/case-analysis/ai-business-model-and-pricing.md)。
@@ -163,15 +175,15 @@ Q4  是否有超大免费流量，且必须长期维持「聊天不设墙」？
 
 延续助手合集做法：先用成本模板估出**免费层月度推理区间**，再反推：
 
-- 订阅：需要多少付费用户 × ARPU  
-- 广告：需要多少有效库存 × 怎样的 eCPM（若无实测，只标情景）  
-- 交易：需要多少单 × 单均贡献（扣补贴与履约）  
+- 订阅：需要多少付费用户 × ARPU
+- 广告：需要多少有效库存 × 怎样的 eCPM（若无实测，只标情景）
+- 交易：需要多少单 × 单均贡献（扣补贴与履约）
 
 缺公开分母时，转化率与 ARR **只作情景上下界**，写入假设表，不写进「已验证」。
 
 ### 5.4 迷你算例（把底线说清楚即可）
 
-沿用成本文量级感：DAU 10 万、渗透 30%、人均日调 5 次、主力档模型，粗算月模型成本可到约 **2.5 万美元** 量级（详见 [llm-cost-101](llm-cost-101.md) 完整假设）。  
+沿用成本文量级感：DAU 10 万、渗透 30%、人均日调 5 次、主力档模型，粗算月模型成本可到约 **2.5 万美元** 量级（详见 [llm-cost-101](llm-cost-101.md) 完整假设）。
 
 若该功能对用户全免费、又无广告/交易第二条腿，则「商业化」问题先变成：**谁补贴这 2.5 万+/月，补贴到什么指标算成功**——而不是先设计精美价目表。若改为 Pro 档订阅承接重度用量，应用本档用户的真实分位成本做压力测试，而不是用「平均用户」自我安慰。
 
@@ -179,11 +191,13 @@ Q4  是否有超大免费流量，且必须长期维持「聊天不设墙」？
 
 ## 六、给 PM 的落地清单
 
-1. **一页写清**：主模式、辅模式、免费层成功标准、成本模板链接、访问日官方价目截图或链接。  
-2. **收费点对齐高意图 + 高边际成本**：Agent 长跑、高档模型、深度研究、企业治理——而不是打断闲聊。  
-3. **包干必做分位**：看 P90/P99 用量，不看均值；必要时「席位 + 用量」或超额按量。  
-4. **对外数字降级**：官方定价可写进 PRD；媒体收入拆分、匿名转化率默认存疑。  
+1. **一页写清**：主模式、辅模式、免费层成功标准、成本模板链接、访问日官方价目截图或链接。
+2. **收费点对齐高意图 + 高边际成本**：Agent 长跑、高档模型、深度研究、企业治理——而不是打断闲聊。
+3. **包干必做分位**：看 P90/P99 用量，不看均值；必要时「席位 + 用量」或超额按量。
+4. **对外数字降级**：官方定价可写进 PRD；媒体收入拆分、匿名转化率默认存疑。
 5. **模式可改，契约要稳**：调价与改计量方式提前公告；企业合同写清封顶与超额。
+
+6. **结果计费必须能审计**：定义成功状态、人工升级、重复请求、失败重试、退款和客户异议的证据字段；没有稳定结果证据时，先用席位/额度或 action 试点。
 
 ---
 
@@ -201,8 +215,11 @@ Q4  是否有超大免费流量，且必须长期维持「聊天不设墙」？
 
 ## 参考资料
 
-- [ChatGPT Plans / Pricing](https://chatgpt.com/pricing/) — OpenAI 消费级计划页，访问约 2026-08-06  
-- [Claude Plans & Pricing](https://claude.com/pricing) — Anthropic 消费/团队/企业计划页（含 Pro / Max / Team / Enterprise 结构），访问约 2026-08-06  
-- [Pricing - Claude Platform Docs](https://platform.claude.com/docs/en/about-claude/pricing) — Anthropic API 定价（含 Sonnet 5 引导价截止日期），访问约 2026-08-06  
-- [Pricing | OpenAI API](https://developers.openai.com/api/docs/pricing) — OpenAI API 定价，访问约 2026-08-06  
+- [ChatGPT Plans / Pricing](https://chatgpt.com/pricing/) — OpenAI 消费级计划页，动态页面；本次不摘录具体消费档位，访问 2026-09-14
+- [Claude Plans & Pricing](https://claude.com/pricing) — Anthropic 消费/团队/企业计划页，访问 2026-09-14。
+- [What is the Enterprise plan?](https://support.claude.com/en/articles/9797531-what-is-the-enterprise-plan) — Anthropic Enterprise 席位与用量说明，访问 2026-09-14；价格可能变化。
+- [Pricing - Claude Platform Docs](https://platform.claude.com/docs/en/about-claude/pricing) — Anthropic API 定价，访问 2026-09-14。
+- [OpenAI model comparison](https://developers.openai.com/api/docs/models/compare) — OpenAI 官方模型与价格，访问 2026-09-14。
+- [Atlassian usage-based pricing](https://www.atlassian.com/blog/company-news/expanded-usage-based-pricing) — Atlassian 官方公告，2026-09-01；AI agent resolutions 与 2026-12-03 生效日，访问 2026-09-14。
+- [Docusign Q2 FY27 results](https://www.sec.gov/Archives/edgar/data/1261333/000126133326000088/q227ex-991er.htm) — SEC Exhibit 99.1，2026-09-03；IAM ARR 为公司定义口径，不等同 Agent 收入，访问 2026-09-14。
 - 选题启发：磊叔 / AIRay1015《关于 AI 产品经理的 100 个问题》Q75、Q76、Q78（飞书专题；**不摘录正文**）

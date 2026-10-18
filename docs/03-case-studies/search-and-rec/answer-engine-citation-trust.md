@@ -40,7 +40,7 @@ Perplexity 把自身定位为 answer engine，并把「逐句编号引用」当�
 
 ### 2.2 信源选择本身就是可感知体验
 
-引用 UI 相同，信源偏好不同，信任气质也会不同。Perplexity 案例记录的第三方统计对照很有用：ChatGPT 引用中 Wikipedia 占比可达 **47.9%**，Perplexity 更偏 Reddit（**46.7%**）与 **30 天内**新鲜内容（引用权重可达 **3.2 倍**）；同一品牌在两边被引用的域名重合度仅约 **11%**。这说明「权威」不是后台隐藏参数，而是用户能感觉到的产品差异——学术调研与「找真实体验帖」本就不该共用同一套信源默认值。夸克侧则用结果分栏（资讯、文档等）+ 来源卡片，把传统搜索的材料感保留在答案旁边，降低「AI 突然接管」的断裂感。
+引用 UI 相同，信源偏好不同，信任气质也会不同。此前流传的 Wikipedia、Reddit 占比、30 天权重和域名重合度等第三方统计，本文无法在两家官方文档中按同一口径复核，因此删除精确数字。可保留的产品事实是：Perplexity 提供 Focus 等信源范围控制；夸克公开页用结果分栏（资讯、文档等）与来源卡片保留材料感。学术调研与「找真实体验帖」不应默认共用同一套信源策略。
 
 ### 2.3 有引用 ≠ 答案正确
 
@@ -105,5 +105,5 @@ Perplexity 把自身定位为 answer engine，并把「逐句编号引用」当�
 - [Perplexity 案例拆解](perplexity.md) — 逐句引用、信源偏好统计、弃广告与 Comet Plus 分成等
 - [夸克 AI 搜索案例拆解](quark.md) — 编号引用、来源卡、生成声明、「无广告」文案边界
 - [Google AI Overviews / AI Mode 案例拆解](google-ai-mode.md) — Ads in Overviews/Mode、Sponsored 与敏感垂类限制
-- [How does Perplexity work?](https://www.perplexity.ai/help-center/en/articles/10352895-how-does-perplexity-work) — Perplexity 官方帮助中心（经 Perplexity 案例转引），2026-07 访问
-- [About ads and AI Overviews](https://support.google.com/google-ads/answer/16297775) — Google Ads Help（经 Google 案例转引），2026-07 访问
+- [How does Perplexity work?](https://www.perplexity.ai/help-center/en/articles/10352895-how-does-perplexity-work) — Perplexity 官方帮助中心（经 Perplexity 案例转引），2026-09-14 访问
+- [About ads and AI Overviews](https://support.google.com/google-ads/answer/16297775) — Google Ads Help（经 Google 案例转引），2026-09-14 访问

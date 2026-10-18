@@ -7,7 +7,7 @@ permalink: aipmwiki/docs/03-case-studies/search-and-rec/quark
 # 夸克 AI 搜索与答案引擎案例拆解
 
 **分类**:搜推
-**体验/核验时间**:2026 年 7 月 13 日（以公开产品页、公开搜索结果页为准；页面功能可能随版本变化）
+**体验时间**:2026 年 7 月 13 日；**动态核验**:2026-09-14（公开产品页、搜索结果页；页面功能可能随版本变化）
 
 ## 一、产品背景
 
@@ -148,9 +148,9 @@ permalink: aipmwiki/docs/03-case-studies/search-and-rec/quark
 
 ## 参考资料
 
-- [夸克 AI 旗舰应用官网](https://ai.quark.cn/) — 夸克官方产品页，展示 AI 浏览器、AI 搜索、AI 侧边栏、AI 总结、PDF、视频和中文任务入口，2026-07-13 访问
-- [夸克 AI 搜索页](https://www.quark.cn/s/ai-search) — 夸克官方搜索入口，核验“搜索、提问或输入网址”、结果分栏和筛选入口，2026-07-13 访问
-- [夸克 AI 搜索开放平台](https://vt.quark.cn/blm/qk-ai-business-page-915/index?x_render_type=stream_ssr) — 夸克官方开放平台页面，2026-07-13 访问
-- [夸克官网](https://www.quark.cn/) — 夸克官方 PC/应用介绍页，展示 AI 浏览器、AI 侧边栏、PDF、播放器和网盘等能力，2026-07-13 访问
-- [夸克用户协议](https://terms.alicdn.com/legal-agreement/terms/c_end_product_protocol/20230727183841535/20230727183841535.html) — 夸克官方协议页面，2026-07-13 访问
-- [夸克隐私权政策](https://terms.alicdn.com/legal-agreement/terms/c_end_product_protocol/20230727184418287/20230727184418287.html) — 夸克官方隐私政策页面，2026-07-13 访问
+- [夸克 AI 旗舰应用官网](https://ai.quark.cn/) — 夸克官方产品页，展示 AI 浏览器、AI 搜索、AI 侧边栏、AI 总结、PDF、视频和中文任务入口，2026-09-14 访问
+- [夸克 AI 搜索页](https://www.quark.cn/s/ai-search) — 夸克官方搜索入口，核验“搜索、提问或输入网址”、结果分栏和筛选入口，2026-09-14 访问
+- [夸克 AI 搜索开放平台](https://vt.quark.cn/blm/qk-ai-business-page-915/index?x_render_type=stream_ssr) — 夸克官方开放平台页面，2026-09-14 访问
+- [夸克官网](https://www.quark.cn/) — 夸克官方 PC/应用介绍页，展示 AI 浏览器、AI 侧边栏、PDF、播放器和网盘等能力，2026-09-14 访问
+- [夸克用户协议](https://terms.alicdn.com/legal-agreement/terms/c_end_product_protocol/20230727183841535/20230727183841535.html) — 夸克官方协议页面，2026-09-14 访问
+- [夸克隐私权政策](https://terms.alicdn.com/legal-agreement/terms/c_end_product_protocol/20230727184418287/20230727184418287.html) — 夸克官方隐私政策页面，2026-09-14 访问

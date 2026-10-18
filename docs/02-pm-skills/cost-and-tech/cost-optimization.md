@@ -6,9 +6,9 @@ permalink: aipmwiki/docs/02-pm-skills/cost-and-tech/cost-optimization
 
 # 降本手段盘点:缓存、批处理、路由与蒸馏
 
-> **信息状态**：动态快照｜**最后核验**：2026-08-06
+> **信息状态**：动态快照｜**最后核验**：2026-09-14
 
-> 价格截至 2026-07,以官方定价页为准。本文延续[《AI 产品成本测算入门》](llm-cost-101.md)的价格表和[《模型选型决策框架》](model-selection-framework.md)的分层策略,聚焦两件事:① 账算出来太贵之后,**具体怎么降**;② 降本手段本身的**反模式与暗成本**,避免"看着省了、实际更贵"。
+> 价格与折扣以 2026-09-14 访问的官方页面为准，处理档、模型、区域和促销会变化。本文延续[《AI 产品成本测算入门》](llm-cost-101.md)的测算方法和[《模型选型决策框架》](model-selection-framework.md)的分层策略，聚焦两件事：① 账算出来太贵之后，具体怎么降；② 降本手段本身的反模式与暗成本。
 
 如果按[成本测算入门](llm-cost-101.md)里的模板算出账单超预算,不要第一反应就是"换个便宜模型"——效果打折的代价往往比省下的钱更贵。更稳妥的顺序是:先做**无损或低损**的降本(缓存、批处理、上下文瘦身),再考虑**有取舍**的降本(小模型路由、蒸馏),这也是[面试案例:成本涨 10 倍如何降本](../../04-interview/case-analysis/reduce-llm-cost-10x.md)里"三层递进"思路的具体展开。后半部分则补上单位经济学里常漏掉的暗成本、品类成本框架,以及 Jevons 悖论、路由失败与缓存负优化——这些往往比"再砍一刀单价"更能解释真实账单。
 
@@ -16,11 +16,11 @@ permalink: aipmwiki/docs/02-pm-skills/cost-and-tech/cost-optimization
 
 | 手段 | 适用场景 | 节省幅度参考 | 代价 |
 |------|----------|--------------|------|
-| Prompt Caching(提示缓存) | 系统 Prompt/长文档/多轮历史有重复前缀 | 缓存命中部分省 90% | 需要设计 Prompt 结构,命中率取决于流量模式 |
-| Batch API(批处理) | 非实时、可延迟到数小时内返回的任务 | 输入输出均省 50% | 不能用于实时对话,有等待时间 |
-| 小模型路由/分级服务 | 请求难度分布不均,大量简单请求 | 综合省 30%-60% | 路由误判风险,需要额外的分类器和监控 |
-| 蒸馏/微调小模型 | 任务边界清晰、调用量大、可积累训练数据 | 长期可省 70% 以上 | 前期数据+训练投入大,迭代周期长 |
-| 上下文瘦身 | 长对话、长文档场景,历史/检索内容冗余 | 视压缩比例,省 20%-50% | 压缩不当可能丢失关键信息,需评估效果影响 |
+| Prompt Caching(提示缓存) | 系统 Prompt/长文档/多轮历史有重复前缀 | 命中部分按厂商和模型价格计，Anthropic 官方示例缓存命中为基础输入价的 0.1 倍 | 需要设计 Prompt 结构，命中率取决于流量模式 |
+| Batch API(批处理) | 非实时、可延迟返回的任务 | Anthropic、OpenAI、Google 页面均提供专门批处理档；具体折扣按当前价目核对 | 不能用于实时对话，有等待时间 |
+| 小模型路由/分级服务 | 请求难度分布不均，大量简单请求 | 仅作自有情景测算，不写成固定节省比例 | 路由误判风险，需要分类器和监控 |
+| 蒸馏/微调小模型 | 任务边界清晰、调用量大、可积累训练数据 | 需用自有训练和推理成本核算 | 前期数据、训练和评估投入大 |
+| 上下文瘦身 | 长对话、长文档场景，历史/检索内容冗余 | 视压缩比例和效果损失测算 | 压缩不当可能丢失关键信息 |
 
 下面逐一展开每种手段的具体机制、官方折扣和落地要点。
 
@@ -30,33 +30,33 @@ permalink: aipmwiki/docs/02-pm-skills/cost-and-tech/cost-optimization
 
 | 厂商 | 触发方式 | 写入价格 | 读取(命中)价格 | 缓存时长 |
 |------|----------|----------|------------------|----------|
-| Anthropic(Claude) | 显式声明 `cache_control`,或开启自动缓存管理 | 5 分钟缓存:1.25x 标准输入价;1 小时缓存:2x 标准输入价 | 0.1x 标准输入价(即命中省 90%) | 5 分钟或 1 小时(可续期) |
-| OpenAI(GPT) | 全自动生效,前 1024 token 完全一致即可命中,以 128 token 为粒度递增匹配 | 无额外写入费用 | 约为标准输入价的 10%(省 90%) | 官方未承诺固定时长,通常几分钟到 1 小时,取决于系统负载 |
-| Google(Gemini) | 需通过 API 显式创建缓存并设置 TTL(隐式缓存也在演进中) | 一次性写入费(约 $0.50/百万 token,量级参考),另需按 TTL 计算存储费 | 约为标准输入价的 90% 折扣(Gemini 2.5 及以上模型) | 默认 60 分钟,可自定义 TTL,主力模型(Flash 级)存储费约 $1/百万 token/小时 |
+| Anthropic(Claude) | 显式声明 `cache_control` | 5 分钟缓存 1.25x、1 小时缓存 2x 基础输入价 | 缓存命中与刷新为基础输入价的 0.1x | 5 分钟或 1 小时，可续期 |
+| OpenAI(GPT) | 官方文档说明自动缓存；命中条件和价格按模型页核对 | 以当前模型页为准 | GPT-5.6 示例缓存输入为标准输入的 0.1x | 官方未承诺固定时长 |
+| Google(Gemini) | 通过 API 创建缓存并设置 TTL；不同模型价格不同 | 以当前 Gemini pricing/caching 页面为准，另有存储费 | 按当前模型缓存价格计，不套用统一折扣 | TTL 与模型和缓存对象有关 |
 
 **PM 需要关注的产品设计要点**:
 
 - 缓存收益取决于"重复前缀"的比例。系统 Prompt、few-shot 示例、长文档背景资料这类**放在 Prompt 开头且很少变化**的内容,最适合缓存;用户的个性化输入应该放在末尾,不要打断可复用的前缀。
 - Anthropic 和 Gemini 的显式缓存有"写入成本"和"存储成本",如果这段内容命中率很低(比如只读一次就过期),反而可能比不缓存更贵——这也是为什么 Gemini 文档特别强调"TTL 要匹配实际访问频率"。
 - OpenAI 的自动缓存无需额外开发,但要求前 1024 token 完全一致,团队在设计 Prompt 模板时要注意让"公共部分"排在最前面,哪怕多花一点结构设计的功夫。
-- 缓存折扣可以和 Batch API 折扣**叠加**使用,两者同时用时降本效果最明显。
+- 缓存与 Batch 是否能叠加，取决于厂商、模型和处理档的计费规则；不能把两种折扣默认相加。上线前逐项核对当期价格页、Batch 文档与账单样例，若没有明确允许，就按不能叠加测算。
 
 ## 三、Batch API(批处理)
 
 | 厂商 | 官方折扣 | 典型 SLA | 实际完成时间参考 |
 |------|----------|----------|--------------------|
-| Anthropic | 输入输出均 50% off | 24 小时内完成 | 大多数批次 1-2 小时内完成 |
-| OpenAI | 输入输出均 50% off(等同于 Flex 处理档位) | 24 小时内完成 | 常见 1-6 小时 |
-| Google(Gemini) | 输入输出均 50% off | 目标 24 小时内 | 常见 2-6 小时 |
+| Anthropic | 官方 Batch 价目显示输入输出均 50% off（具体模型以当前页为准） | 官方文档说明为异步处理；不要把内部完成时间写成 SLA | 需用自有批次日志核算 |
+| OpenAI | 官方 Batch 价目显示输入输出均 50% off（处理档与模型以当前页为准） | 以当期 Batch 文档为准 | 需用自有批次日志核算 |
+| Google(Gemini) | 官方 Batch 价目显示输入输出均 50% off（具体模型以当前页为准） | 以当期 Batch 文档为准 | 需用自有批次日志核算 |
 
-三家官方 SLA 都是"24 小时内完成",实际情况通常更快,但**不能承诺给用户"秒回"**,因此只适合非实时场景,比如:
+Batch 是异步处理，具体完成时限、服务承诺和取消规则按厂商、模型与当期文档核对；不能把某一家页面的时限外推为三家统一 SLA，也不能承诺给用户"秒回"，因此只适合非实时场景,比如:
 
 - 离线批量生成(营销文案、商品描述、周期性报告)
 - 数据标注辅助 / 预标注
 - 历史数据的批量重新评估(比如模型升级后要重新跑一遍评估集)
 - 非即时的内容审核复核
 
-**落地建议**:把产品功能拆成"用户等待的实时部分"和"可以异步完成的部分"。比如客服场景中,用户提问必须实时应答,但"每日生成服务质量周报""批量给历史工单打标签"完全可以走 Batch,这部分能直接省下一半成本。
+**落地建议**:把产品功能拆成“用户等待的实时部分”和“可以异步完成的部分”。比如客服场景中，用户提问必须实时应答，但每日生成周报、批量给历史工单打标签可以走 Batch；节省金额按当前模型、处理档和实际用量重算。
 
 ## 四、小模型路由/分级服务
 
@@ -66,22 +66,20 @@ permalink: aipmwiki/docs/02-pm-skills/cost-and-tech/cost-optimization
 用户请求
    ↓
 意图/难度分类器(用极小模型或规则,成本几乎为零)
-   ├── 简单请求(约 60-70%)→ 轻量模型(Haiku / mini・nano / Flash-Lite 级)
-   ├── 中等请求(约 20-30%)→ 主力模型(Sonnet / 主力 / Flash 级)
-   └── 复杂请求(约 5-10%)→ 旗舰模型(Opus / 旗舰 / Pro 级)
+   ├── 简单请求(示例比例，需用线上数据替换)→ 轻量模型(Haiku / mini・nano / Flash-Lite 级)
+   ├── 中等请求(示例比例，需用线上数据替换)→ 主力模型(Sonnet / 主力 / Flash 级)
+   └── 复杂请求(示例比例，需用线上数据替换)→ 旗舰模型(Opus / 旗舰 / Pro 级)
 ```
 
-**节省幅度测算示例**(延续 llm-cost-101.md 的问答助手案例,假设全部改用 Sonnet 4.6 的成本是 $24,975/月):
+**节省幅度测算示例**（沿用 [llm-cost-101](llm-cost-101.md) 的问答助手算例，$16,650/月仅是该算例的假设结果，不是外部基准）：
 
 ```
 若引入分层路由:
-- 60% 简单请求 → Haiku 4.5(单价约为 Sonnet 4.6 的 1/3)
-- 30% 中等请求 → 仍走 Sonnet 4.6
-- 10% 复杂请求 → 仍走 Sonnet 4.6(暂不升级到 Opus)
+- 60% 简单请求 → 轻量模型（按当前价格页填写）
+- 30% 中等请求 → 主力模型
+- 10% 复杂请求 → 主力或旗舰模型
 
-粗略估算:60% 的调用成本降至原来的 1/3,其余 40% 不变
-综合成本 ≈ 24,975 × (60% × 1/3 + 40% × 1) ≈ 24,975 × 0.6 ≈ $14,985/月
-降本幅度 ≈ 40%
+将实际输入/输出单价代入后，再计算综合成本；若未有线上路由比例和失败重试数据，只能称为情景演算。
 ```
 
 **代价与风险**:路由误判是最大的风险——把复杂问题误判成简单问题、发给轻量模型,会直接导致该请求的回答质量下降。缓解方法:
@@ -98,7 +96,7 @@ permalink: aipmwiki/docs/02-pm-skills/cost-and-tech/cost-optimization
 |------|------|
 | 适用信号 | 任务范围窄(比如"从客服对话中提取工单类型")、调用量足够大能摊薄训练成本、大模型效果已验证但太贵 |
 | 数据来源 | 用旗舰模型批量生成标注数据(结合 Batch API 降低生成成本),再人工抽检修正 |
-| 前期投入 | 数据构建、训练/微调、评估体系搭建,通常需要算法团队 4-8 周的投入 |
+| 前期投入 | 数据构建、训练/微调、评估体系搭建；周期与数据准备、模型方案和团队资源有关，不能套用固定周数 |
 | 长期收益 | 小模型单价通常是旗舰模型的 1/10 到 1/20,调用量越大,摊薄后越划算 |
 | 风险 | 任务需求变化后,小模型需要重新训练;泛化能力弱于通用大模型,不适合开放域场景 |
 
@@ -117,19 +115,15 @@ permalink: aipmwiki/docs/02-pm-skills/cost-and-tech/cost-optimization
 
 ## 七、组合策略案例
 
-回到 llm-cost-101.md 中"DAU 10 万问答助手"的案例(基线月成本约 $24,975),叠加多种手段后的效果参考:
+回到 llm-cost-101.md 中“DAU 10 万问答助手”的案例（基线月成本约 $16,650，仅为独立教学假设），叠加多种手段时应按当前价目重算：
 
 ```
-基线(全部走 Sonnet 4.6,同步调用): $24,975/月
+基线：选定模型、输入/输出 token、调用次数和处理档后计算。
+小模型路由：使用线上路由比例、升级率、重试率和当前价格重算。
+Prompt Caching：使用可复用前缀占比、命中率、写入/存储成本和缓存价重算。
+Batch：仅对可异步任务使用，并按当前 Batch 价和完成时限重算。
 
-+ 小模型路由(40% 降本,见上文): → 约 $14,985/月
-+ Prompt Caching(系统 Prompt + 检索背景占输入的 40%,命中率 70%,命中部分省 90%):
-    输入成本中约 40% × 70% × 90% 的部分被节省
-    → 输入成本再降约 25%,整体再降约 10-15%: → 约 $13,000/月
-+ 非实时的周报/批量摘要功能改用 Batch API(设该部分占总量 15%,省 50%):
-    → 再降约 5-8%: → 约 $12,000-12,500/月
-
-综合降本幅度:约 50%,且优先动用的都是"无损或低损"手段
+没有这些观测数据时，只能展示公式和敏感性区间，不能写成“综合降本 50%”或固定节省承诺。
 ```
 
 **关键结论**:降本不是选择题(选一个手段),而是组合题——缓存、批处理、路由三种手段的适用场景基本不重叠,可以叠加使用;蒸馏和微调则是在业务稳定后的长期投入项,不必第一阶段就上。落地节奏建议参考[成本涨 10 倍如何降本](../../04-interview/case-analysis/reduce-llm-cost-10x.md)里"无损降本 → 低损降本 → 结构性优化"的三层顺序,先把容易拿到的收益拿到手,再评估更重的投入项。
@@ -179,7 +173,7 @@ permalink: aipmwiki/docs/02-pm-skills/cost-and-tech/cost-optimization
 
 **Jevons 悖论**(Jevons paradox):当技术进步提高了某种资源的使用效率时,该资源的**总消耗量往往不降反升**——效率降低了单位用途的有效成本,若需求对价格足够敏感,会诱发更多使用,甚至超过节约下来的部分。英国经济学家 William Stanley Jevons 在 1865 年《煤炭问题》(The Coal Question)中讨论煤与蒸汽机效率时提出这一观察:更节约地用煤,并不等于全社会少用煤。
 
-(定义综述见 [Wikipedia: Jevons paradox](https://en.wikipedia.org/wiki/Jevons_paradox);原始论著见 Jevons, *The Coal Question*, 1865。访问日期:2026-08-06。)
+(定义综述见 [Wikipedia: Jevons paradox](https://en.wikipedia.org/wiki/Jevons_paradox);原始论著见 Jevons, *The Coal Question*, 1865。该处是历史定义，不作为 2026 年动态事实。)
 
 ### 在 AI 产品里怎么表现
 
@@ -190,7 +184,7 @@ permalink: aipmwiki/docs/02-pm-skills/cost-and-tech/cost-optimization
 3. **单次任务的 token 乘数**上升(一次用户请求触发更多内部调用);
 4. 总账单 = 单价 × 用量;单价下降被用量上升抵消甚至反超。
 
-公开讨论里,推理变便宜后企业总支出仍可能上升、以及"便宜智能刺激更多用法",已有财经与产业侧复盘(例如 [NPR Planet Money 对 AI 与 Jevons 的讨论](https://www.npr.org/sections/planet-money/2025/02/04/g-s1-46018/ai-deepseek-economics-jevons-paradox),2026-08-06 访问)。具体"降价当天账单翻几倍"属于个案叙事,**不能**当作可复现的行业系数;对 PM 有用的是机制,不是轶事数字。
+公开讨论里,推理变便宜后企业总支出仍可能上升、以及"便宜智能刺激更多用法",已有财经与产业侧复盘(例如 [NPR Planet Money 对 AI 与 Jevons 的讨论](https://www.npr.org/sections/planet-money/2025/02/04/g-s1-46018/ai-deepseek-economics-jevons-paradox)；此处只作历史机制示例，未作为 2026 年近期证据)。具体"降价当天账单翻几倍"属于个案叙事,**不能**当作可复现的行业系数;对 PM 有用的是机制,不是轶事数字。
 
 ### 对降本决策的启示
 
@@ -247,14 +241,14 @@ permalink: aipmwiki/docs/02-pm-skills/cost-and-tech/cost-optimization
 
 ## 参考资料
 
-- [Pricing - Claude Platform Docs](https://platform.claude.com/docs/en/about-claude/pricing) — Anthropic 官方定价页(含 Prompt Caching、Batch 折扣说明),2026-07 访问;机制相关条目 2026-08-06 复核
-- [Pricing | OpenAI API](https://developers.openai.com/api/docs/pricing) — OpenAI 官方定价页,2026-07 访问
-- [Prompt caching | OpenAI API](https://developers.openai.com/api/docs/guides/prompt-caching) — OpenAI 提示缓存机制说明,2026-07 访问
-- [Batch API | OpenAI API](https://developers.openai.com/api/docs/guides/batch) — OpenAI 批处理说明,2026-07 访问
-- [Gemini Developer API pricing | Google AI for Developers](https://ai.google.dev/gemini-api/docs/pricing) — Google 官方定价页,2026-07 访问
-- [Context caching | Gemini API | Google AI for Developers](https://ai.google.dev/gemini-api/docs/caching) — Google 上下文缓存机制说明,2026-07 访问
-- [Batch API | Gemini API | Google AI for Developers](https://ai.google.dev/gemini-api/docs/batch-api) — Google 批处理说明,2026-07 访问
-- [Jevons paradox - Wikipedia](https://en.wikipedia.org/wiki/Jevons_paradox) — Jevons 悖论定义与机制综述,2026-08-06 访问
-- Jevons, William Stanley. *The Coal Question*. London: Macmillan, 1865. 可参考 [Yale Energy History 摘录说明](https://energyhistory.yale.edu/w-stanley-jevons-the-coal-question-1865/),2026-08-06 访问
-- [Why the AI world is suddenly obsessed with Jevons paradox (NPR / Planet Money)](https://www.npr.org/sections/planet-money/2025/02/04/g-s1-46018/ai-deepseek-economics-jevons-paradox) — AI 语境下的公开讨论,2026-08-06 访问
+- [Pricing - Claude Platform Docs](https://platform.claude.com/docs/en/about-claude/pricing) — Anthropic 官方定价、缓存和 Batch 说明，访问 2026-09-14。
+- [OpenAI model comparison](https://developers.openai.com/api/docs/models/compare) — OpenAI 官方模型和价格，访问 2026-09-14。
+- [Prompt caching | OpenAI API](https://developers.openai.com/api/docs/guides/prompt-caching) — OpenAI 提示缓存机制说明，访问 2026-09-14
+- [Batch API | OpenAI API](https://developers.openai.com/api/docs/guides/batch) — OpenAI 批处理说明，访问 2026-09-14
+- [Gemini Developer API pricing](https://ai.google.dev/gemini-api/docs/pricing) — Google 官方价格和处理档，访问 2026-09-14。
+- [Context caching | Gemini API](https://ai.google.dev/gemini-api/docs/caching) — Google 官方缓存机制，访问 2026-09-14。
+- [Batch API | Gemini API](https://ai.google.dev/gemini-api/docs/batch-api) — Google 官方批处理说明，访问 2026-09-14。
+- [Jevons paradox - Wikipedia](https://en.wikipedia.org/wiki/Jevons_paradox) — Jevons 悖论定义与机制综述，历史定义，本次不作为近期证据
+- Jevons, William Stanley. *The Coal Question*. London: Macmillan, 1865. 可参考 [Yale Energy History 摘录说明](https://energyhistory.yale.edu/w-stanley-jevons-the-coal-question-1865/) — 历史原始论著指针
+- [Why the AI world is suddenly obsessed with Jevons paradox (NPR / Planet Money)](https://www.npr.org/sections/planet-money/2025/02/04/g-s1-46018/ai-deepseek-economics-jevons-paradox) — AI 语境历史讨论，本次不作为 2026 年近期证据
 - 选题启发:磊叔(AIRay1015)《关于 AI 产品经理的 100 个问题》Q47 / Q52 / Q53 / Q55 / Q79 / Q80([飞书链接](https://my.feishu.cn/wiki/Rl6zw6lp2ipOnnkBVxwc5urRnLc));本文不摘录其答案正文

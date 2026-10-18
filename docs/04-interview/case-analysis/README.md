@@ -11,7 +11,7 @@ permalink: aipmwiki/docs/04-interview/case-analysis/readme
 ## 题目列表
 
 - [模型准确率从 90% 提升到 95%,对业务价值如何量化?](quantify-model-accuracy-value.md)
-- [DeepSeek 开始峰谷定价,你怎么看 AI 产品的商业模式?](ai-business-model-and-pricing.md)
+- [AI 产品峰谷定价,你怎么看商业模式?](ai-business-model-and-pricing.md)
 - [如何用 AI 优化生鲜电商的库存周转?](ai-optimize-fresh-inventory.md)
 - [估算日活 100 万的 AI 对话产品每月模型调用成本](estimate-daily-active-chat-cost.md)
 - [某功能接入大模型后成本涨了 10 倍,如何降本?](reduce-llm-cost-10x.md)

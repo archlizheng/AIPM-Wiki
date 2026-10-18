@@ -7,7 +7,7 @@ permalink: aipmwiki/docs/05-resources/tools
 # 值得上手的 AI 工具与平台
 
 > 对 AI PM 来说，「用过」比「听过」重要十倍。这里收录建议亲自上手的工具。  
-> 截至 2026-07，定价与权益可能变化，具体以官网为准。
+> 截至 2026-09，定价与权益可能变化，具体以官网为准。本文列出的 GA、Preview、Experimental 是产品状态，不等于作者已在真实业务中使用。
 
 ## 对话助手（至少深度使用 2-3 个）
 
@@ -19,7 +19,18 @@ permalink: aipmwiki/docs/05-resources/tools
 
 ## 工作流 / Agent 搭建平台(不写代码做 Demo)
 
-编程 Agent、全栈应用生成平台、低代码工作流平台的完整分类盘点与选型建议,见 [Vibe Coding 工具盘点与选型(2026 年中)](../02-pm-skills/vibe-coding/tool-landscape.md)。
+编程 Agent、全栈应用生成平台、低代码工作流平台的完整分类盘点与选型建议,见 [Vibe Coding 工具盘点与选型(2026 年 9 月)](../02-pm-skills/vibe-coding/tool-landscape.md)。
+
+## 近期可核验的 Agent 入口
+
+| 入口 | 截至 2026-09-14 的状态 | 适合先验证什么 |
+|---|---|---|
+| [GPT-Live-1 API](https://openai.com/index/introducing-gpt-live-1-in-the-api/) | 官方公告称 API 已可用；价格、地区和额度需以当前定价页复核 | 全双工语音、打断、慢工具不阻塞媒体链路 |
+| [Gemini Computer Use](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/) | Google 官方产品公告；能力开放范围和套餐按账号复核 | 浏览器或桌面操作中的确认、注入检测和恢复 |
+| [Anthropic computer use tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool) | API 工具集；需应用侧在 VM 或容器执行，不代表托管 Agent GA | allowlist、人工监督、最小权限和审计 |
+| [GitHub Copilot Agent Plugins](https://github.blog/changelog/2026-08-13-github-copilot-weekly-releases-august-10/) | Agent Plugins 1.0 GA；企业权限另见 [managed permissions](https://github.blog/changelog/2026-09-09-enterprise-managed-permissions-for-github-copilot-agent-operations/) | 代码库任务、插件边界、命令和网络权限 |
+
+采购或作品集展示前，至少保留一次真实官方入口、套餐截图或页面记录、状态标签和失败回退说明。研究论文可以帮助判断方向，但不能代替产品可用性证据。
 
 ## 效率工具
 

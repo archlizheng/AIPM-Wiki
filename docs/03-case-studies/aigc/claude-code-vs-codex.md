@@ -6,10 +6,10 @@ permalink: aipmwiki/docs/03-case-studies/aigc/claude-code-vs-codex
 
 # Claude Code 与 OpenAI Codex：AI 编程 Agent 的运行环境与执行闭环对比
 
-> **核验时间：2026 年 7 月 13 日。** 本文主要依据 Anthropic Claude Code 文档、OpenAI Codex 开发者文档与官方帮助页整理。两款产品更新很快，价格、模型、额度、计划权益和地区可用性只代表核验日页面；官方没有确认的内容标为“未披露”或“推测”，不把单次体验推断成官方承诺。
+> **核验时间：2026 年 9 月 14 日。** 本文主要依据 Anthropic Claude Code 文档、OpenAI Codex 产品与帮助页整理。两款产品更新很快，价格、模型、额度、计划权益和地区可用性只代表核验日页面；官方没有确认的内容标为“未披露”或“推测”，不把单次体验推断成官方承诺。
 
 **分类**:AIGC
-**体验时间**:2026 年 7 月（资料核验）
+**资料核验时间**:2026 年 9 月 14 日
 
 ## 一、产品背景
 
@@ -143,20 +143,11 @@ Anthropic 官方概览说明，多数 Claude Code 入口需要 Claude 订阅或 
 2. **团队/企业订阅**：用管理设置、权限策略、用量分析和组织级治理承接团队；
 3. **Console/API/第三方提供商**：让开发者或组织按各自平台的模型调用和治理方式使用。
 
-本文不把某个页面上的具体 Claude 价格或额度固化进表格：官方页面更新频繁，且本次核验材料不足以确认每个入口与每个计划的完整权益。**具体金额、地区可用性和 Claude Code 是否包含在某个计划中，发布前应重新核验 Claude 官方价格页与 Feature availability 页面。**
+截至 2026-09-14，Anthropic 官方价格页列出 Free、Pro、Max、Team 和 Enterprise 方案。页面当前显示 Pro 为年付折合 $17/月、月付 $20/月，Max 从 $100/月起，并明确 Pro 包含 Claude Code；桌面端需要付费订阅。价格和额度仍是动态信息，团队与企业权益须按方案页和地区复核。
 
 ### Codex：ChatGPT 计划用量 + credits + API key
 
-OpenAI Codex 官方定价页在本次核验时列出的个人档位如下，金额均为页面当前显示的美元月价；它们是动态信息，不应当视为长期承诺：
-
-| 档位 | 官方页面核验到的价格 | 页面给出的 Codex 定位 |
-|------|----------------------|----------------------|
-| Free | $0/月 | 体验 Codex，适合快速编码任务 |
-| Go | $8/月 | 轻量级编码任务 |
-| Plus | $20/月 | 每周若干次聚焦编码会话；页面列出 Web、CLI、IDE extension、iOS 与云端集成 |
-| Pro | $100/月起 | 5× 或 20× Plus 的更高用量档位 |
-| Business | 年付 $20/用户/月；月付 $25/用户/月 | 团队工作区与管理能力 |
-| Enterprise & Edu | 联系销售 | 企业级控制、审计、数据留存/驻留等能力 |
+截至 2026-09-14，OpenAI 官方 Codex 产品页把 Codex 定位为连接 ChatGPT、编辑器和终端的编程 Agent，并列出 worktree、云环境、多 Agent 和计划任务入口。计划价格与用量资格由 ChatGPT 方案、工作区和地区共同决定，官方页面另提供 pricing 入口；本文不把 7 月旧价位继续当作当前报价。
 
 Codex 的计费与可用性有几个值得记录的产品点：
 
@@ -195,16 +186,18 @@ Codex 的计费与可用性有几个值得记录的产品点：
 
 ## 参考资料
 
-- [Claude Code Overview](https://code.claude.com/docs/en/overview) — Anthropic 官方产品/开发者文档，终端、IDE、桌面端与 Web 入口、任务能力，2026-07-13 访问
-- [Configure permissions](https://code.claude.com/docs/en/permissions) — Anthropic 官方帮助文档，权限规则与 permission modes，2026-07-13 访问
-- [Claude Code on the web](https://code.claude.com/docs/en/claude-code-on-the-web) — Anthropic 官方开发者文档，云环境、网络与 Web 任务，2026-07-13 访问
-- [Remote Control](https://code.claude.com/docs/en/remote-control) — Anthropic 官方开发者文档，本地会话的浏览器/移动端接续，2026-07-13 访问
-- [Desktop application](https://code.claude.com/docs/en/desktop) — Anthropic 官方开发者文档，桌面端并行会话、diff、计划任务与云会话，2026-07-13 访问
-- [Plans & Pricing | Claude](https://claude.com/pricing) — Anthropic 官方定价页，计划与 API 定价入口；具体 Claude Code 权益待按发布日核验，2026-07-13 访问
+- [Claude Code Overview](https://code.claude.com/docs/en/overview) — Anthropic 官方产品/开发者文档，终端、IDE、桌面端与 Web 入口、任务能力，2026-09-14 访问
+- [Configure permissions](https://code.claude.com/docs/en/permissions) — Anthropic 官方帮助文档，权限规则与 permission modes，2026-09-14 访问
+- [Claude Code on the web](https://code.claude.com/docs/en/claude-code-on-the-web) — Anthropic 官方开发者文档，云环境、网络与 Web 任务，2026-09-14 访问
+- [Remote Control](https://code.claude.com/docs/en/remote-control) — Anthropic 官方开发者文档，本地会话的浏览器/移动端接续，2026-09-14 访问
+- [Desktop application](https://code.claude.com/docs/en/desktop) — Anthropic 官方开发者文档，桌面端并行会话、diff、计划任务与云会话，2026-09-14 访问
+- [Plans & Pricing | Claude](https://claude.com/pricing) — Anthropic 官方定价页，Pro/Max 价格与 Claude Code 方案权益，2026-09-14 访问
+- [Codex](https://openai.com/codex/) — OpenAI 官方产品页，ChatGPT、编辑器、终端、Worktree、云环境与计划任务，2026-09-14 访问
+- [ChatGPT Rate Card](https://help.openai.com/en/articles/20001415) — OpenAI 官方帮助页，ChatGPT Work 与 Codex 的动态模型计费说明，2026-09-14 访问
 - [Agent approvals & security](https://developers.openai.com/codex/agent-approvals-security) — OpenAI 官方开发者文档，sandbox、approval policy 与网络边界，2026-07-13 访问
 - [Codex environments](https://developers.openai.com/codex/environments/modes) — OpenAI 官方开发者文档，Local、Worktree、Cloud 任务环境，2026-07-13 访问
 - [Cloud environments](https://developers.openai.com/codex/environments/cloud-environment) — OpenAI 官方开发者文档，云端容器、setup script、网络与验证流程，2026-07-13 访问
 - [Code review](https://developers.openai.com/codex/code-review) — OpenAI 官方开发者文档，评审范围、findings 与应用修复的权限关系，2026-07-13 访问
 - [Authentication](https://developers.openai.com/codex/auth) — OpenAI 官方开发者文档，ChatGPT 登录、API key 与 Codex cloud 可用性，2026-07-13 访问
 - [Scheduled tasks](https://developers.openai.com/codex/automations) — OpenAI 官方开发者文档，后台计划任务与本地/Worktree 选择，2026-07-13 访问
-- [Pricing | Codex](https://developers.openai.com/codex/pricing) — OpenAI 官方定价与用量文档，计划价格、共享 usage、credits 与动态使用上限，2026-07-13 访问
+- [Pricing | Codex](https://developers.openai.com/codex/pricing) — OpenAI 官方定价与用量入口，计划价格、共享 usage、credits 与动态使用上限，2026-09-14 访问

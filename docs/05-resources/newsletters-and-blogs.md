@@ -7,7 +7,7 @@ permalink: aipmwiki/docs/05-resources/newsletters-and-blogs
 # 信息源：Newsletter、博客、播客
 
 > AI 行业变化快，好的信息源比囤课更重要。每个条目附一句话说明「它好在哪」。  
-> 截至 2026-07，本页优先收录仍稳定更新、可持续跟读的来源。
+> 截至 2026-09，本页优先收录仍稳定更新、可持续跟读的来源；单条能力仍需回到产品公告或文档核验状态。
 
 ## Newsletter
 
@@ -41,6 +41,13 @@ permalink: aipmwiki/docs/05-resources/newsletters-and-blogs
 - [A practical guide to building agents（PDF）](https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf)：同名白皮书 PDF 版本，便于离线阅读和团队分享。
 - [An enterprise guide to multi-agent systems（Google Cloud）](https://cloud.google.com/resources/content/enterprise-guide-ai-agents)：Google 官方多 Agent 企业指南，重点在生产化与治理。
 - [The AI agent handbook（Google Cloud）](https://cloud.google.com/resources/content/ai-agent-handbook)：Google 官方业务向手册，适合非技术 stakeholder 快速建立共识。
+
+## 本轮专题跟踪入口
+
+- [GPT-Live-1 in the API](https://openai.com/index/introducing-gpt-live-1-in-the-api/)：2026-09-10 官方公告，跟踪实时语音 API 的可用范围、打断和后台委派。
+- [Workspace agentic capabilities](https://workspace.google.com/blog/product-announcements/less-switching-more-flow-5-new-agentic-capabilities-across-google-workspace-apps)：2026-09-09 官方公告，跟踪跨应用可编辑交付物和滚动开放范围。
+- [GitHub Copilot weekly releases](https://github.blog/changelog/2026-09-10-github-copilot-weekly-releases-september-7/)：2026-09-10 官方 Changelog，逐项标注 Experimental 和 Public Preview。
+- [Qwen-UI-Agent](https://arxiv.org/abs/2607.28227) 与 [Qwen-Image-Agent](https://arxiv.org/abs/2606.26907)：原始论文入口，适合观察 GUI 与图像 Agent 研究方向，不能据此推断 GA 产品。
 
 ## 播客
 

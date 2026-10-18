@@ -41,3 +41,7 @@ permalink: aipmwiki/docs/00-roadmap/getting-started
 1. 系统刷 [04-interview](../04-interview/README.md) 题库,先概念题后设计题
 2. 读目标公司的 [面经](../04-interview/experiences/README.md)
 3. 准备好自己的"作品":哪怕只是一个 [Vibe Coding](../02-pm-skills/vibe-coding/README.md) 做出的小 Demo + 一份分析文档,也远胜空谈
+
+## 已在岗或希望做完整练习
+
+新人保留上面的基础顺序；已掌握 Agent、RAG 与 PRD 的读者可转 [企业 AI 在岗进阶路线](README.md#企业-ai-在岗进阶)。需要完整交付物时进入 [内部服务助手实践路线](../02-pm-skills/practice/README.md)。各课列出先修要求，练习中的成绩与成本均为虚构演算。

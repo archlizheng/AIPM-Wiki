@@ -7,7 +7,7 @@ permalink: aipmwiki/docs/03-case-studies/aigc/midjourney
 # Midjourney 案例拆解:文生图的用户分层与 GPU 定价
 
 **分类**:AIGC
-**体验时间**:2026 年 7 月
+**资料核验时间**:2026 年 9 月 14 日
 
 ## 一、产品背景
 
@@ -66,7 +66,7 @@ Midjourney 是文生图赛道里把「付费订阅 + GPU 时长计量」跑得�
 
 ## 四、商业模式
 
-### 套餐结构(核实截至 2026 年 7 月,来源:Midjourney 官方 Plans 文档)
+### 套餐结构(核实截至 2026 年 9 月 14 日,来源:Midjourney 官方 Plans 文档)
 
 | 档位 | 月付 | 年付(约合月价) | Fast GPU / 月 | Relax | Stealth |
 |------|------|----------------|---------------|-------|---------|
@@ -107,8 +107,8 @@ Midjourney 的分层可以读成三张「可独立计价的轴」:
 
 ## 参考资料
 
-- [Comparing Midjourney Plans](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) — Midjourney 官方文档(Basic/Standard/Pro/Mega 价格与权益、$1M 营收条款),2026-07 访问
-- [GPU Speed (Fast, Relax, Turbo)](https://docs.midjourney.com/hc/en-us/articles/32016412137741-GPU-Speed-Fast-Relax-Turbo) — Midjourney 官方文档(GPU 时间计量与任务耗时参考),2026-07 访问
-- [Stealth Mode](https://docs.midjourney.com/hc/en-us/articles/32019750070669-Stealth-Mode) — Midjourney 官方文档(Stealth 仅 Pro/Mega),2026-07 访问
-- [Keeping Your Creations Private](https://docs.midjourney.com/hc/en-us/articles/28014645615373-Keeping-Your-Creations-Private) — Midjourney 官方文档(默认公开与隐私边界),2026-07 访问
-- [Plan Information](https://docs.midjourney.com/hc/en-us/sections/28005319720845-Plan-Information) — Midjourney 官方文档栏目(订阅与试用说明),2026-07 访问
+- [Comparing Midjourney Plans](https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans) — Midjourney 官方文档，Basic/Standard/Pro/Mega 价格与权益，2026-09-14 访问
+- [GPU Speed (Fast, Relax, Turbo)](https://docs.midjourney.com/hc/en-us/articles/32016412137741-GPU-Speed-Fast-Relax-Turbo) — Midjourney 官方文档，GPU 时间计量与任务耗时参考，2026-09-14 访问
+- [Stealth Mode](https://docs.midjourney.com/hc/en-us/articles/32019750070669-Stealth-Mode) — Midjourney 官方文档，Stealth 仅 Pro/Mega，2026-09-14 访问
+- [Keeping Your Creations Private](https://docs.midjourney.com/hc/en-us/articles/28014645615373-Keeping-Your-Creations-Private) — Midjourney 官方文档，默认公开与隐私边界，2026-09-14 访问
+- [Plan Information](https://docs.midjourney.com/hc/en-us/sections/28005319720845-Plan-Information) — Midjourney 官方文档栏目，订阅与试用说明，2026-09-14 访问

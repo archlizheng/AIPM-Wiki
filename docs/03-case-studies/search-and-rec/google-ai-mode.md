@@ -26,14 +26,14 @@ Google 的应对不是另起一个答案引擎品牌,而是在既有 Search 上�
 - **2025-03**:AI Overviews 升级 Gemini 2.0;Labs 引入 AI Mode 实验([Expanding AI Overviews and introducing AI Mode](https://blog.google/products-and-platforms/products/search/ai-mode-search/))。
 - **2025-05 I/O**:AI Mode 在美国向用户开放(无需 Labs);Deep Search、Live、购物与 agentic 能力路线图公开([AI in Search: Going beyond information to intelligence](https://blog.google/products-and-platforms/products/search/google-search-ai-mode-update/))。
 - **2025-05**:官方开始测试/扩展 Ads in AI Overviews,并宣布测试 Ads in AI Mode([New ways AI in Search helps your business](https://blog.google/products/ads-commerce/google-search-ai-brand-discovery/))。
-- **2026-05 I/O**:官方称 AI Mode 已超过 **10 亿月用户**(monthly users),默认模型升级为 Gemini 3.5 Flash;并推进 Overviews 与 Mode 的无缝衔接([100 things we announced at Google I/O 2026](https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/))。
+- **2026-05 I/O**:官方称 AI Mode 已超过 **10 亿月用户**(monthly users),并推进 Overviews 与 Mode 的无缝衔接([100 things we announced at Google I/O 2026](https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/))。默认模型、地区与入口以当前产品页为准，本文不把某一型号写成永久默认。
 - **2026-05 Marketing Live**:在 AI Mode 内测试 Conversational Discovery ads、Highlighted Answers 等 Gemini 驱动广告形态([A new generation of ads for the AI era of Search](https://blog.google/products/ads-commerce/google-marketing-live-search-ads/))。
 
 **可核实的规模口径**(不要与第三方"覆盖率/渗透率"混用):
 
 - Google 称全球搜索量超过 **5 万亿次/年**(内部数据,2025-01 口径,见广告商业博客脚注)。
 - AI Overviews:2025-03 博客写"used by more than a billion people"(使用过的人数口径,不是月活定义);美/印等大市场,对会展示 Overview 的那类查询,实验显示 Google 使用量提升超过 **10%**。
-- AI Mode:2026-05 I/O 官方清单写明 **surpassed more than 1 billion monthly users**;并称上线以来查询量每季度翻倍以上。Labs 早期反馈称 AI Mode 查询平均长度约为传统搜索的 **2 倍**。
+- AI Mode:2026-05 I/O 官方清单写明 **surpassed more than 1 billion monthly users**;并称上线以来查询量每季度翻倍以上。Google 2026-05-19 的官方用户研究更新称，AI Mode 平均查询长度约为传统 Search 的 **3 倍**；这是 Google 的行为统计口径，不应泛化为所有市场或所有用户。
 
 一句话定位:这是**垄断搜索入口上的答案层防御**——先用 Overviews 守住"第一屏答案",再用 Mode 承接长问与多轮,同时把广告库存迁进答案面,而不是像 Perplexity 那样用弃广告换信任定位。
 
@@ -76,7 +76,7 @@ Google 的应对不是另起一个答案引擎品牌,而是在既有 Search 上�
 
 Google Search 的商业内核仍是广告。答案层若只摘要、不点击,会压缩自然结果与部分广告的曝光路径——因此 Google 的选择与 Perplexity **相反**:不是撤广告,而是**把广告库存搬进答案面**,并宣称这能缩短"发现 → 决策"路径。
 
-### 4.1 Ads in AI Overviews(Ads Help,核实截至 2026-07)
+### 4.1 Ads in AI Overviews（Ads Help，核实截至 2026-09-14）
 
 据 [About ads and AI Overviews](https://support.google.com/google-ads/answer/16297775):
 
@@ -118,11 +118,12 @@ Google Search 的商业内核仍是广告。答案层若只摘要、不点击,�
 
 ## 参考资料
 
-- [Expanding AI Overviews and introducing AI Mode](https://blog.google/products-and-platforms/products/search/ai-mode-search/) — Google Blog,2025-03;2026-07 访问
-- [AI in Search: Going beyond information to intelligence](https://blog.google/products-and-platforms/products/search/google-search-ai-mode-update/) — Google Blog / I/O 2025,2025-05;2026-07 访问
-- [New ways to interact with information in AI Mode](https://blog.google/products-and-platforms/products/search/ai-mode-updates-may-2025/) — Google Blog,2025-05;2026-07 访问
-- [100 things we announced at Google I/O 2026](https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/) — Google Blog,2026-05;含 AI Mode 10 亿月用户口径;2026-07 访问
-- [New ways AI in Search helps your business](https://blog.google/products/ads-commerce/google-search-ai-brand-discovery/) — Google Ads Blog,2025-05;2026-07 访问
-- [A new generation of ads for the AI era of Search](https://blog.google/products/ads-commerce/google-marketing-live-search-ads/) — Google Ads Blog / Marketing Live,2026-05;2026-07 访问
-- [About ads and AI Overviews](https://support.google.com/google-ads/answer/16297775) — Google Ads Help;2026-07 访问
-- [Ads in AI Mode](https://business.google.com/us/accelerate/announcements/ads-in-ai-mode/) — Google Business / Accelerate;2026-07 访问
+- [Expanding AI Overviews and introducing AI Mode](https://blog.google/products-and-platforms/products/search/ai-mode-search/) — Google Blog,2025-03;2026-09-14 访问
+- [AI in Search: Going beyond information to intelligence](https://blog.google/products-and-platforms/products/search/google-search-ai-mode-update/) — Google Blog / I/O 2025,2025-05;2026-09-14 访问
+- [New ways to interact with information in AI Mode](https://blog.google/products-and-platforms/products/search/ai-mode-updates-may-2025/) — Google Blog,2025-05;2026-09-14 访问
+- [100 things we announced at Google I/O 2026](https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/) — Google Blog,2026-05;含 AI Mode 10 亿月用户口径;2026-09-14 访问
+- [How AI Mode is changing and expanding the way people search](https://blog.google/products-and-platforms/products/search/ai-mode-us-insights/) — Google Blog,2026-05-19;含平均查询长度约 3 倍口径;2026-09-14 访问
+- [New ways AI in Search helps your business](https://blog.google/products/ads-commerce/google-search-ai-brand-discovery/) — Google Ads Blog,2025-05;2026-09-14 访问
+- [A new generation of ads for the AI era of Search](https://blog.google/products/ads-commerce/google-marketing-live-search-ads/) — Google Ads Blog / Marketing Live,2026-05;2026-09-14 访问
+- [About ads and AI Overviews](https://support.google.com/google-ads/answer/16297775) — Google Ads Help;2026-09-14 访问
+- [Ads in AI Mode](https://business.google.com/us/accelerate/announcements/ads-in-ai-mode/) — Google Business / Accelerate;2026-09-14 访问

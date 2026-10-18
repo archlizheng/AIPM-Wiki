@@ -6,7 +6,7 @@ permalink: aipmwiki/docs/01-ai-basics/llm/mcp
 
 # MCP:给 Agent 接上外部世界的「USB-C」
 
-> 时效说明:协议角色与三大原语相对稳定;公开服务器数量、厂商目录与企业鉴权能力截至 **2026-07**,请以 [modelcontextprotocol.io](https://modelcontextprotocol.io/) 与各厂商文档为准。
+> 时效说明：概念部分保留原有来源日期；2026-07-28规范变化于2026-09-14专项核验，见文末版本更新。历史生态数字不是当前数量；具体客户端兼容性仍需逐项核对。
 
 ## 一句话说清
 
@@ -34,7 +34,7 @@ permalink: aipmwiki/docs/01-ai-basics/llm/mcp
 | 角色 | 是什么 | 例子 |
 |------|--------|------|
 | **MCP Host** | 使用 AI 的应用程序,负责协调 | Claude Desktop、Cursor、VS Code、ChatGPT |
-| **MCP Client** | Host 内部、与**某一个** Server 保持连接的组件 | Host 连 Sentry 时实例化一个 Client,再连文件系统时再实例化一个 |
+| **MCP Client** | Host 内部、与**某一个** Server 交互的组件；新版远程协议不要求持久会话 | Host 连 Sentry 时实例化一个 Client,再连文件系统时再实例化一个 |
 | **MCP Server** | 对外暴露能力的程序(本地或远程) | 本地 filesystem 服务器、远程 Sentry / 公司内部知识库服务器 |
 
 ```
@@ -109,9 +109,9 @@ MCP **只规定上下文与工具如何交换**,不规定你怎么选模型、�
 
 ## 相关阅读
 
-- B站:[MCP 终极指南](https://www.bilibili.com/video/BV1uronYREWR)（马克的技术工作坊，~24 万播放）
-- B站:[Function Calling、MCP 和 A2A 的核心原理与区别](https://www.bilibili.com/video/BV1XFhPzoEBx)（技术蛋老师，~5.5 万播放）
-- B站:[一口气拆穿 Skill/MCP/RAG/Agent 底层逻辑](https://www.bilibili.com/video/BV1ojfDBSEPv)（飞天闪客，~88 万播放）
+- B站:[MCP 终极指南](https://www.bilibili.com/video/BV1uronYREWR)（马克的技术工作坊）
+- B站:[Function Calling、MCP 和 A2A 的核心原理与区别](https://www.bilibili.com/video/BV1XFhPzoEBx)（技术蛋老师）
+- B站:[一口气拆穿 Skill/MCP/RAG/Agent 底层逻辑](https://www.bilibili.com/video/BV1ojfDBSEPv)（飞天闪客）
 - [Agent 入门:规划、记忆、工具调用](agent-basics.md)
 - [Agent Skills:给 Agent 装上可复用的「操作手册」](agent-skills.md)
 - [什么是 Agent?它和 Chatbot 的区别是什么?](../../04-interview/basics/agent-vs-chatbot.md)
@@ -126,4 +126,27 @@ MCP **只规定上下文与工具如何交换**,不规定你怎么选模型、�
 - [Architecture overview](https://modelcontextprotocol.io/docs/learn/architecture) — 官方文档,2026-07 访问
 - [Understanding MCP servers](https://modelcontextprotocol.io/docs/learn/server-concepts) — 官方文档,2026-07 访问
 - [Building MCP servers for ChatGPT Apps and API integrations](https://developers.openai.com/api/docs/mcp) — OpenAI 开发者文档,2026-07 访问
+
+### 非规范延伸阅读
+
+以下只辅助理解，不作为协议版本、厂商状态和安全承诺的证据。
+
 - [Model Context Protocol](https://en.wikipedia.org/wiki/Model_Context_Protocol) — Wikipedia,2026-07 访问
+
+## 2026-09 更新：2026-07-28 规范变化
+
+截至 2026-09-14，官方 2026-07-28 changelog 已把 MCP 的远程运行时基础改成无状态：移除 protocol-level session、`Mcp-Session-Id` 和 `initialize/notifications/initialized` 握手；请求在 `_meta` 中携带协议版本与能力，服务器通过 `server/discover` 暴露版本、能力和身份。跨调用状态不再藏在传输层，应由服务器签发显式 handle，并作为普通工具参数传递。
+
+异步任务也发生了结构性变化：实验性 Tasks 移出核心协议，进入官方 `io.modelcontextprotocol/tasks` 扩展；新设计使用轮询 `tasks/get` 和客户端输入 `tasks/update`，移除 `tasks/list`。这不是“核心 MCP 自带所有任务调度”，而是协议扩展，客户端和服务器要分别确认支持。
+
+原先服务器主动发起的 `elicitation/create`、`sampling/createMessage`、`roots/list` 场景改用 Multi Round-Trip Requests（MRTR）：服务器返回 `resultType: "input_required"` 与 `inputRequests`，客户端补齐 `inputResponses` 后重试原请求。对 PM 来说，这更适合无状态网关，但需要重新设计确认、超时、幂等和重试。
+
+此外，HTTP+SSE 进入 Deprecated 路径；工具/资源列表结果新增 `ttlMs` 与 `cacheScope`，工具列表建议保持确定性顺序，以帮助缓存和观测。GitHub 2026-07-23 已公告其 MCP Server 提前支持新规范，但不能据此推断所有 Host/SDK 已完成迁移。
+
+练习：把一个“查询申请→用户确认→提交申请”的工具链画成旧版 session 流程和新版 MRTR/Tasks 流程，标出请求 ID、业务 `request_key`、确认状态、重试条件和最终业务回执。
+
+参考更新：
+
+- [2026-07-28 Specification changelog](https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/docs/specification/2026-07-28/changelog.mdx) — MCP 官方规范变更，访问 2026-09-14。
+- [GitHub MCP Server supports the next specification](https://github.blog/changelog/2026-07-23-github-mcp-server-supports-the-next-mcp-specification/) — GitHub，2026-07-23，已支持公告，访问 2026-09-14。
+- [The New MCP Roadmap](https://blog.modelcontextprotocol.io/posts/mcp-roadmap/) — MCP 官方路线图，2026-08-22；未来方向不当作已发布能力，访问 2026-09-14。

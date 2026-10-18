@@ -7,7 +7,7 @@ permalink: aipmwiki/docs/03-case-studies/aigc/cursor-vs-copilot
 # Cursor 与 GitHub Copilot:AI 代码助手的付费转化
 
 **分类**:AIGC
-**体验时间**:2026 年 7 月
+**资料核验时间**:2026 年 9 月 14 日
 
 ## 一、产品背景
 
@@ -67,11 +67,11 @@ AI 代码助手是生成式 AI 里付费转化相对「看得见」的品类之�
 
 ## 四、商业模式
 
-### Cursor 定价(核实截至 2026 年 7 月,来源:cursor.com/pricing)
+### Cursor 定价(核实截至 2026 年 9 月 14 日,来源:cursor.com/pricing)
 
 官网个人档展示为 **Individual**,其下再分 Pro / Pro+ / Ultra;页面默认可见年付折合价(例如 Individual 展示约 **$16/月** 起,对应年付)。结合官网说明与公开价目习惯,个人侧可理解为:
 
-| 档位 | 大致价位(2026-07) | 转化角色 |
+| 档位 | 官网当前价位 | 转化角色 |
 |------|-------------------|----------|
 | Hobby | 免费 | 试用:有限 Agent、有限 Tab,培养「AI 写代码」习惯 |
 | Pro | 约 $20/月;年付折合约 $16/月 | 个人主力转化档:扩大 Agent 限额、前沿模型、MCP/Skills/Hooks、Cloud agents 等 |
@@ -80,27 +80,27 @@ AI 代码助手是生成式 AI 里付费转化相对「看得见」的品类之�
 | Teams | 约 $40/用户/月;年付折合约 $32/用户/月 | 团队计费、共享规则/插件市场、团队隐私模式、SSO 等 |
 | Enterprise | 定制 | 池化用量、SCIM、审计、访问控制、优先支持 |
 
-官网 FAQ 写明:每个方案含一定模型用量,**用尽后可按需(on-demand)继续用,周期末计费**。因此 Cursor 的个人转化不只是「买功能」,更是「买包含用量 + 可选超转」——Pro 解决「能不能当主力编辑器」;Pro+/Ultra 解决「Agent 是否天天触顶」。
+截至核验日，官网仍显示 Hobby 免费、Pro $20/月、Pro+ $60/月、Ultra $200/月，并列出 MCP、Skills、Hooks 与 Cloud agents；页面建议日常 Agent 用户用 Pro+、重度用户用 Ultra。官网同时说明每个方案含一定模型用量，超出后可按需使用并在周期末计费。Cursor Changelog 另显示 Projects 于 2026-09-02 以 beta 开始向全体用户滚动开放，self-hosted machines 同日发布，支持让工具执行留在企业网络。
 
-### GitHub Copilot 定价(核实截至 2026 年 7 月,来源:官网 Plans 与 GitHub Docs)
+### GitHub Copilot 定价(核实截至 2026 年 9 月 14 日,来源:官网 Plans 与 GitHub Docs)
 
 **个人:**
 
 | 档位 | 价格 | 转化角色 |
 |------|------|----------|
 | Free | $0 | 每月约 2,000 次补全;有限模型与 Chat/Agent;零成本获客 |
-| Pro | $10/用户/月 | 无限补全;Cloud agent、代码评审等;约 **$15/月** 合计 AI Credits(含 base + flex 等构成,以官网为准) |
-| Pro+ | $39/用户/月 | 更高用量(官方称约 4x+ Pro)与高级模型;约 **$70/月** Credits |
-| Max | $100/用户/月 | 更高用量(官方称约 2.9x+ Pro+)与优先新模型;约 **$200/月** Credits |
+| Pro | $10/用户/月 | 个人付费入口;官网当前表列 1,000 base、1,500 total AI Credits |
+| Pro+ | $39/用户/月 | 高级模型与更高用量;官网当前表列 3,900 base、7,000 total AI Credits |
+| Max | $100/用户/月 | 持续高用量;官网当前表列 10,000 base、20,000 total AI Credits |
 
 **组织:**
 
 | 档位 | 价格 | 转化角色 |
 |------|------|----------|
-| Business | $19/用户/月 | 组织策略与集中管理;每席约 1,900 AI Credits 并在计费实体层池化 |
-| Enterprise | $39/用户/月 | 更大 Credits 池(约 3,900/席)、GitHub.com 深度整合与企业向定制能力 |
+| Business | $19/用户/月 | 组织策略与集中管理;每席 1,900 AI Credits 并在计费实体层池化 |
+| Enterprise | $39/用户/月 | 每席 3,900 AI Credits、优先新模型与 GitHub.com 深度整合 |
 
-超额用量方面,文档说明额外消耗按 AI Credits 计量(公开材料中有 **1 credit = $0.01 USD** 的换算口径,具体以当时账单文档为准);组织管理员可设预算与是否允许超转。
+超额用量方面，GitHub 文档说明额外消耗按 AI Credits 计量，1 credit = $0.01 USD；组织管理员可设置预算与是否允许超转。2026-09-09 的官方 Changelog 还确认 managed permissions 已在 Copilot app、CLI 和使用 Agent Host 的 VS Code 会话 GA，可管理 Shell、文件读写与网络域名策略。2026-09-10 周更把 Voice mode 标为 Experimental、Recurring agent tasks 标为 Public Preview，不能当成稳定默认能力。
 
 ### 两条转化漏斗对比
 
@@ -112,7 +112,7 @@ AI 代码助手是生成式 AI 里付费转化相对「看得见」的品类之�
 | 团队溢价理由 | 管理、共享资产、隐私与 SSO | 策略、池化 Credits、与 GitHub 权限/PR 一体 |
 | 成本传递方式 | 包含用量 + on-demand | AI Credits 包 + 超额 |
 
-Copilot 用 **$10** 完成大量个人付费转化,再用 Credits 包把 Agent 时代的成本涨价「藏进额度」;Cursor 用更高一点的 Pro 锚点换「整个 IDE 换栈」的承诺,再靠 Pro+/Ultra 吸收重度 Agent 用户。两者都没有把「无限免费 Agent」当作长期策略——那会与真实推理成本冲突。
+Copilot 以 **$10** 作为 Pro 个人入口，并用 AI Credits 显式计量额外用量；公开资料不足以证明付费转化规模，也不能把 Credits 描述成“隐藏涨价”。Cursor 以 Pro、Pro+ 和 Ultra 分层承接不同用量，具体转化效果仍需产品数据验证。两者的公开套餐都没有承诺无限免费 Agent，长期成本策略仍应按官方套餐与实际用量核算。
 
 ## 五、PM 视角的启示
 
@@ -131,8 +131,10 @@ Copilot 用 **$10** 完成大量个人付费转化,再用 Credits 包把 Agent �
 
 ## 参考资料
 
-- [Cursor · Pricing](https://cursor.com/pricing) — Cursor 官方定价页,2026-07 访问
-- [GitHub Copilot · Plans & pricing](https://github.com/features/copilot/plans) — GitHub 官方定价页(个人 Free/Pro/Pro+/Max 与 Credits 展示),2026-07 访问
-- [Plans for GitHub Copilot](https://docs.github.com/en/copilot/about-github-copilot/subscription-plans-for-github-copilot) — GitHub Docs(个人与 Business/Enterprise 价格表),2026-07 访问
-- [About billing for GitHub Copilot in organizations and enterprises](https://docs.github.com/en/copilot/concepts/billing/organizations-and-enterprises) — GitHub Docs(Business $19、Enterprise $39 与 Credits 池),2026-07 访问
-- [GitHub Copilot licenses](https://docs.github.com/en/billing/concepts/product-billing/github-copilot-licenses) — GitHub Docs(席位与个人档价目),2026-07 访问
+- [Cursor · Pricing](https://cursor.com/pricing) — Cursor 官方定价页，Hobby/Pro/Pro+/Ultra 当前价格与 Cloud agents，2026-09-14 访问
+- [Cursor Changelog](https://cursor.com/changelog) — Cursor 官方 Changelog，Projects beta 与 self-hosted machines，2026-09-14 访问
+- [GitHub Copilot · Plans & pricing](https://github.com/features/copilot/plans) — GitHub 官方定价页，个人计划与 Agent/Cloud agent 能力，2026-09-14 访问
+- [Plans for GitHub Copilot](https://docs.github.com/en/copilot/get-started/plans) — GitHub Docs，Free/Pro/Pro+/Max/Business/Enterprise 价格与 AI Credits，2026-09-14 访问
+- [About billing for GitHub Copilot in organizations and enterprises](https://docs.github.com/en/copilot/concepts/billing/organizations-and-enterprises/fundamentals) — GitHub Docs，Business $19、Enterprise $39 与 Credits 池，2026-09-14 访问
+- [Enterprise managed permissions for GitHub Copilot agent operations](https://github.blog/changelog/2026-09-09-enterprise-managed-permissions-for-github-copilot-agent-operations/) — GitHub 官方 Changelog，权限治理 GA，2026-09-09 发布，2026-09-14 访问
+- [GitHub Copilot weekly releases — September 7](https://github.blog/changelog/2026-09-10-github-copilot-weekly-releases-september-7/) — GitHub 官方 Changelog，Voice Experimental、Recurring agent tasks Public Preview，2026-09-10 发布，2026-09-14 访问

@@ -7,21 +7,15 @@ permalink: aipmwiki/docs/03-case-studies/search-and-rec/perplexity
 # Perplexity 案例拆解:AI 搜索的答案引擎范式
 
 **分类**:搜推
-**体验时间**:2026 年 7 月
+**体验时间**:2026 年 7 月（历史体验）；**动态核验**:2026-09-14
 
 ## 一、产品背景
 
 Perplexity 成立于 2022 年,是"AI 搜索"这个品类里定义范式的产品之一。它给自己的定位不是"聊天机器人"也不是"搜索引擎",而是 **answer engine(答案引擎)**——你提出问题,它直接给出一段带引用来源的综合答案,而不是一页排序好的蓝色链接。
 
-**用户规模与增长**(核实截至 2026 年 7 月的最新数据):
+**用户规模与增长**：MAU、查询量、ARR、融资和 Comet 月活等数字在媒体、投融资材料和第三方测量中口径不同；截至 2026-09-14，我没有找到可以在 Perplexity 官方页面按同一口径复核的完整序列，因此不在本文填写精确数字。官方帮助中心能核验 Comet 是 Chromium 浏览器，并列出其搜索、个人搜索、自然语言浏览器命令、Gmail 连接器、页面提问和摘要等能力。
 
-- 月活跃用户(MAU):2026 年初已超过 **4500 万**,较 2025 年初的 2200 万翻了一倍还多;整体月访问量约 **1.7 亿**。
-- 月查询量:约 **7.8 亿次/月**(第三方统计口径)。
-- 年化收入(ARR):2026 年 3 月突破 **4.5 亿美元**,较 2025 年 9 月的 2 亿美元在半年内翻倍多。
-- 融资:2026 年 6 月完成新一轮 2 亿美元融资,累计融资总额约 **17.2 亿美元**。
-- **Comet 浏览器**:2026 年 3 月起免费开放,上线 48 小时内冲上美区 App Store 总榜第三;2026 年第一季度月活达到 **1800 万**(一年前仅 240 万)。
-
-这组数字说明 Perplexity 已经从"极客圈内的小众工具"成长为有真实规模效应的独立入口,并且正在通过 Comet 浏览器把自己从"一个网站"升级为"一个操作系统级的入口",这与 ChatGPT 用 Atlas 浏览器争夺入口的逻辑如出一辙——AI 搜索赛道的下一个战场不是答案质量,而是"谁能成为用户打开互联网的第一站"。
+**产品推论**：Comet 把答案引擎延伸到浏览器入口，但“操作系统级入口”、用户规模和增长速度属于战略判断或待核验经营主张，不应从产品功能列表直接推出。
 
 **竞争格局**:上有 Google(搜索垄断者,正在用 AI Overviews/AI Mode 防御性地把生成式回答嵌回传统搜索结果页),侧有 ChatGPT Search(凭借海量用户基数把搜索变成对话助手的一个功能而非独立产品),Perplexity 夹在中间,策略是"专注做好答案引擎与引用溯源体验,并率先放弃广告以强化信任定位"。
 
@@ -41,11 +35,11 @@ Perplexity 的核心交互链路是:提问 → 实时联网检索 → 排序信�
 | Spaces / 项目空间 | 团队/个人可建立专属知识库与协作空间,复用历史检索结果 | 从"一次性问答"延伸到"持续性研究项目" |
 | Shopping(购物) | 直接在答案中展示可比价、可购买的商品卡片 | 把"信息检索"和"交易决策"打通 |
 | Finance(金融) | 针对股票、财报等提供结构化数据卡片 | 高频垂类场景的信息密度优化 |
-| **Model Council** | Max 档位特有:同一问题并行发给多个前沿模型(据报道通常包括 GPT-5.4、Claude Opus 4.8、Gemini 3.1 Pro 等),再综合展示"模型间的共识与分歧" | 把"选哪个模型回答更准"的决策权交还给用户,并显式呈现模型间差异 |
+| **Model Council** | 历史版本/媒体报道曾描述为多模型比较功能；截至本次核验未在当前官方公开文档中复核固定的模型清单或 Max 专属状态 | 若产品实际提供，应以当前账户页面与官方帮助说明为准；不把具体模型名写进验收 |
 | **Comet 浏览器** | AI 原生浏览器,侧边栏助手可理解当前页面、跨标签页操作,并支持代理模式完成"填表""下单"等任务 | 把答案引擎的能力延伸到"帮你把事情做完",而不止"告诉你答案" |
-| Comet Plus | 5 美元/月增值订阅,与已接入的 2400 多家出版商(含 CNN、Condé Nast、Fortune、华盛顿邮报等)按 80/20 分成 | 用真实付费分成换取优质内容源的授权与信任背书 |
+| Comet Plus | 官方公告列为独立 **5 美元/月**订阅；Pro/Max 会员包含该权益。合作出版商名单和分配比例以公告/当前条款为准 | 用订阅收入支持出版商内容和代理访问；不把未在当前公告复核的数量或比例写成固定事实 |
 
-值得特别记录的一个数据对比:第三方统计显示,ChatGPT 引用信源中 Wikipedia 占比高达 47.9%,而 Perplexity 更偏好 Reddit(46.7%)与 30 天内的新鲜内容(引用权重可达 3.2 倍)。两个产品对"权威信源"的定义完全不同,同一品牌在 ChatGPT 和 Perplexity 中被引用的域名重合度仅 11%——这说明"信源选择偏好"本身已经成为不同 AI 搜索产品之间可感知的差异化体验,而不只是后台的技术细节。
+信源选择会改变答案体验，但本篇不采用无法在两家官方文档中复核的 Wikipedia、Reddit 占比、时间权重或域名重合度数字。产品层面仍可通过 Focus 等信源范围控制观察“学术调研”和“真实体验帖”的差异；这属于功能观察，不等于公开了排序公式。
 
 ## 三、技术方案推测
 
@@ -59,46 +53,41 @@ Perplexity 的核心交互链路是:提问 → 实时联网检索 → 排序信�
 
 ## 四、商业模式
 
-### 订阅档位(核实截至 2026 年 7 月)
+### 订阅档位（以官方当前页面核验）
 
 | 档位 | 价格 | 说明 |
 |------|------|------|
 | Free | 免费 | 基础答案引擎能力,查询额度有限 |
-| Pro | 20 美元/月(或 200 美元/年) | 更高查询额度、Deep Research、文件上传等 |
-| Education Pro | 10 美元/月 | 面向学生的折扣档位 |
-| Max | 200 美元/月(或 2000 美元/年,2025 年 7 月上线) | Pro 全部权益 + 更高的 Deep Research/生图/上传额度、更多视频生成、Model Council |
-| Enterprise Pro | 40 美元/席位/月 | 团队协作、企业级数据不训练承诺、基础合规能力 |
-| Enterprise Max | 325 美元/席位/月 | 更高权限层级的 SSO/SCIM/审计日志等企业合规能力 |
+| Pro / Max / Enterprise | 价格、额度和权益以官方当前 pricing 页面及账户地区显示为准 | 页面会随地区、促销和产品版本变化；本文不复制一组可能过时的美元档位 |
 
-### Sonar API 定价(按每百万 Token,核实截至 2026 年 7 月,官方文档)
+### Sonar API 定价（官方动态页面）
 
 | 模型 | 输入 | 输出 | 引用 Token | 推理 Token |
 |------|------|------|-----------|-----------|
-| Sonar | 1 美元 | 1 美元 | — | — |
-| Sonar Pro | 3 美元 | 15 美元 | — | — |
-| Sonar Reasoning Pro | 2 美元 | 8 美元 | — | — |
-| Sonar Deep Research | 2 美元 | 8 美元 | 2 美元 | 3 美元 |
+| 模型与版本 | 输入/输出 | 检索或引用费用 | 核验方式 |
+|---|---|---|---|
+| Sonar 系列 | 以官方定价页当前表格为准 | 可能另有请求、检索深度或引用相关费用 | 调用前保存当日页面和模型 ID |
 
-此外还按"检索上下文规模"(低/中/高)叠加每千次请求 5-14 美元不等的请求费,Deep Research 额外按每千次搜索查询收取约 5 美元——这种"Token + 请求 + 检索深度"三层计费结构,直接体现了 AI 搜索类产品相比纯生成式对话产品更复杂的成本结构(检索本身也是要花钱的)。
+AI 搜索可能同时产生模型 token、请求、检索深度和引用相关费用；具体金额、计费单位和是否随模型版本变化，必须以 [Perplexity API 定价](https://docs.perplexity.ai/docs/getting-started/pricing) 当前表格为准。
 
 ### 广告:一次公开的"试了又撤"
 
-Perplexity 从 2024 年起就是最早尝试在 AI 搜索结果里投放广告的平台之一,形式包括"相关问题"区域的赞助追问(约占平台四成查询会展示)、以及答案旁的"Sponsored"视频广告,CPM 报价一度超过 50 美元并为部分行业提供类目排他性保证。但 2026 年 2 月,公司宣布**彻底放弃广告**,理由是:一旦答案里出现广告,用户就会开始怀疑回答本身是否掺杂了商业影响,这与"答案引擎"赖以生存的信任基础相冲突。放弃广告后,Perplexity 把目标改为把订阅收入做到 5 亿美元年化规模,并把自己定位为"ChatGPT 与 Google 之外的无广告选项"。
+关于 Perplexity 的广告试验、撤回时间和收入目标，公开报道口径与直接公告不完全一致；本文不再保留“占四成查询、CPM 超过 50 美元、5 亿美元 ARR”等精确数字。若引用“无广告”定位，应同时注明适用产品面、地区和访问日，不能把一次公告外推到全部答案或浏览器库存。
 
 这个"试点广告 → 主动撤下"的过程,是本案例最值得记录的商业模式决策——它说明在"回答型"产品里,广告与可信度之间的冲突比在传统搜索(用户本就默认结果含广告)里要尖锐得多。
 
 ### 内容生态分成:Comet Plus
 
-作为广告之外的另一条探索路径,Comet Plus 以 5 美元/月的增值订阅与出版商分成(据披露约 80/20,平台留存 20%),换取媒体机构的内容被合规抓取与引用授权。这是一种"给内容源直接付费"而不是"靠广告间接变现内容"的思路,某种程度上是对"AI 抓取新闻网站却不付费"这一行业争议的主动回应。
+作为广告之外的探索路径，Comet Plus 官方公告列为 5 美元/月独立订阅，并说明收入会分配给参与的出版商；分配公式和合作名单应以当前公告与条款为准。这体现了“为内容源付费”的产品方向，但不等于所有来源都已授权或所有访问都免广告。
 
 ## 与传统搜索、Google AI Overviews 的对比
 
 | 维度 | 传统搜索(Google 经典结果页) | Google AI Overviews / AI Mode | Perplexity |
 |------|------------------------------|-------------------------------|------------|
 | 呈现形式 | 十条蓝色链接,用户自行点击、综合 | 在搜索结果顶部插入 AI 摘要(自动触发,不可选择关闭);AI Mode 是需要用户主动切换进入的独立对话式体验 | 直接给出综合性答案 + 逐句编号引用 |
-| 覆盖率/规模 | 全部查询 | AI Overviews 已覆盖约 48% 的 Google 查询 | 月查询量约 7.8 亿次,规模远小于 Google |
+| 覆盖率/规模 | 全部查询 | 覆盖范围和触发条件随市场变化 | Perplexity 未在本文采用未经同口径官方核验的查询量/MAU数字 |
 | 时效性 | 依赖索引更新频率 | 依赖 Google 索引 + 实时信号 | 默认实时抓取全网,对突发新闻/最新价格类查询较有优势 |
-| 广告 | 结果页顶部大量商业推广位 | 据第三方统计,已有约四分之一的 AI Overview 回答旁伴随广告(2025 年初该比例约为 5%) | 2026 年 2 月起主动放弃广告,以"无广告"作为差异化卖点 |
+| 广告 | 结果页包含商业推广位 | 广告在答案层的展示位置和资格以 Google Ads Help 当前规则为准 | 公开定位与广告策略可能按产品面/地区变化，引用时核对当前公告 |
 | 信源偏好 | 由传统 SEO 排名逻辑主导 | 建立在 Google 索引基础上,叠加权威性信号 | 明显偏好 Reddit 等社区内容与 30 天内新鲜信息 |
 | 转化质量 | 点击后需用户自行判断可信度 | 摘要压缩了点击欲望,但入口极大 | 内联引用链接的点击转化率据第三方统计可达传统自然搜索的数倍 |
 
@@ -119,13 +108,15 @@ Perplexity 从 2024 年起就是最早尝试在 AI 搜索结果里投放广告�
 
 ## 参考资料
 
-- [How does Perplexity work?](https://www.perplexity.ai/help-center/en/articles/10352895-how-does-perplexity-work) — Perplexity 官方帮助中心,2026-07 访问
-- [What is an answer engine, and how does Perplexity work as one?](https://www.perplexity.ai/help-center/en/articles/10354917-what-is-an-answer-engine-and-how-does-perplexity-work-as-one) — Perplexity 官方帮助中心,2026-07 访问
-- [Perplexity Pricing](https://www.perplexity.ai/enterprise/pricing) — Perplexity 官方定价页,2026-07 访问
-- [Perplexity Max](https://www.perplexity.ai/max) — Perplexity 官方产品页,2026-07 访问
-- [Pricing | Perplexity API Docs](https://docs.perplexity.ai/docs/getting-started/pricing) — Perplexity 官方 API 定价文档,2026-07 访问
-- [Why we're experimenting with advertising](https://www.perplexity.ai/hub/blog/why-we-re-experimenting-with-advertising) — Perplexity 官方博客,2026-07 访问
-- [Perplexity pulls the plug on ads, citing trust concerns for AI](https://www.campaignlive.com/article/perplexity-pulls-plug-ads-citing-trust-concerns-ai/1949142) — Campaign US,2026-07 访问
-- [Perplexity Raises $200 Million for Comet: The AI Browser Is the Agent Economy Front Door](https://www.techtimes.com/articles/318028/20260608/perplexity-raises-200-million-comet-ai-browser-agent-economy-front-door.htm) — Tech Times,2026-07 访问
-- [Perplexity AI - Wikipedia](https://en.wikipedia.org/wiki/Perplexity_AI) — Wikipedia,2026-07 访问
-- [Google AI Overviews vs ChatGPT vs Perplexity: Which AI Search Tool Wins in 2026](https://www.usegrowthos.com/blog/google-ai-overviews-vs-chatgpt-vs-perplexity) — GrowthOS 行业分析,2026-07 访问
+- [How does Perplexity work?](https://www.perplexity.ai/help-center/en/articles/10352895-how-does-perplexity-work) — Perplexity 官方帮助中心,2026-09-14 访问
+- [What is an answer engine, and how does Perplexity work as one?](https://www.perplexity.ai/help-center/en/articles/10354917-what-is-an-answer-engine-and-how-does-perplexity-work-as-one) — Perplexity 官方帮助中心,2026-09-14 访问
+- [Getting Started with Comet](https://www.perplexity.ai/help-center/en/articles/11172798-getting-started-with-comet) — Perplexity 官方帮助中心，2026-07-16 更新；2026-09-14 访问
+- [Introducing Comet Plus](https://www.perplexity.ai/hub/blog/introducing-comet-plus) — Perplexity 官方公告；官方页面注明 5 美元/月，2026-09-14 访问
+- [Perplexity Pricing](https://www.perplexity.ai/enterprise/pricing) — Perplexity 官方定价页,2026-09-14 访问
+- [Perplexity Max](https://www.perplexity.ai/max) — Perplexity 官方产品页,2026-09-14 访问
+- [Pricing | Perplexity API Docs](https://docs.perplexity.ai/docs/getting-started/pricing) — Perplexity 官方 API 定价文档,2026-09-14 访问
+- [Why we're experimenting with advertising](https://www.perplexity.ai/hub/blog/why-we-re-experimenting-with-advertising) — Perplexity 官方博客；历史广告试验背景，2026-09-14 访问
+- [Perplexity pulls the plug on ads, citing trust concerns for AI](https://www.campaignlive.com/article/perplexity-pulls-plug-ads-citing-trust-concerns-ai/1949142) — Campaign US；报道背景，不作为本文精确事实依据，2026-09-14 访问
+- [Perplexity Raises $200 Million for Comet: The AI Browser Is the Agent Economy Front Door](https://www.techtimes.com/articles/318028/20260608/perplexity-raises-200-million-comet-ai-browser-agent-economy-front-door.htm) — Tech Times；第三方背景，不作为本文规模事实依据，2026-09-14 访问
+- [Perplexity AI - Wikipedia](https://en.wikipedia.org/wiki/Perplexity_AI) — Wikipedia；背景索引，不作为本文规模事实依据，2026-09-14 访问
+- [Google AI Overviews vs ChatGPT vs Perplexity: Which AI Search Tool Wins in 2026](https://www.usegrowthos.com/blog/google-ai-overviews-vs-chatgpt-vs-perplexity) — GrowthOS 行业分析；第三方背景，不作为本文规模事实依据，2026-09-14 访问

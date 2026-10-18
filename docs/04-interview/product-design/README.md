@@ -29,3 +29,16 @@ permalink: aipmwiki/docs/04-interview/product-design/readme
 - [AI 产品如何判断 PMF、如何冷启动、兜底策略怎么设计?](ai-product-pmf-coldstart-fallback.md)
 - [怎么在 PRD 里写清楚 Agent 的行为边界?](agent-behavior-boundary-in-prd.md)
 - [怎么设计 Agent 的信任校准，避免过度信任或不信任？](agent-trust-calibration-design.md)
+
+## 原创进阶练习：从正课到验收
+
+以下四题出现频率均为“未统计／原创练习”，不对应任何真实公司面试记录。
+
+| 题目 | 先修 |
+|---|---|
+| [PoC 达标为什么仍不能进入生产](poc-production-readiness.md) | 企业 AI 采用、实践四 |
+| [记忆纠错或删除后，Agent 应如何变化](agent-memory-correction-deletion.md) | 长期记忆、实践二/三 |
+| [超时重试怎样避免重复建单](agent-retry-duplicate-request.md) | Agent 生产化、实践二/三 |
+| [打断语音时已发出的动作怎么办](voice-interruption-action-boundary.md) | 实时语音、实践三扩展验收 |
+
+完整练习材料见 [内部服务助手路线](../../02-pm-skills/practice/README.md)。

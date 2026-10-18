@@ -4,77 +4,101 @@ type: note
 permalink: aipmwiki/docs/01-ai-basics/llm/model-landscape
 ---
 
-# 主流大模型盘点与选型思路(2026 年中)
+# 主流大模型盘点与选型思路（动态版）
 
-> **信息状态**：动态快照｜**最后核验**：2026-07
+> **信息状态**：动态核验页｜**最后核验**：2026-09-14（Asia/Shanghai）
 
-> **数据截至 2026 年 7 月**,来自 Anthropic、OpenAI、Google、DeepSeek、阿里云等官方文档。大模型行业发布节奏是"数周级别",请把本文当作一次快照,实际选型前务必去官方页面核对最新数字(见文末链接)。
+模型名、别名、价格、上下文上限和退役日期都可能改变。本文保留能在官方目录或定价页直接核对的字段；没有稳定官方字段的地方只给入口和核验方法，不把第三方榜单或旧快照当作当前事实。
 
-"我们该用哪个模型"常没有标准答案——**没有最好的模型,只有最合适的模型**。本文先给一份 2026 年 7 月的盘点,再给一套不会过时的选型方法。
+## 先看“服务对象”，再看型号
 
-## 三大闭源旗舰对比
+产品实际购买的是“厂商 + 区域/部署 + 模型 ID + API 版本 + 限流/计费规则”这一组服务对象。一个别名可能指向新快照，两个平台也可能对同名模型提供不同的上下文、工具和数据处理条件。因此评审表至少记录：
 
-| 厂商 | 型号 | 定位 | 上下文窗口 | 参考价格(输入/输出,每百万 token) |
-|------|------|------|-----------|--------------------------------|
-| Anthropic | Claude Fable 5 | 最强旗舰,面向长时间自主运行的 Agent | 1M tokens | $10 / $50 |
-| Anthropic | Claude Opus 4.8 | 复杂编程与企业级任务主力 | 1M tokens | $5 / $25 |
-| Anthropic | Claude Sonnet 5 | 速度与智能平衡,默认选择 | 1M tokens | $2/$10(2026-08-31 前引导价,后为 $3/$15) |
-| Anthropic | Claude Haiku 4.5 | 最快,近旗舰智能 | 200K tokens | $1 / $5 |
-| OpenAI | GPT-5.5 | 旗舰通用模型 | 1M tokens(API) | $5 / $30 |
-| OpenAI | GPT-5.4 | 主力生产型号 | 1M tokens | $2.50 / $15 |
-| OpenAI | GPT-5.4-mini | 高性价比 | 400K tokens | $0.75 / $4.50 |
-| Google | Gemini 3.5 Flash | 官方标注最智能的稳定旗舰(注意命名含 Flash) | 1M tokens | $1.50 / $9 |
-| Google | Gemini 3.1 Pro | 复杂推理/超长文档 | 最高 1M tokens(模型卡口径) | $2/$12(≤20万 token)、$4/$18(超出);注:API 侧截至 2026-07 仍以 -preview 端点提供,适用 Pre-GA 条款 |
-| Google | Gemini 3 Flash(预览) | 高性价比全能 | 1M tokens | $0.50 / $3 |
+| 字段 | 记录方式 | 为什么必须记录 |
+|---|---|---|
+| 模型 ID 与别名 | 复制官方 API ID，注明是否为 latest/alias | 便于回滚和复现实验 |
+| 生命周期 | GA、预览、Beta、deprecated、retired | 预览能力不等于生产承诺 |
+| 输入/输出与缓存价 | 标明币种、单位、阶梯、批处理 | 单价不能脱离 token 构成 |
+| 上下文与最大输出 | 从官方模型目录/模型 API 读取 | 窗口和输出上限是两个字段 |
+| 工具与区域 | 记录工具、地域、数据处理条款 | Agent 可用性由接口与合规共同决定 |
 
-提醒:Opus 4.7 起使用新分词器,相同文本产生的 token 数比旧版多约 30%,换算成本要留意;Gemini 3.5 Flash 虽名字带"Flash",却是官方定位的综合最强稳定旗舰,选型不能只看名字。
+## 2026-09-14 可直接核验的官方入口
 
-## 开源与中国模型对比
+下表只列官方页面明确展示的例子，目的是教你如何读目录，不是给出永久排名。价格均为官方页面展示的每百万 token 参考值；调用前应重新打开链接并保存当日快照。
 
-| 模型 | 厂商 | 定位 | 上下文窗口 | 价格 / 开放方式 |
-|------|------|------|-----------|-----------------|
-| DeepSeek V4 Pro | DeepSeek | 开源旗舰 MoE(1.6T 总参数/49B 激活) | 1M tokens 输入,384K 输出 | $0.435 / $0.87(每百万 token) |
-| DeepSeek V4 Flash | DeepSeek | 轻量版,同架构 | 1M tokens | $0.14 / $0.28 |
-| Qwen3.7-Max | 阿里云 | 闭源 API 旗舰,强 Agent/编程能力 | 1M tokens | 列表价 $2.50 / $7.50(常有促销) |
-| Qwen3.7-Plus | 阿里云 | 多模态,高性价比 | 1M tokens(含 256K 思维链预算) | 约 $0.4 / $1.6 |
-| Llama 4 Scout/Maverick | Meta | 开源可商用 MoE,原生多模态 | Scout 最高 10M tokens | 免费下载自部署,成本取决于托管方案 |
-| Llama 5 | Meta | 最新旗舰,600B+ 参数 | — | 自定义社区许可,非 OSI 认证开源 |
-| Kimi K2.6 | Moonshot(月之暗面) | 中国开源旗舰 MoE(1T 总参数/32B 激活) | 256K tokens | 开放权重(Modified MIT),价格约为同水平闭源模型的 1/5 |
+| 厂商 | 代表性官方快照（模型 ID） | 上下文 / 最大输出 | 价格与生命周期（访问日页面） |
+|---|---|---|---|
+| OpenAI | GPT-6 Astra (`gpt-6-astra`)、GPT-5.6 Sol (`gpt-5.6-sol`)、GPT-5.6 Terra (`gpt-5.6-terra`)、GPT-5.6 Luna (`gpt-5.6-luna`) | 均为 1.05M / 128K | Astra $10/$50、Sol $4/$20、Terra $2/$12、Luna $0.20/$1.20（输入/输出，美元/百万 token）；官方模型目录当前列为可选模型 |
+| Anthropic | Claude Fable 5.1 (`claude-fable-5-1`)、Claude Opus 5 (`claude-opus-5`)、Claude Sonnet 5 (`claude-sonnet-5`)、Claude Haiku 4.5 (`claude-haiku-4-5-20251001`) | Fable/Opus/Sonnet 1M / 128K；Haiku 200K / 64K | 官方总览列输入/输出 $10/$50、$5/$25、$2/$10、$1/$5；状态为当前总览项，仍需按退役页核验 |
+| Google Gemini API | Gemini 3.8 Flash (`gemini-3.8-flash`，稳定)；Gemini 3.1 Pro Preview (`gemini-3.1-pro-preview`，预览) | 均为 1,048,576 / 65,536 | 模型页直接给出 ID、上下文、输出与能力；价格和区域以定价页逐模型重核，Pro Preview 不能当作 GA |
+| DeepSeek API | 以官方 `models`/pricing 页面返回的模型 ID 为准 | 页面列出的版本字段 | 按官方定价页核对版本与缓存；若存在时段优惠，再核其适用和生效时间；本次未将静态抓取不稳定页面中的数字抄入表格 |
+| 阿里云 Model Studio | Qwen3.7 Max (`qwen3.7-max`，当前别名)；Qwen3 Max (`qwen3-max`，当前别名)；Qwen Long (`qwen-long`) | Qwen3.7 Max 1M；Qwen3 Max 256K；Qwen Long 以模型页为准 | 中国大陆实时输入/输出：Qwen3.7 Max ¥12/¥36（≤1M）；Qwen3 Max 按 32K/128K/256K 阶梯 ¥2.5/¥10、¥4/¥16、¥7/¥28；价格按页面和地域重核 |
+| Moonshot AI / Kimi | Kimi K3 (`kimi-k3`，开放权重与 API 页面可见) | 1M / 最大输出以 API 模型页为准 | 2026-07-27 官方开放日发布权重与技术报告；API 入口展示 $0.30 缓存命中、$3 输入、$15 输出/百万 token；开放权重不等于托管 API 的可用性或 SLA |
 
-要点:①"开源"程度差异很大,同一家公司的旗舰不一定开源(Qwen3.7-Max 闭源、Llama 5 用限制性许可),选型前需确认许可条款;②中国模型价格优势明显,常是同能力档位海外模型的几分之一到十几分之一;③标称的超长上下文(如 10M)未必等于"有效可用"的上下文,不是唯一指标。
+**事实**：OpenAI、Anthropic、Google、DeepSeek、阿里云和 Moonshot AI 都提供官方模型目录或 API 入口；Google 的 Models API 还提供 `models.list`/`models.get`，可读取支持的动作和 token 限制。上表只抽取能在官方模型页直接定位的代表项；Qwen、Kimi 的价格仍受地域、模式、阶梯和缓存规则影响，不能用作跨厂商报价比较。
 
-## 选型维度
+**产品推论**：模型表不应只放“最强/最便宜”标签。采购评审应先冻结模型 ID、状态、区域和价格版本，再用同一组业务样本测质量、延迟、失败率和总成本；当任一字段改变时触发回归，而不是自动切换别名。
 
-- **能力**:不要只看榜单排名(存在被针对性优化的风险),用自己的真实业务场景建小型评测集更可靠。
-- **成本**:真实成本 = 单价 × 单次消耗量 × 频率。输出 token 通常比输入贵 5-6 倍,思考过程也计费;提示词缓存、批处理能显著降本;开放权重模型可自建推理,把"按 token 付费"换成"按算力付费"。
-- **延迟**:同厂商通常有旗舰/轻量两套体系,实时对话产品延迟权重高于离线批处理任务。
-- **生态**:是否有成熟 SDK/Agent 框架、是否支持 MCP、能否多云部署避免锁定;中文场景下国产模型在语感和本土知识上通常有优势。
-- **合规**:数据能否留境内、能否私有化部署(涉密/金融场景常是唯一选项)、供应链/地缘政治风险、开源许可条款(是否允许商用、有无规模上限)。
+## 选型方法：用档位和约束做决策
 
-## "没有最好只有最合适"的方法论
+### 1. 能力：让真实任务胜过榜单
 
-1. 用"旗舰/中端/轻量"档位而非具体型号名字做决策框架——名字每隔几周就变,分层逻辑是稳定的。
-2. 建自己的评测集,几十条真实案例配人工评分,比任何公开榜单更能反映"适不适合我们"。
-3. 算总拥有成本,把工程集成、多模型路由、私有化运维都计入,不能只看 API 单价表。
-4. 考虑多模型路由:简单任务给便宜快速的轻量模型,复杂任务给旗舰模型。
-5. 避免单一厂商锁定,保留架构上的可替换性。
-6. 定期回看官方页面——价格和上下文窗口随时会变,决策前必核对最新数字,不要依赖包括本文在内的过时资料。
+准备几十条脱敏业务样本，覆盖正常、边界、拒答、工具失败和长上下文场景。每次记录模型 ID、提示版本、工具版本和人工评分。把“看起来会推理”拆成可验收的字段，例如 JSON 合法率、引用正确率、工具参数准确率和任务完成率。
+
+### 2. 成本：按一次任务而不是一次请求估算
+
+```text
+单任务成本
+= 未命中缓存的输入 token × 适用输入单价
++ 输出 token（含计费的思考 token）× 输出单价
++ 缓存写入/命中 token × 各自适用单价（避免与普通输入重复计费）
++ 工具、检索、运行时和重试成本
+```
+
+对长任务再记录上下文重放、摘要/压缩和失败重试次数。不同厂商的缓存、批处理、阶梯价格和工具费不能混成一个“每百万 token 单价”。
+
+### 3. 延迟与可靠性：用分位数和降级链
+
+在线对话关注首 token、完整响应和 P95/P99；工具型 Agent 关注从计划到完成的总耗时、重试率和人工接管率。预先写好超时、重试、降级到轻量模型和人工接管条件，避免把“模型答得像样”误当成服务可用。
+
+### 4. 合规与替换成本：把区域和许可写进门槛
+
+检查数据驻留、训练使用政策、保留期、审计日志、私有化/专属部署、开源许可和供应商退出路径。国产接口的地域与合规优势也要按实际合同、部署和数据类型确认，不能从“国产”二字推导出自动合规。
+
+## 一个可复用的评审表
+
+| 维度 | 问题 | 证据/阈值 | 结论 |
+|---|---|---|---|
+| 质量 | 30 条验收样本能否完成关键动作？ | 任务完成率、字段准确率 | 通过/补测 |
+| 成本 | 每个请求的真实 token 构成是什么？ | 计费账单 + token 日志 | 元/任务 |
+| 可靠性 | 超时、工具失败、限流如何恢复？ | 线上 trace、P95、重试率 | 是否可上线 |
+| 合规 | 何种数据可发往何处？ | 合同、DPA、区域配置 | 允许的数据级别 |
+| 可替换 | 换一个供应商需要改什么？ | 适配层、结构化输出、回归集 | 人日/风险 |
+
+## 常见误区
+
+- 把“上下文窗口大”当作“长文档一定答得好”；有效检索、排序、压缩和引用仍要评测。
+- 把预览、Beta 或参考架构当作 GA；状态必须来自官方生命周期页或产品公告。
+- 把某日价格复制成长期事实；价格表要记录访问日、生效日、币种、区域和计费模式。
+- 把“开源”当作一个二元标签；开放权重、许可、商用条件、自部署成本和托管 API 是不同问题。
+
+## 练习：为内部 IT 服务助手做一次选型
+
+使用教学契约中的 E01/M01/IT01/ADM01、租户 A/B 和任务 A/B/C 建立 30 条评测样本：任务 A 是制度问答，任务 B 是员工确认后的受控申请提交，任务 C 是授权状态查询。可先读[内部服务需求发现实践](../../02-pm-skills/practice/internal-service-discovery.md)、[内部服务助手 PRD](../../02-pm-skills/practice/internal-service-prd.md)和[内部服务采用评估实践](../../02-pm-skills/practice/internal-service-adoption.md)，再冻结三档模型的官方 ID 和价格版本，测试分类是否正确、是否遵守“提交≠批准≠履行”、是否只保存明确允许的界面语言、`request_key` 重试是否幂等。最后用同一输入/输出分布计算元/任务，并写出升级到旗舰模型、降级到轻量模型和转人工的边界。教学中的成本数字只用于算术练习，不是线上账单。
 
 ## 相关阅读
 
-- [什么是 RAG:检索增强生成入门](what-is-rag.md)
-- [Prompt / RAG / 微调:三种让模型更懂你的方式怎么选](prompt-rag-finetuning.md)
-- [Agent 入门:规划、记忆、工具调用](agent-basics.md)
-- [AI 术语速查表](../glossary.md)
+- [上下文窗口：限制、成本与产品设计影响](context-window.md)
+- [Context Engineering：从写 Prompt 到拼上下文系统](../prompt-engineering/context-engineering.md)
+- [Agent 入门：规划、记忆、工具调用](agent-basics.md)
+- [Agent 平台选型与治理](../../02-pm-skills/cost-and-tech/agent-platform-selection-and-governance.md)
+- [Agent 评测与可观测性](../../02-pm-skills/ai-product-operations/agent-evaluation-and-observability.md)
 
-## 参考资料
+## 官方资料（访问 2026-09-14）
 
-- [Pricing - Claude Platform Docs](https://platform.claude.com/docs/en/about-claude/pricing) — Anthropic 官方文档,2026-07 访问
-- [Models overview - Claude Platform Docs](https://platform.claude.com/docs/en/about-claude/models/overview) — Anthropic 官方文档,2026-07 访问
-- [Pricing | OpenAI API](https://developers.openai.com/api/docs/pricing) — OpenAI 官方文档,2026-07 访问
-- [Models | Gemini API | Google AI for Developers](https://ai.google.dev/gemini-api/docs/models) — Google 官方文档,2026-07 访问
-- [Gemini API 官方定价页](https://ai.google.dev/gemini-api/docs/pricing) — Google 官方文档,2026-07 访问
-- [Models & Pricing | DeepSeek API Docs](https://api-docs.deepseek.com/quick_start/pricing) — DeepSeek 官方文档,2026-07 访问
-- [Alibaba Cloud Model Studio model pricing](https://www.alibabacloud.com/help/en/model-studio/model-pricing) — 阿里云官方文档,2026-07 访问
-- [The Llama 4 herd](https://ai.meta.com/blog/llama-4-multimodal-intelligence/) — Meta 官方博客,2026-07 访问
-- [moonshotai/Kimi-K2.6 · Hugging Face](https://huggingface.co/moonshotai/Kimi-K2.6) — Moonshot AI 官方模型页,2026-07 访问
+- [OpenAI Models](https://developers.openai.com/api/docs/models)；[OpenAI Compare models](https://developers.openai.com/api/docs/models/compare)；[OpenAI API Pricing](https://developers.openai.com/api/docs/pricing)
+- [Anthropic Models overview](https://platform.claude.com/docs/en/models/overview)；[Model deprecations](https://platform.claude.com/docs/en/about-claude/model-deprecations)；[Pricing](https://platform.claude.com/docs/en/about-claude/pricing)
+- [Gemini API Models API](https://ai.google.dev/api/models)；[Gemini API Pricing](https://ai.google.dev/gemini-api/docs/pricing)
+- [DeepSeek Models & Pricing](https://api-docs.deepseek.com/quick_start/pricing)
+- [Alibaba Cloud Model Studio model pricing](https://help.aliyun.com/en/model-studio/model-pricing)
+- [Kimi K3 Open Day](https://www.kimi.com/news/kimi-k3-open-source)；[Kimi API Platform](https://platform.kimi.ai/)

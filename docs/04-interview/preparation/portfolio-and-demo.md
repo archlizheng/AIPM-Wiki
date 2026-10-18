@@ -178,6 +178,18 @@ Vibe Coding 项目最适合展示“从一句话需求到可验证原型”的�
 - [ ] Demo 有离线/截图/轨迹等备用证据，且不会接触真实敏感数据或副作用工具。
 - [ ] 讲解顺序遵循问题—方案—证据—取舍—边界，不把 Demo 当成全部证明。
 
+## 十一、实时语音、文档和 Computer Use 项目怎么讲
+
+多模态作品集要把可见体验和后台副作用分开。语音项目展示一条可打断的对话、一条后台任务和一条确认后写入；文档项目展示来源、版本、引用与可编辑草稿；Computer Use 项目展示为什么接口不可用、如何隔离环境，以及何时交给用户接管。
+
+面试官追问“停止后会怎样”时，明确说停止播报不撤回已发的写动作。追问“为什么不用模型记忆”时，说明权限、审批状态和制度版本每次从业务系统读取，记忆默认只保留用户明确选择的界面语言。
+
+| 项目 | 必讲证据 | 不可夸大的结果 |
+|---|---|---|
+| 实时语音 Agent | V01-V20、打断状态、工具边界 | 不能把自然对话偏好写成生产成功率 |
+| 文档智能 | 来源矩阵、引用、缺字段和草稿 | 不能把 OCR 分数写成业务完成 |
+| Computer Use | 工具选择、沙箱、确认、日志 | 不能把论文 benchmark 写成 GA |
+
 ## 相关阅读
 
 - [AI PM 项目深挖的准备方法](project-deep-dive.md)
@@ -190,6 +202,9 @@ Vibe Coding 项目最适合展示“从一句话需求到可验证原型”的�
 - [AI 产品指标体系：从业务结果到成本与风险](../../02-pm-skills/ai-product-operations/ai-product-metrics.md)
 - [从一句话需求到能跑的原型：AI PM 的 Vibe Coding 实战方法论](../../02-pm-skills/vibe-coding/from-idea-to-demo.md)
 - [如何构建大模型效果评测体系?](../basics/model-evaluation-system.md)
+- [文档智能产品怎么设计](../../02-pm-skills/prd-and-design/document-intelligence-design.md)
+- [实时语音 Agent 怎么设计](../../02-pm-skills/prd-and-design/realtime-voice-agent-design.md)
+- [Computer Use 产品怎么设计](../../02-pm-skills/prd-and-design/computer-use-product-design.md)
 
 ## 参考资料
 

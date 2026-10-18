@@ -7,7 +7,7 @@ permalink: aipmwiki/docs/03-case-studies/aigc/kling-vs-jimeng
 # 可灵与即梦:视频生成两条商业化路径
 
 **分类**:AIGC
-**体验时间**:2026 年 7 月
+**资料核验时间**:2026 年 9 月 14 日
 
 ## 一、产品背景
 
@@ -16,7 +16,9 @@ permalink: aipmwiki/docs/03-case-studies/aigc/kling-vs-jimeng
 - **可灵 AI**(快手):以专业创作者与企业客户为主的视频生成产品,上市公司口径披露了可核实的收入运行率。
 - **即梦**(字节跳动,海外品牌 Dreamina):Seedance 等视频模型的重要 C 端入口之一,与剪映、火山引擎 API/年框销售共享同一条模型供应链。
 
-二者都不是「再讲一遍扩散模型有多贵」,而是回答:**爆款模型能力落进什么产品容器、向谁收费、算力紧张时优先保谁。**
+截至 2026-09-14，快手 IR 已确认 2026 年 2 月推出 Kling AI 3.0 系列；字节 Seed 官方已确认 Seedance 2.0 与 2.5 的发布、输入和时长能力。本文把 2025 年底的收入锚点与 2026 年的新模型分开记录，避免把旧模型发布时点当作当前版本。
+
+二者都不是「再讲一遍扩散模型有多贵」,而是回答:**模型能力落进什么产品容器、向谁收费、模型更新后如何维持可用性。**
 
 | 维度 | 可灵 AI | 即梦(+ Seedance 供给) |
 |------|---------|----------------------|
@@ -42,24 +44,24 @@ permalink: aipmwiki/docs/03-case-studies/aigc/kling-vs-jimeng
 
 ### 即梦:爆款模型的 C 端水龙头
 
-即梦承载图像与视频等多模态创作;2026 年初前后 Seedance 2.0 能力接入即梦、豆包等字节系入口后,C 端出现明显的排队与积分压力(多家媒体与从业者报道)。对 PM 而言,即梦拆解的重点是**供给分配**:
+即梦承载图像与视频等多模态创作。字节 Seed 官方在 2026-02-12 的发布中确认 Seedance 2.0 已上线即梦、豆包和火山方舟体验中心，支持文字、图片、音频、视频混合输入，并可生成 15 秒多镜头音视频；2026-07-31 又发布 Seedance 2.5，单次生成最长 30 秒并支持多轮延展。即梦官网当前仍提供文/图生视频、首尾帧和智能画布入口。排队、积分和集团内资源分配的媒体说法保留为待核实观察，不作为字节官方经营事实。
 
 | 环节 | 发生了什么 | 产品决策含义 |
 |------|------------|--------------|
-| 模型爆火 | Seedance 需求超过预期算力 | 不能同时「人人无限玩」与「企业稳定出片」 |
-| C 端会员/积分 | 订阅与积分消耗限制生成 | 用价格与配额过滤轻度用户 |
+| 模型更新 | Seedance 2.0 已发布，2.5 于 2026-07-31 发布 | 产品要标注当前模型与旧模型兼容关系 |
+| C 端入口 | 即梦官网提供文/图生视频、首尾帧、智能画布 | 先核验实际账号可见的模型、额度和排队规则 |
 | 优惠收缩 | 新会员优惠取消、积分按全价计等报道 | 从拉新补贴切到可持续供给 |
-| 集团内争抢 | 剪映与即梦争同一模型能力(媒体报道) | 同一模型多入口时,要显式定优先级 |
+| 集团内供给 | 剪映、即梦、豆包和火山方舟入口关系需按官方页面核验 | 不把媒体的资源争抢描述成已确认组织规则 |
 | B 端年框 | 媒体称高门槛年框保「满血」供给 | 算力优先卖给付得起确定性的客户 |
 
-主流程(C 端向):灵感/素材 → 消耗积分生成 → 排队或会员加速 → 导出到剪映等后续工具。AI 负责生成,产品层用积分与队列做「看不见的调度器」。
+主流程(C 端向)可抽象为灵感/素材 → 选择模型与参考 → 生成或延展 → 检查并导出。积分、排队和会员加速是否出现在某个账号，要以即梦当日页面为准；本文不把媒体观察当作统一产品规则。
 
 ## 三、技术方案推测
 
 > 以下为基于公开信息的合理推测,非两家完整架构披露。
 
 - **可灵(推测)**:自研视频生成大模型产品线,强调多模态条件(文本/图像/视频参考)与主体一致性;工程上需支持高并发推理与企业级 SLA。具体参数量与训练数据未在 IR 新闻稿中展开。
-- **即梦 / Seedance(推测)**:Seedance 为字节侧视频生成模型品牌,经火山引擎等渠道向 ToB 输出,同时注入即梦等 C 端 App。爆火后的排队本质是**推理算力调度问题**:白名单/年框用户与普通会员不在同一优先级队列。
+- **即梦 / Seedance(事实与边界)**:字节 Seed 官方确认 Seedance 2.0 已上线即梦、豆包和火山方舟体验中心，2.5 于 2026-07-31 发布；具体 API 商业套餐、会员优先级和排队调度规则没有在上述发布页完整披露，不能据媒体报道推断白名单或年框队列。
 - **共同约束**:视频生成单位成本远高于文本(见 Sora/Veo 文原理部分),因此两家都不可能长期靠「无限免费生成」支撑;差别在于可灵更早把专业付费讲清楚,即梦则同时承受 C 端增长与集团内多入口分食。
 
 ## 四、商业模式
@@ -88,7 +90,7 @@ permalink: aipmwiki/docs/03-case-studies/aigc/kling-vs-jimeng
 
 ### 与 Sora / Veo 的三角对照
 
-| 路线 | 代表 | 结局/状态(截至 2026-07) |
+| 路线 | 代表 | 结局/状态(截至 2026-09) |
 |------|------|-------------------------|
 | 独立消费爆款 | Sora App | 关停(见专文) |
 | 生态嵌入 | Veo | 多入口分发,成本摊入订阅/云 |
@@ -110,7 +112,11 @@ permalink: aipmwiki/docs/03-case-studies/aigc/kling-vs-jimeng
 
 ## 参考资料
 
-- [可灵AI年化收入运行率在2025年12月达2.4亿美元](https://ir.kuaishou.com/zh-hans/news-releases/news-release-details/kelingainianhuashouruyunxingluzai2025nian12yueda24yimeijin) — 快手科技 IR,2026-01-13,2026-07 访问
+- [Kling AI Annualized Revenue Run Rate Hits USD240 Million in December 2025](https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-annualized-revenue-run-rate-hits-usd240-million) — 快手科技 IR，2026-01-13 发布，2026-09-14 访问；ARR 为公司口径
+- [Kuaishou Technology Announces Fourth Quarter and Full Year 2025 Financial Results](https://ir.kuaishou.com/news-releases/news-release-details/kuaishou-technology-announces-fourth-quarter-and-full-year-2025) — 快手科技 IR，确认 2026-02 Kling 3.0 系列及 4Q25 收入，2026-09-14 访问
+- [Seedance 2.0 Official Launch](https://seed.bytedance.com/en/blog/seedance-2-0-official-launch) — 字节 Seed 官方，2026-02-12 发布；模型、输入模态、即梦/豆包/火山方舟入口，2026-09-14 访问
+- [One-take Creation, Flexible Referencing: Introducing Seedance 2.5](https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5) — 字节 Seed 官方，2026-07-31 发布；30 秒生成与延展，2026-09-14 访问
+- [即梦 AI](https://jimeng.jianying.com/) — 即梦官方入口，文/图生视频、首尾帧、智能画布，2026-09-14 访问
 - [别再管豆包收费了,Seedance正在疯狂吸金](https://www.36kr.com/p/3873701357736969) — 36氪(含火山否认偏高收入传闻),2026-07 访问
 - [火山引擎提升MaaS营收目标…Seedance 2.0单月营收已超10亿元](https://36kr.com/p/3836973710423429) — 36氪独家报道(**媒体口径,非上市公司 IR**),2026-07 访问
 - [字节发布Seedance 2.0,豆包、即梦官宣接入](https://www.pingwest.com/w/311515) — 品玩,2026-07 访问

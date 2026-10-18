@@ -82,6 +82,29 @@ AI 产品不能用一个“准确率”概括好坏。用户是否愿意使用�
 
 ## 三、从指标树到诊断链路
 
+### 先把“有效任务”与“收费单位”分开
+
+有效完成任务是产品指标，收费单位是商业契约，两者可能相同，也可能不同。Atlassian 2026-09-01 公告把 Rovo credits、automation steps 和 AI agent resolutions 分列；resolution 指 Agent 在没有人工升级时自主完成请求，相关 allowance/billing 计划于 2026-12-03 生效。这个例子说明 action、step、resolution 不应混称为 outcome。Docusign 2026-09-03 的财报披露 IAM ARR 占总 ARR 的 15.1%，但该数字不是 Agent 单独收入。
+
+建议看板同时保留三种分母：
+
+| 分母 | 适合回答 | 不能推出 |
+|---|---|---|
+| 发起任务意图 | 有多少需求被触发、成本覆盖多少失败 | 不能推出用户数或价值 |
+| 有效完成任务 | 每项业务结果花多少全成本 | 不能直接推出收入 |
+| 计费 action / resolution | 合同按什么单位结算 | 不能自动证明任务质量 |
+
+单位经济模板：
+
+```text
+有效任务全成本 = 模型与工具 + 基础设施/存储 + 重试增量
+                 + 人工确认/接管 + 评估/运营摊销
+每个有效任务成本 = 有效任务全成本 ÷ 有效完成任务数
+结果贡献 = 可归因收入或账面价值 − 有效任务全成本
+```
+
+若内部使用场景用“人工处理时间 × 工时单价”作对照，得到的是账面工时成本差，不等于现金节省或 ROI；还需扣除一次性建设、返工、治理、机会成本和业务系统改造。所有教学数字都必须标为虚构演算。
+
 上线评审时，可以把指标写成一条假设链：
 
 ```text
@@ -265,9 +288,11 @@ AI 产品的指标经常互相拉扯：
 
 ## 参考资料
 
-- [Evaluation best practices](https://developers.openai.com/api/docs/guides/evaluation-best-practices) —— OpenAI 官方文档，2026-07 访问
-- [Define success criteria and build evaluations](https://platform.claude.com/docs/en/test-and-evaluate/develop-tests) —— Anthropic 官方文档，2026-07 访问
-- [Generative AI evaluation overview](https://cloud.google.com/vertex-ai/generative-ai/docs/models/evaluation-overview) —— Google Cloud 官方文档，2026-07 访问
-- [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents) —— Anthropic 官方工程文章，2026-07 访问
+- [Evaluation best practices](https://developers.openai.com/api/docs/guides/evaluation-best-practices) —— OpenAI 官方文档，访问 2026-09-14
+- [Define success criteria and build evaluations](https://platform.claude.com/docs/en/test-and-evaluate/develop-tests) —— Anthropic 官方文档，访问 2026-09-14
+- [Generative AI evaluation overview](https://cloud.google.com/vertex-ai/generative-ai/docs/models/evaluation-overview) —— Google Cloud 官方文档，访问 2026-09-14
+- [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents) —— Anthropic 官方工程文章，访问 2026-09-14
+- [Atlassian usage-based pricing](https://www.atlassian.com/blog/company-news/expanded-usage-based-pricing) —— Atlassian 官方公告，2026-09-01；计费生效日和 resolution 定义，访问 2026-09-14
+- [Docusign Q2 FY27 results](https://www.sec.gov/Archives/edgar/data/1261333/000126133326000088/q227ex-991er.htm) —— SEC Exhibit 99.1，2026-09-03；IAM ARR 为公司定义口径，访问 2026-09-14
 - [Your Mouse and Eyes Secretly Leak Your Preference: LLM Alignment using Implicit Feedback from Users](https://arxiv.org/html/2606.20482) —— 讨论显式反馈覆盖有限、隐式行为可用于对齐；文中引用约 1%–3% 显式反馈量级（Wang et al.），作区间参考而非产品基线，2026-08-06 访问
 - 第七–九节选题启发自磊叔《关于 AI 产品经理的 100 个问题》Q28、Q49、Q63；正文为原创重写，未摘录原书答案

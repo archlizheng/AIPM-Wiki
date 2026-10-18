@@ -137,6 +137,22 @@ permalink: aipmwiki/docs/02-pm-skills/prd-and-design/agentic-ux-and-trust-calibr
 
 Agentic UX 的工作，是把「模型会规划」翻译成用户可理解的**控制面**：进度、确认、撤销、接管与完成证据。信任校准的工作，是让依赖强度跟着真实能力走——压低 overtrust，抬升不必要的 undertrust。当用户「用完又回人工」时，用能力 / 交互 / 信任 / 成本 / 组织五类归因，才能避免把所有问题甩给模型团队。
 
+## 七、停止、取消和撤回要分开设计
+
+Agent UI 常把“停止”做成一个按钮，但它至少对应三种不同动作。停止播报只影响当前声音，取消未执行计划会阻止后续工具调用，撤回已提交业务对象则要依赖业务系统规则和回执。三者在按钮文案、状态和审计记录中都应不同。
+
+| 用户动作 | 系统效果 | 必须显示的证据 |
+|---|---|---|
+| 停止播报 | 结束音频输出，继续听用户补充 | 已播到哪里、是否有后台任务 |
+| 取消计划 | 阻止尚未发出的工具动作 | 被取消步骤和取消时间 |
+| 撤回申请 | 调用业务撤回规则 | 业务系统返回的撤回结果 |
+
+在内部 IT 服务教学场景中，提交申请后按 request_key 查询状态。没有撤回回执时只能说“已提交，正在查询”，不能说“已撤销”。
+
+## 八、把确认预算给高后果动作
+
+低风险只读动作可以少打扰，草稿应当容易修改，提交、外发、删除、付款和权限变更必须展示对象、范围、后果和可撤销性。确认卡不应只问“是否继续”，还要让用户知道 Agent 将以谁的身份调用哪个系统。
+
 ## 相关阅读
 
 - [怎么设计 Agent 的信任校准，避免过度信任或不信任？](../../04-interview/product-design/agent-trust-calibration-design.md)
@@ -147,6 +163,9 @@ Agentic UX 的工作，是把「模型会规划」翻译成用户可理解的**�
 - [AI 产品的黑箱问题如何影响用户信任?产品层面怎么做?](../../04-interview/basics/ai-blackbox-trust.md)
 - [答案引擎的引用与信任设计](../../03-case-studies/search-and-rec/answer-engine-citation-trust.md)
 - [Agent 入门：规划、记忆、工具调用](../../01-ai-basics/llm/agent-basics.md)
+- [文档智能产品怎么设计](document-intelligence-design.md)
+- [实时语音 Agent 怎么设计](realtime-voice-agent-design.md)
+- [Computer Use 产品怎么设计](computer-use-product-design.md)
 
 ## 参考资料
 

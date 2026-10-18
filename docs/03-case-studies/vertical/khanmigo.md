@@ -7,13 +7,13 @@ permalink: aipmwiki/docs/03-case-studies/vertical/khanmigo
 # Khanmigo 案例拆解:教育 AI 的成效指标与采纳教训
 
 **分类**:垂直行业
-**体验时间**:2026 年 7 月
+**体验时间**:2026 年 9 月（基于公开资料，未进行付费账户实测）
 
 ## 一、产品背景
 
 教育 AI 最容易被讲成"每个学生配一个 AI 家教",也最容易在真实教室里撞上另一件事:**有权限 ≠ 会用,会聊 ≠ 学会**。Khanmigo 是 Khan Academy(可汗学院)推出的生成式 AI 辅导与教师助手,2023 年首次接入平台;作为非营利组织产品,它的目标表述更接近"提升可衡量的学习结果",而不是追求消费级 DAU 叙事。
 
-到 2025–26 学年,Khan Academy 在官方博客中公开了一组对产品经理极有价值的数据:**拥有 Khanmigo 权限的学生里,大约只有 15% 会真正使用**;同时他们把成效指标锚定在 **next-item correctness**(下一题独立正确率)——学生接受辅导后,能否在同一技能上**不借助 Khanmigo** 做对下一题。配套的交互重设计(把 AI 嵌进练习流、主动出手、区分作答前后帮助方式)在试点区推行,并计划于 **2026 年夏季**向全部学区合作伙伴推开"Reimagined"体验。
+到 2025–26 学年,Khan Academy 在 2026-04-28 官方博客中公开了一组对产品经理极有价值的数据:**拥有 Khanmigo 权限的学生里,大约只有 15% 会真正使用**；学年内工作日平均约 26.9 万次交互，自 2023 年上线累计超 1.08 亿次。成效指标锚定在 **next-item correctness**(下一题独立正确率)——学生接受辅导后，能否在同一技能上**不借助 Khanmigo** 做对下一题。官方 2026-04-01 续约指南写明，Reimagined 平台计划在 2026 年 7 月面向所有用户正式上线；此前试点材料仍只能证明约 5,100 名学生、五个美国学区的共建过程，不能推出所有学区的实际采用。
 
 与[智能客服案例](ai-customer-service.md)对照:客服把"结果"定义成可计费的会话关闭事件;Khanmigo 把"结果"定义成**学习迁移是否发生**。计费可以按学生席位/学区合同走,但产品是否成功,看的是练习成效与采纳,而不是"聊了多少轮"。
 
@@ -86,7 +86,7 @@ Khan Academy 将 **next-item correctness** 定义为:学生在接受辅导后,�
 
 ### 3. 收费形态(公开信息层级)
 
-Khan Academy 核心练习内容对个人学习者长期免费;Khanmigo / 学区能力走订阅或学区合作合同。学区合作博客曾披露含学生侧 Khanmigo 的 District Partnership 等档位及按生计价信息,但价目会随学年续约调整,且大型学区多为定制报价。**本文不把第三方整理的价目表当作唯一真相**;商业模式上更重要的是:**非营利 + 学区 B2B 采购 + 用学习成效说话**,与 Harvey 式高 ARPU 律所合同、Fin 式按次结果费都不同。
+Khan Academy 核心练习内容对个人学习者长期免费；Khanmigo / 学区能力走订阅或学区合作合同。官方 2026-09 价目页显示 Enterprise Starter 面向美国、1,000 个学生席位以内，公开价格为 **$10/学生/年**；超过 1,000 席位的 Enterprise 方案要求联系销售，具体合同、服务与实施支持按学区确认。**本文不把旧博客或第三方整理的个人/学区价目当作永久价格**；商业模式上更重要的是非营利 + 学区 B2B 采购 + 用学习成效说话。
 
 ## 五、PM 视角的启示
 
@@ -96,7 +96,7 @@ Khan Academy 核心练习内容对个人学习者长期免费;Khanmigo / 学区�
 
 ## 相关阅读
 
-- [智能客服:最成熟的 LLM 落地场景拆解](ai-customer-service.md) —— 对照另一种"结果"定义与按结果付费
+- [智能客服:公开商业化闭环案例拆解](ai-customer-service.md) —— 对照另一种"结果"定义与按结果付费
 - [Harvey 案例拆解:法律垂直的高合规企业 AI](harvey-legal-ai.md) —— 高合规垂直的另一条商业路径
 - [如何构建你的评估集](../../02-pm-skills/model-evaluation/build-your-eval-set.md)
 - [Badcase 分析方法论](../../02-pm-skills/model-evaluation/badcase-analysis.md)
@@ -105,8 +105,8 @@ Khan Academy 核心练习内容对个人学习者长期免费;Khanmigo / 学区�
 
 ## 参考资料
 
-- [Learning in the Open: What AI Is (and Isn't) Changing](https://blog.khanacademy.org/learning-in-the-open-what-ai-is-and-isnt-changing/) — Khan Academy 官方博客(约 15% 采纳、交互量、重设计要点、2026 夏学区 rollout),2026-07 访问
-- [How Khan Academy Is Building a Better AI Tutor: Our Most Recent Learnings](https://blog.khanacademy.org/how-khan-academy-is-building-a-better-ai-tutor-our-most-recent-learnings/) — 官方博客(next-item correctness 定义与 +6.1%、math agent、A/B 方法),2026-07 访问
-- [How Pilot Districts Shaped the Reimagined Khan Academy](https://blog.khanacademy.org/built-in-the-open-how-pilot-districts-shaped-the-reimagined-khan-academy/) — 官方博客(练习内嵌 AI、仪表盘、学区试点共创),2026-07 访问
-- [Becoming a Khan Academy Districts Partner](https://blog.khanacademy.org/becoming-a-khan-academy-districts-partner/) — 学区合作与 Khanmigo 档位说明,2026-07 访问
-- [Khan Academy Districts 2026–27 Renewal Guide](https://blog.khanacademy.org/khan-academy-districts-2026-27-renewal-guide/) — 2026–27 续约与 Reimagined 时间线,2026-07 访问
+- [Learning in the Open: What AI Is (and Isn't) Changing](https://blog.khanacademy.org/learning-in-the-open-what-ai-is-and-isnt-changing/) — Khan Academy 官方博客,2026-04-28；15% 采用、交互量、重设计与夏季 rollout,访问 2026-09-14
+- [How Khan Academy Is Building a Better AI Tutor: Our Most Recent Learnings](https://blog.khanacademy.org/how-khan-academy-is-building-a-better-ai-tutor-our-most-recent-learnings/) — 官方博客,2026-05-06；next-item correctness、+6.1%、math agent、A/B 方法,访问 2026-09-14
+- [How Pilot Districts Shaped the Reimagined Khan Academy](https://blog.khanacademy.org/built-in-the-open-how-pilot-districts-shaped-the-reimagined-khan-academy/) — 官方博客,2026-06-15；约 5,100 名学生、五个美国学区和练习内嵌 AI,访问 2026-09-14
+- [Khan Academy Districts 2026–27 Renewal Guide](https://blog.khanacademy.org/khan-academy-districts-2026-27-renewal-guide/) — 官方指南,2026-04-01；续约范围与 2026-07 正式上线计划,访问 2026-09-14
+- [Pricing | Khan Academy Districts](https://www.khanacademy.org/schools/pricing) — 官方价目页,动态页,访问 2026-09-14；Enterprise Starter $10/学生/年、1,000 席位限制

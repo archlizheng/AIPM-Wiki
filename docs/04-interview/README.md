@@ -25,3 +25,7 @@ permalink: aipmwiki/docs/04-interview/readme
 2. 概念题过一遍查漏 → 设计题动笔写(不要只在脑子里想)→ 面经用来了解风格和流程。
 3. 每道题的「追问延伸」是面试官最可能 follow-up 的方向,务必准备。
 4. 有项目或作品集时,先看 [preparation/ 面试准备方法](preparation/README.md),再把自己的材料带回对应题型练习。
+
+## 原创实践题入口
+
+[四道进阶原创题](product-design/README.md#原创进阶练习从正课到验收)连接 PoC 采用、记忆删除、幂等重试与语音打断。先完成 [内部服务助手实践](../02-pm-skills/practice/README.md)，再脱离标准答案作答；题目不是公司面经，出现频率未统计。

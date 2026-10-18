@@ -235,7 +235,7 @@ Agent 类任务还要在 Eval Spec 里区分**最终结果**与**轨迹**(是否
 
 ## 类比:向 Model Card / System Card 学"效果怎么披露"
 
-Anthropic 和 OpenAI 每次发布新模型,都会同步发布一份 **System Card**(系统卡,早期也叫 Model Card)。以 2026 年 Anthropic 发布的 Claude Sonnet 5 System Card、Claude Opus 4.6/4.8 System Card,以及 OpenAI 的 GPT-5 系列 System Card 为例,它们的公开结构通常包含:能力评测结果(在哪些 benchmark 和"生产场景真实困难案例"上的表现)、安全评估(红队测试、滥用风险测试)、已知局限性、以及负责任部署决策(在什么条件下才允许开放什么能力)。
+Anthropic 和 OpenAI 为部分模型和系统公开 **System Card**（系统卡）。它与 **Model Card**（模型卡）的范围不完全相同，不能把两者理解为简单的新旧名称。以 2026 年 Anthropic 发布的 Claude Sonnet 5 System Card、Claude Opus 4.6/4.8 System Card,以及 OpenAI 的 GPT-5 系列 System Card 为例,它们的公开结构通常包含:能力评测结果(在哪些 benchmark 和"生产场景真实困难案例"上的表现)、安全评估(红队测试、滥用风险测试)、已知局限性、以及负责任部署决策(在什么条件下才允许开放什么能力)。
 
 这套披露逻辑,和 AI PRD 里"效果定义 + 能力边界"两节想解决的问题几乎一模一样:**不是等用户发现模型不会什么,而是主动、具体地讲清楚模型能做什么、不能做什么、在什么水位上是可信的**。区别在于系统卡面向的是外部世界和监管,AI PRD 面向的是内部团队和验收流程,但"用具体数字和具体场景说话,而不是用形容词"这条原则是相通的。写效果定义章节卡壳时,不妨反问自己:如果要把这个功能的效果写成一份对外的"系统卡",你有没有底气写出具体的评测结果和边界说明?写不出来,往往说明效果定义还不够扎实。
 
@@ -304,6 +304,25 @@ Anthropic 和 OpenAI 每次发布新模型,都会同步发布一份 **System Car
 - Eval 集扩充与"评测饱和"处理
 ```
 
+## 九、把多模态和办公 Agent 写进同一份 PRD
+
+当输入包含文档、语音或屏幕，PRD 需要新增三张表。第一张表说明每个来源是否由用户选择、管理员启用或系统默认读取。第二张表说明输出是回答、草稿还是已经写入业务系统。第三张表说明打断、确认、取消和重试分别影响哪一个状态。
+
+| 需求 | PRD 要写什么 | 不能用什么替代 |
+|---|---|---|
+| 文档理解 | 版本、生效日、引用位置、缺失字段 | OCR 综合分 |
+| 实时语音 | 监听、停顿、打断、转写和首个可听片段 | 支持语音 |
+| Computer Use | 适用工具、账号身份、截图回执、沙箱和接管 | 模型可以操作电脑 |
+| 办公交付 | 文件类型、可编辑性、来源、发送前审核 | 自动生成报告 |
+
+OpenAI GPT-Live 的官方材料把全双工媒体路径和后台搜索、推理、工具调用分开。Google Workspace 在 2026-09-09 公告中展示了从 Chat、Drive、Docs、Gmail 生成 Slides、Sheets、Brief、邮件和 Deck 的路径。它们说明 AI PRD 的验收对象已经包含持续会话、跨应用来源和可编辑交付物，但不代表每个账号都已获得相同能力。
+
+## 十、提交前的状态和证据检查
+
+写完功能后逐项回答四个问题。谁发起了动作，谁拥有业务权限，系统返回了什么证据，用户下一步还要做什么。任务 B 的“已提交”只能由业务申请 ID 证明，不能由语音播报或页面动画证明。用户停止播报也不能撤回已发请求。
+
+把这些答案放入 Eval Spec。至少加入缺资料、过期文档、冲突来源、跨租户读取、重复提交、审批变化和接口超时。没有真实数据时使用虚构材料，并明确这只是教学演算。
+
 ## 相关阅读
 
 - [AI 产品经理和传统产品经理最大的区别是什么?](../../04-interview/behavioral/ai-pm-vs-traditional-pm.md)
@@ -313,6 +332,9 @@ Anthropic 和 OpenAI 每次发布新模型,都会同步发布一份 **System Car
 - [某功能接入大模型后成本涨了 10 倍,如何降本?](../../04-interview/case-analysis/reduce-llm-cost-10x.md)
 - [兜底、反馈与预期管理:AI 产品的交互设计三件套](fallback-and-feedback-design.md)
 - [Agentic UX 与信任校准：用户何时该信、何时该介入](agentic-ux-and-trust-calibration.md)
+- [文档智能产品怎么设计](document-intelligence-design.md)
+- [实时语音 Agent 怎么设计](realtime-voice-agent-design.md)
+- [Computer Use 产品怎么设计](computer-use-product-design.md)
 - [Agent 产品生产化：从会执行到可负责地完成任务](../ai-product-operations/agent-product-design.md)
 - [Agent 评测与可观测性：从最终答案追到完整轨迹](../ai-product-operations/agent-evaluation-and-observability.md)
 - [系统提示词设计与 Prompt 工程化:把玄学变工程](../../01-ai-basics/prompt-engineering/system-prompt-and-prompt-ops.md)

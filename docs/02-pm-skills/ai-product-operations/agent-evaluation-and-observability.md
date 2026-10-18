@@ -339,3 +339,31 @@ Anthropic 指出：有 evals 的团队能在新模型发布后较快判断强弱
 - [Traces](https://opentelemetry.io/docs/concepts/signals/traces/) —— OpenTelemetry 官方文档，2026-08-06 访问
 - [Tracing](https://openai.github.io/openai-agents-python/tracing/) —— OpenAI Agents SDK 官方文档，2026-08-06 访问
 - 选题启发：磊叔 / AIRay1015《关于 AI 产品经理的 100 个问题》Q42、Q48、Q56、Q57、Q59、Q60、Q66、Q67
+
+## 2026-09 深化：行为级回归与线上轨迹闭环
+
+评测正在从“跑一个总分”转向“看任务、轨迹、结果和生产漂移”。Google 2026-07-31 宣布 Agent and Model Evaluations GA，支持 user simulator、environment simulator、失败聚类、完整 trace 和在线 monitor；Google 2026-08-24 又给 ADK 增加 live/voice evaluation，用模拟用户、音频和多轮 trajectory rubric；Anthropic 的 Agent eval 方法把 task、trial、transcript、outcome 和 harness 分开定义。最终回答好看，不代表工具正确，更不代表业务状态真的完成。
+
+行为断言应检查可观察事件，而不是强迫模型走唯一顺序。例如“设备申请提交前必须出现用户确认事件”“查询状态必须调用业务系统”“工具超时后不得再次创建相同申请”。复杂任务允许多条正确路径时，用 outcome 或 rubric 判断；只有有明确唯一安全动作时才写严格工具序列。
+
+| 层 | 断言 | 证据 |
+|---|---|---|
+| 任务结果 | 问答有 D01 生效版本和引用；提交有业务申请 ID | 业务状态/引用字段 |
+| 轨迹行为 | 缺字段时先追问；提交前出现确认 | trace event |
+| 权限安全 | E01 不能查 tenant-B；不能代主管审批 | 服务端拒绝与审计 |
+| 稳定性 | 多 trial 不出现重复建单 | 多次 outcome 对比 |
+| 线上健康 | 成功率、工具错误、转人工和成本没有异常漂移 | online monitor |
+
+教学契约中的 EV01-EV30 只是 30 条教学用例，A 版 22/30、B 版 28/30 的数字是演算，不足以证明上线稳定。每次模型、Prompt、工具 schema、权限策略、记忆策略或路由变化，都要记录版本并重新跑安全集和回归集。`transcript` 是 Agent 做过什么；`outcome` 是外部环境最后变成什么。只有业务系统返回申请 ID 并确认 `submitted/pending_approval`，任务提交才算完成；`approved` 和 `fulfilled` 仍需业务系统与人工流程确认。
+
+### 让同一用例可重复比较
+
+每次trial（同题一次尝试）先恢复相同制度、权限、业务对象与记忆快照，使用隔离的测试意图键；否则上一轮已建的申请会污染下一轮。记录每次是否通过、错误类型与耗时，不把多次里最好的一次当成功率。模拟用户需要业务专家审查：它可能更配合、表达更完整，遗漏真实用户的犹豫、噪声和矛盾请求。
+
+线上回流按“用户反馈/异常事件→去重到任务意图→脱敏与许可检查→归因→新增回归用例→独立留出验证”进行。业务分布变化与模型版本变化分开观察。教学[逐条评分账本](../practice/internal-service-evaluation.md)的22/30和28/30仅来自预设，真实线上完成率另按[1000项意图账本](../practice/internal-service-adoption.md)的定义采集，不能互换。
+
+参考更新：
+
+- [Agent and Model Evaluations are now GA](https://developers.googleblog.com/agent-and-model-evaluations-in-gemini-enterprise-agent-platform-are-now-ga/) — Google，2026-07-31，GA，访问 2026-09-14。
+- [How to Evaluate Live & Voice Agents in ADK](https://developers.googleblog.com/how-to-evaluate-live-voice-agents-in-adk/) — Google，2026-08-24，官方工程文章，访问 2026-09-14。
+- [Demystifying evals for AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents) — Anthropic，2026-01-09，方法指导，访问 2026-09-14。

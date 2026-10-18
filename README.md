@@ -18,7 +18,7 @@ permalink: aipmwiki/readme
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![GitHub stars](https://img.shields.io/github/stars/archlizheng/AIPM-Wiki?style=social)](../../stargazers)
 ![内容规模](https://img.shields.io/badge/%E6%96%87%E7%AB%A0-100%2B%20%E7%AF%87-blue)
-![数据时效](https://img.shields.io/badge/%E6%95%B0%E6%8D%AE%E6%A0%B8%E5%AE%9E-2026--07-orange)
+![内容更新](https://img.shields.io/badge/%E6%9C%AC%E8%BD%AE%E6%9B%B4%E6%96%B0-2026--09--14-orange)
 
 ---
 
@@ -43,7 +43,7 @@ permalink: aipmwiki/readme
 - 🚀 **准备面试?** 直接进入 [04-interview 面试题库](docs/04-interview/README.md) —— 概念题、设计题、案例题、行为面 + 18 篇面经与经验资料
 - 🌱 **零基础入门?** 从 [00-roadmap 学习路线](docs/00-roadmap/README.md) 开始,按目录编号顺序阅读
 - 🔍 **查概念?** 打开 [AI 术语速查表](docs/01-ai-basics/glossary.md)
-- 💰 **算成本 / 做选型?** 见 [成本测算入门](docs/02-pm-skills/cost-and-tech/llm-cost-101.md) 与 [2026 模型盘点](docs/01-ai-basics/llm/model-landscape.md)(数据核实至 2026-07)
+- 💰 **算成本 / 做选型?** 见 [成本测算入门](docs/02-pm-skills/cost-and-tech/llm-cost-101.md) 与 [2026 模型盘点](docs/01-ai-basics/llm/model-landscape.md)（动态字段按文中逐项来源与核验日使用）
 
 ## 🧑‍💻 推荐使用方式:Obsidian + Claudian
 
@@ -89,6 +89,14 @@ permalink: aipmwiki/readme
    ↓
 04 面试题库(求职前 2-4 周集中刷)
 ```
+
+### 按你的阶段选择
+
+- **新人入门**：[00—05基础路线](docs/00-roadmap/README.md#新人入门)。
+- **企业 AI 在岗进阶**：[需求、平台、执行、评测、成本与采用](docs/00-roadmap/README.md#企业-ai-在岗进阶)。
+- **完整文档实践**：[内部 IT 服务助手四课](docs/02-pm-skills/practice/README.md)，含12份虚构制度、30条评测与4条扩展验收、4道原创练习题。
+
+2026-09-14这一轮更新包含7篇新正课、2篇案例、4篇实践与4道原创题。更新时间不代表每个历史事实全部重新验证；模型、政策、价格与产品状态以正文标出的来源、适用范围和核验日为准。教学演算不代表真实运行效果。
 
 ## ✨ 内容特色
 

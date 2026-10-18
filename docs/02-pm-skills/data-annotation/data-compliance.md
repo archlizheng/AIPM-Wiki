@@ -12,7 +12,7 @@ permalink: aipmwiki/docs/02-pm-skills/data-annotation/data-compliance
 
 选题结构启发自磊叔《关于 AI 产品经理的 100 个问题》Q40（隐私进训练集何时爆）、Q88（训练红线怎么划）；正文依据下文「参考资料」中的官方原文原创撰写，**不以任何第三方 PDF 条款代替法规原文**。
 
-**信息核验日期**：2026-08-06（以下「访问日期」同，除非另行注明）。
+**信息核验日期**：2026-09-14（以下「访问日期」同，除非另行注明）。本次复核范围是文末列出的 Anthropic、OpenAI、Google 官方数据政策，以及中国政府网/网信办列出的法规与 2026 年 1 月出境问答；截至访问日未检索到替代本文所引核心条款的新官方文本。这不是对所有法域、合同或地方执法动态的穷尽检索，具体项目仍需法务确认。
 
 ---
 
@@ -30,7 +30,7 @@ permalink: aipmwiki/docs/02-pm-skills/data-annotation/data-compliance
 | **B. 上游厂商训练** | 调用 OpenAI / Anthropic / Google 等 API 或企业版时，**厂商**是否会用你的客户数据训练其基础模型 | 「用了某家 API，等于数据进了它的公开模型」或反过来「API 不训练 = 我自己也可以随便训」 |
 | **C. 消费者产品对照** | 厂商自己的 ChatGPT / Claude / Gemini 消费者产品，对终端用户的默认策略与开关 | 把消费者产品文案直接抄进 B2B 产品隐私政策 |
 
-**事实（厂商政策，访问 2026-08-06）**：三家主流厂商对**企业 / API** 普遍默认**不**用客户业务数据训练基础模型；对**消费者产品**则多允许在设置可控的前提下用于改进。这只回答层级 B/C，**不自动合法化层级 A**。
+**事实（厂商政策，访问 2026-09-14）**：Anthropic 与 OpenAI 的公开商业/API 页面分别写明客户业务数据默认不用于训练基础模型；Google 的 Workspace、Vertex AI/API 路径需按当期企业合同与 Cloud 文档核对。三家消费者产品均另有设置、反馈或安全处理规则。这只回答层级 B/C，**不自动合法化层级 A**。
 
 ## 隐私进训练集：风险通常怎么爆（对应 Q40）
 
@@ -46,7 +46,7 @@ permalink: aipmwiki/docs/02-pm-skills/data-annotation/data-compliance
 
 ### 3. 监管问询与说明义务
 
-**事实**：《生成式人工智能服务管理暂行办法》第 19 条要求提供者配合监督检查，并按要求对训练数据来源、规模、类型、标注规则、算法机制机理等予以说明（[全文](https://www.gov.cn/zhengce/zhengceku/202307/content_6891752.htm)，访问 2026-08-06）。临时拼凑「数据从哪来、有没有个保依据」会直接暴露日常缺失。
+**事实**：《生成式人工智能服务管理暂行办法》第 19 条要求提供者配合监督检查，并按要求对训练数据来源、规模、类型、标注规则、算法机制机理等予以说明（[全文](https://www.gov.cn/zhengce/zhengceku/202307/content_6891752.htm)，访问 2026-09-14）。临时拼凑「数据从哪来、有没有个保依据」会直接暴露日常缺失。
 
 ### 4. 开关文案与真实路径不一致
 
@@ -54,7 +54,7 @@ permalink: aipmwiki/docs/02-pm-skills/data-annotation/data-compliance
 
 ### 5. 「关开关」幻想：已训进模型的数据回不来
 
-**事实（厂商政策）**：Anthropic 明确说明，关闭模型改进后，**已开始的训练与已训练模型**中的数据不会因此「撤回」；关闭只影响未来新对话进入未来训练（见其消费者条款更新 FAQ，访问 2026-08-06）。OpenAI 等亦普遍区分「停止用于未来训练」与「从已发布模型中擦除」。产品文案若暗示「一点即永久抹除训练痕迹」，属于高风险承诺，**需法务**审定表述。
+**事实（厂商政策）**：Anthropic 明确说明，关闭模型改进后，**已开始的训练与已训练模型**中的数据不会因此「撤回」；关闭只影响未来新对话进入未来训练（见其消费者隐私中心，访问 2026-09-14）。OpenAI 的数据控制页面也把停止未来训练与其他保留/法定义务分开；两者都不构成从已发布模型中擦除的承诺。产品文案若暗示「一点即永久抹除训练痕迹」，属于高风险承诺，**需法务**审定表述。
 
 ---
 
@@ -64,7 +64,7 @@ permalink: aipmwiki/docs/02-pm-skills/data-annotation/data-compliance
 
 ### 中国：暂行办法第 7、11 条 + 个保法
 
-| 方向 | 事实要点（摘要） | 出处（访问 2026-08-06） |
+| 方向 | 事实要点（摘要） | 出处（访问 2026-09-14） |
 |------|------------------|-------------------------|
 | 训练数据处理 | 预训练、优化训练等须：合法来源的数据与基础模型；涉及知识产权不得侵害；**涉及个人信息的，应当取得个人同意或者符合法律、行政法规规定的其他情形**；提高数据质量（真实、准确、客观、多样）；并遵守网安法、数安法、个保法等 | 《生成式人工智能服务管理暂行办法》第 7 条，[中国政府网全文](https://www.gov.cn/zhengce/zhengceku/202307/content_6891752.htm) / [网信办](https://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm) |
 | 输入与使用记录 | 不得收集非必要个人信息；不得非法留存能够识别使用者身份的输入信息和使用记录；不得非法向他人提供；应及时处理查阅/复制/更正/补充/删除等请求 | 暂行办法第 11 条，同上 |
@@ -78,26 +78,26 @@ permalink: aipmwiki/docs/02-pm-skills/data-annotation/data-compliance
 
 ### 欧盟 / 美国：只做对照指针
 
-| 管辖 | 产品侧要知道的边界 | 出处（访问 2026-08-06） |
+| 管辖 | 产品侧要知道的边界 | 出处（访问 2026-09-14） |
 |------|--------------------|-------------------------|
 | 欧盟 | 个人数据进训练通常落入 GDPR：合法基础、目的限制、透明与撤回、删除权等；「从已训练模型中删除」的技术与法律可行性高度场景化，**禁止**把「用户点删除 = 模型已遗忘」写成对外保证 | [GDPR EUR-Lex](https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng/)；AI 系统义务另见 [AI Act 2024/1689](https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng) 与清单文中欧对照表 |
-| 美国 | **无**与中欧同构的联邦「生成式 AI + 训练数据」统一法；常见为州隐私法（如加州 CPRA 等）+ 行业法 + 执法；具体州与行业 **需法务** | 对照摘要见 [genai-compliance-checklist-cn.md](genai-compliance-checklist-cn.md)；勿背第三方读物当法条 |
+| 美国 | 本文不作“存在/不存在一部联邦统一生成式 AI 训练数据法”的穷尽结论；产品义务可能同时来自联邦部门规则与执法、州隐私法（如加州 CPRA）及行业法，需按州、行业、角色和数据流复核 | 对照摘要见 [genai-compliance-checklist-cn.md](genai-compliance-checklist-cn.md)；勿背第三方读物当法条 |
 
 ---
 
-## 三家大模型厂商的训练数据政策对比（访问 2026-08-06）
+## 三家大模型厂商的训练数据政策对比（访问 2026-09-14）
 
 以下对比基于三家**官方**隐私政策 / 帮助中心 / 企业隐私页。消费者产品与企业/API **不能混为一谈**；下表回答的是「厂商是否用你的数据训它的模型」，不是「你是否可以训自己的模型」。
 
 | 厂商 | 消费者产品 | 消费者是否可控 | 企业 / API 默认 |
 |------|------------|----------------|-----------------|
-| Anthropic（Claude） | Free / Pro / Max：若开启模型改进（Improve Claude），新对话与编程会话可用于改进模型；开启时可去标识化保留至多约 5 年 | 可在隐私设置中开关；关闭后**新**对话不用于未来训练，保留回到约 30 天量级。**例外**：被安全系统标记复核的对话，仍可能用于安全/Usage Policy 类改进（即使关闭训练）。Incognito 对话不用于改进。关闭不回溯已训模型 | Claude for Work、Enterprise、API（含 Bedrock / Vertex 等商业路径）默认**不**用于训练基础模型（适用其 Commercial Terms） |
+| Anthropic（Claude） | Free / Pro / Max：若开启模型改进（Improve Claude），新对话与编程会话可用于改进模型；反馈和安全复核另有处理规则，保留期限以当前地区/产品政策页为准，不在本文固化单一数字 | 可在隐私设置中开关；关闭后**新**对话不用于未来训练。**例外**：被安全系统标记复核的对话，仍可能用于安全/Usage Policy 类改进（即使关闭训练）。Incognito 对话不用于改进。关闭不回溯已训模型 | Claude for Work、Enterprise、API（含 Bedrock / Vertex 等商业路径）默认**不**用于训练基础模型（适用其 Commercial Terms） |
 | OpenAI（ChatGPT 等） | 面向个人的 ChatGPT 等：可能用内容训练模型，除非用户退出 | 可在数据控制中选择「不在我的内容上训练」；退出后**新**对话不用于训练 | ChatGPT Business / Enterprise / Edu 等及 API 平台：默认**不**用输入输出训练或改进模型，除非客户显式选择共享（如 Playground 反馈） |
 | Google（Gemini Apps） | Keep Activity 开启时，活动可用于提供、开发与改进服务（含训练生成式 AI 模型），并可能经人工复核 | 可关 Keep Activity，或用临时聊天（Temporary Chat）。官方说明：临时聊天不用于训练；Keep Activity 关闭且未提交反馈时，未来聊天不用于改进 AI 模型。关闭后账户侧保留约 **72 小时**（用于应答、反馈与安全保护）。已被人工复核的聊天及相关数据可保留至多约 **三年**，且不随你删除活动而删。设置**不**控制「匿名化数据用于改进服务」类处理 | Workspace 企业版与 Vertex AI / API 等企业路径：默认不用于训练公开/基础模型的口径以当期企业合同与 Cloud 文档为准；管理员可进一步约束留存——选型时单独核验，**待核验**你方合同页 |
 
 几个直接影响文案与设置项的细节：
 
-- **「关闭训练」≠「数据完全不被使用」**。Anthropic 的安全复核例外、Google 在 Keep Activity 关闭后仍可为应答与保护（含人工复核）处理对话，都是隐私说明里最容易漏写、也最容易引发不满的点。
+- **「关闭训练」≠「数据完全不被使用」**。Anthropic 的安全复核例外、反馈/滥用处置和地区化保留规则，以及 Google 在 Keep Activity 关闭后仍可为应答与保护（含人工复核）处理对话，都是隐私说明里最容易漏写、也最容易引发不满的点。不要把某个帮助页的固定天数复制成所有地区和数据类型的承诺。
 - **「删除对话」≠「从已发布模型中卸载」**。以 Anthropic 官方 FAQ 为例：删除对话可使其不进入**未来**训练；已完成的训练与已上线模型不受「关闭开关」回溯。
 - **层级 B 干净 ≠ 层级 A 干净**。API 默认不训练，只说明厂商侧；你方若把对话落库再微调自有模型，仍须单独完成告知、合法依据与（如适用）出境评估。
 
@@ -107,7 +107,9 @@ permalink: aipmwiki/docs/02-pm-skills/data-annotation/data-compliance
 
 若中国用户的对话会传到**境外部署**的大模型 API，这通常构成向境外提供个人信息的行为，需按出境制度评估路径——与「厂商是否用于训练」是相邻但不同的问题。
 
-**事实（政策问答口径，访问 2026-08-06）**：国家网信办《数据出境安全管理政策法规问答（2026年1月）》说明，关键信息基础设施运营者以外的数据处理者，自当年 1 月 1 日起累计向境外提供 **10 万人以上、不满 100 万人**个人信息（不含敏感个人信息）或 **不满 1 万人**敏感个人信息的，可通过订立**标准合同**或**个人信息出境认证**等方式；累计超过 **100 万人**个人信息（不含敏感）或超过 **1 万人**敏感个人信息的，应申报**数据出境安全评估**。属于《促进和规范数据跨境流动规定》第三至六条情形的，从其规定。[问答原文](https://www.cac.gov.cn/2026-01/30/c_1771505108953002.htm)
+**事实（访问 2026-09-14）**：对关键信息基础设施运营者以外的数据处理者，《促进和规范数据跨境流动规定》第七、八条按当年 1 月 1 日起累计人数区分路径：非敏感个人信息达到 10 万但未满 100 万人，或敏感个人信息未满 1 万人时，按规定适用标准合同或认证；非敏感个人信息达到 **100 万人（含）**、敏感个人信息达到 **1 万人（含）**，或涉及重要数据时，进入安全评估要求。第三至六条规定的例外须另行判断。[法规原文](https://www.cac.gov.cn/2024-03/22/c_1712776611775634.htm)
+
+2026 年 1 月官方问答讨论“已订合同或通过认证后累计超量”的衔接，用了“超过”措辞；不能据此把上述法规的含等号门槛改成严格大于，也不能假定问答创设了边界豁免。跨境人力资源等例外、敏感信息类别与人数去重应结合完整法规确认。[衔接问答](https://www.cac.gov.cn/2026-01/30/c_1771505108953002.htm)
 
 **建议**：不要假设「只是调 API、没做模型训练」就不算出境；门槛计算、是否适用例外、合同与认证材料，**需法务 / 合规**。过审总流程中的出境勾选项见清单文，细节闸门留在本文。
 
@@ -174,15 +176,15 @@ permalink: aipmwiki/docs/02-pm-skills/data-annotation/data-compliance
 
 ## 参考资料
 
-- [Is my data used for model training?](https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training) — Anthropic Privacy Center（文内标注更新至 2026-03），访问 2026-08-06
-- [Updates to Consumer Terms and Privacy Policy](https://www.anthropic.com/news/updates-to-our-consumer-terms) — Anthropic，访问 2026-08-06
-- [How your data is used to improve model performance](https://openai.com/policies/how-your-data-is-used-to-improve-model-performance/) — OpenAI，访问 2026-08-06
-- [Enterprise privacy at OpenAI](https://openai.com/enterprise-privacy/) — OpenAI，访问 2026-08-06
-- [Data controls in the OpenAI platform](https://developers.openai.com/api/docs/guides/your-data) — OpenAI Platform Docs，访问 2026-08-06
-- [Gemini Apps Privacy Hub](https://support.google.com/gemini/answer/13594961) — Google（Hub 页标注 Last updated: 2026-07-15），访问 2026-08-06
-- [生成式人工智能服务管理暂行办法](https://www.gov.cn/zhengce/zhengceku/202307/content_6891752.htm) — 中国政府网；[网信办同文](https://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm)，访问 2026-08-06
-- [中华人民共和国个人信息保护法](https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm) — 网信办转载，访问 2026-08-06
-- [数据出境安全管理政策法规问答（2026年1月）](https://www.cac.gov.cn/2026-01/30/c_1771505108953002.htm) — 国家互联网信息办公室，访问 2026-08-06
-- [GDPR (EU) 2016/679](https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng/) — EUR-Lex，访问 2026-08-06（仅作对照指针）
+- [Is my data used for model training?](https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training) — Anthropic Privacy Center（文内标注更新至 2026-03），访问 2026-09-14
+- [Updates to Consumer Terms and Privacy Policy](https://www.anthropic.com/news/updates-to-our-consumer-terms) — Anthropic，访问 2026-09-14
+- [How your data is used to improve model performance](https://openai.com/policies/how-your-data-is-used-to-improve-model-performance/) — OpenAI，访问 2026-09-14
+- [Enterprise privacy at OpenAI](https://openai.com/enterprise-privacy/) — OpenAI，访问 2026-09-14
+- [Data controls in the OpenAI platform](https://developers.openai.com/api/docs/guides/your-data) — OpenAI Platform Docs，访问 2026-09-14
+- [Gemini Apps Privacy Hub](https://support.google.com/gemini/answer/13594961) — Google（Hub 页标注 Last updated: 2026-08-10），访问 2026-09-14
+- [生成式人工智能服务管理暂行办法](https://www.gov.cn/zhengce/zhengceku/202307/content_6891752.htm) — 中国政府网；[网信办同文](https://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm)，访问 2026-09-14
+- [中华人民共和国个人信息保护法](https://www.cac.gov.cn/2021-08/20/c_1631050028355286.htm) — 网信办转载，访问 2026-09-14
+- [数据出境安全管理政策法规问答（2026年1月）](https://www.cac.gov.cn/2026-01/30/c_1771505108953002.htm) — 国家互联网信息办公室，访问 2026-09-14
+- [GDPR (EU) 2016/679](https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng/) — EUR-Lex，访问 2026-09-14（仅作对照指针）
 
 选题结构启发自磊叔《关于 AI 产品经理的 100 个问题》Q40、Q88（飞书公开读物）；**不作为法规或厂商政策依据**。

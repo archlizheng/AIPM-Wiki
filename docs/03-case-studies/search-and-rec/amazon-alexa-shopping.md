@@ -7,7 +7,7 @@ permalink: aipmwiki/docs/03-case-studies/search-and-rec/amazon-alexa-shopping
 # Amazon Alexa for Shopping:电商推荐里的大模型落地
 
 **分类**:搜推
-**体验时间**:2026 年 7 月
+**体验时间**:2026 年 7 月（历史体验）；**动态核验**:2026-09-14
 
 ## 一、产品背景
 
@@ -33,7 +33,7 @@ permalink: aipmwiki/docs/03-case-studies/search-and-rec/amazon-alexa-shopping
 
 **竞争格局**:站外有 ChatGPT Shopping、Google AI Mode 购物、Perplexity Shopping 等"开放网页导购";站内则是 Amazon 用账号、评论、物流与履约把 LLM 钉在转化漏斗上。Alexa for Shopping 的差异化不是更好的百科引用,而是**跨 Echo ↔ App ↔ 网站的偏好互通** + **可执行的加购/盯价/代购**。
 
-**准入**:美国顾客登录 Amazon 账号即可免费使用;官方明确**不要求** Prime、Echo 或独立 Alexa App。
+**准入**:官方公告的范围是**美国顾客**；登录 Amazon 账号即可在 Amazon Shopping App/网站使用，明确**不要求** Prime、Echo 或独立 Alexa App。其他地区与客户端的可用性未在本文外推。
 
 ## 二、核心功能拆解
 
@@ -115,7 +115,8 @@ Rufus → Alexa for Shopping 不只是改名:它把**十年 Alexa 品牌**与**�
 
 ## 参考资料
 
-- [Meet Alexa for Shopping, your personalized, agentic AI assistant on Amazon](https://www.aboutamazon.com/news/retail/alexa-for-shopping-ai-assistant) — About Amazon,2026-05;2026-07 访问
-- [How Amazon is using generative and agentic AI to transform the shopping experience](https://www.aboutamazon.com/news/retail/amazon-agentic-ai-gen-ai-shopping) — About Amazon;文中注明 2026-05-13 Rufus 更名;含转化倾向等公司口径;2026-07 访问
-- [Amazon.com Announces Fourth Quarter Results](https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Fourth-Quarter-Results/) — Amazon IR,2026-02;Rufus 3 亿+顾客、近 120 亿美元增量年化销售;2026-07 访问
-- [Amazon ditches Rufus AI chatbot in favor of Alexa shopping agent](https://www.cnbc.com/2026/05/13/amazon-ditches-rufus-ai-chatbot-in-favor-of-alexa-shopping-agent.html) — CNBC,2026-05;报道侧补充;2026-07 访问
+- [Meet Alexa for Shopping, your personalized, agentic AI assistant on Amazon](https://www.aboutamazon.com/news/retail/alexa-for-shopping-ai-assistant) — About Amazon,2026-05;2026-09-14 访问
+- [How AWS is helping retailers build their own AI-powered shopping experiences](https://www.aboutamazon.com/news/aws/aws-agentic-shopping-assistant-retailers) — About Amazon/AWS，2026-06；介绍面向零售商的 Agentic Shopping Assistant，含测试/生产边界，2026-09-14 访问
+- [How Amazon is using generative and agentic AI to transform the shopping experience](https://www.aboutamazon.com/news/retail/amazon-agentic-ai-gen-ai-shopping) — About Amazon;文中注明 2026-05-13 Rufus 更名;含转化倾向等公司口径;2026-09-14 访问
+- [Amazon.com Announces Fourth Quarter Results](https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Fourth-Quarter-Results/) — Amazon IR,2026-02;Rufus 3 亿+顾客、近 120 亿美元增量年化销售;2026-09-14 访问
+- [Amazon ditches Rufus AI chatbot in favor of Alexa shopping agent](https://www.cnbc.com/2026/05/13/amazon-ditches-rufus-ai-chatbot-in-favor-of-alexa-shopping-agent.html) — CNBC,2026-05;报道侧补充;2026-09-14 访问

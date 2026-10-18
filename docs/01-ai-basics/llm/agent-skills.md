@@ -145,6 +145,36 @@ my-skill/
 - [Agent Skills - Claude Platform Docs](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview) — Anthropic 平台文档
 - [Agent Skills | Cursor Docs](https://cursor.com/docs/skills) — Cursor 官方文档,2026-07 访问
 - [Agent Skills – Codex](https://developers.openai.com/codex/skills) — OpenAI 开发者文档,2026-07 访问
+### 对比解读（不替代规范）
+
+以下是工具开发者或第三方的概念解读；协议事实以官方规范为准，平台支持以对应产品文档为准。
+
 - [Skills vs MCP tools for agents: when to use what](https://www.llamaindex.ai/blog/skills-vs-mcp-tools-for-agents-when-to-use-what) — LlamaIndex
 - [EP213: MCP vs Skills, Clearly Explained](https://blog.bytebytego.com/p/ep213-mcp-vs-skills-clearly-explained) — ByteByteGo,2026-05-02
 - [SkillsBench](https://arxiv.org/abs/2602.12670) — arXiv:2602.12670,2026-02
+
+## 2026-09 更新：从 Skill 目录到 Plugin 生命周期
+
+单个 Skill 解决“这类任务怎么做”；当一组 Skill 需要共同依赖文档、MCP Server、权限和脚本时，产品形态开始变成 Plugin bundle。Google Cloud 2026-09-10 发布的 Developer Plugin 将 Skills、官方文档和远程 MCP servers 打包为可安装单元，并称其遵循 Agent Plugins 规范。该页面是公告，未明确所有客户端或生态已 GA，不能把“遵循规范”写成普遍兼容。
+
+企业治理至少要把下面五件事一起做：
+
+| 生命周期 | PM 要求 | 验收证据 |
+|---|---|---|
+| 来源 | 记录发布者、仓库、版本、依赖和许可证 | manifest、commit、来源链接 |
+| 触发 | 说明何时启用、何时明确不启用 | 正/负触发用例 |
+| 权限 | MCP 工具按只读、可逆写、不可逆写分级 | 服务端鉴权与确认日志 |
+| 安全 | 扫描指令、脚本、外连和依赖 | 扫描结果、人工复核 |
+| 运营 | 发布、灰度、回滚、过期和责任人 | 版本记录与停用演练 |
+
+Anthropic 2026-08-06 的 Release Notes 显示，Enterprise 可开启第三方 Skill/Plugin security scanning（Beta），在上传或编辑时检查恶意内容。它是安全扫描能力，不代表扫描能证明 Skill 永远安全。含脚本和外部指令的 Skill 仍需限制网络、密钥和副作用工具。
+
+内部 IT 服务助手的“设备申请 Skill”可以规定：先读 D01 生效制度、再收集缺失字段、生成草稿、等待 E01 确认、调用带 `request_key` 的提交工具、返回业务申请 ID；但 Skill 不能替代服务端权限，也不能把主管审批和 IT 交付写成 Agent 自动完成。
+
+练习：给一个 Skill 写 manifest 草案，列出触发词、排除边界、MCP 依赖、敏感权限、评测用例、回滚版本和过期日期。至少准备一条“应触发”和一条“相似但不应触发”的输入。
+
+参考更新：
+
+- [Introducing the Google Cloud Developer Plugin for AI Coding Agents](https://cloud.google.com/blog/topics/developers-practitioners/introducing-the-google-cloud-developer-plugin-for-ai-coding-agents) — Google Cloud，2026-09-10，Plugin 公告，访问 2026-09-14。
+- [Claude Release Notes](https://support.claude.com/en/articles/12138966-release-notes) — Anthropic，2026-08-06，Skill/Plugin scanning Beta，访问 2026-09-14。
+- [agents-cli release notes](https://github.com/google/agents-cli/blob/main/RELEASE_NOTES.md) — Google，1.5.0，2026-09-01，扩展与评测相关变更，访问 2026-09-14。

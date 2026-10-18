@@ -29,3 +29,12 @@ AI 功能从 Demo 走到生产，难点不只是把模型接进来，而是把�
 - [模型与产品效果评估](../model-evaluation/README.md)负责评测集、人工评分和 Badcase 闭环；本板块补充 Agent 的步骤、工具和轨迹维度。
 - [成本测算与技术协作](../cost-and-tech/README.md)负责模型调用和基础设施成本；本板块把成本上限、任务预算和成本告警放回 Agent 生命周期。
 - [Vibe Coding](../vibe-coding/README.md)适合验证原型假设；涉及真实用户、真实数据和持续稳定性时，仍需回到生产化的权限、评测和监控要求。
+
+## 组织采用与长期记忆
+
+| 层级 | 文章 | 先修与边界 |
+|---|---|---|
+| 进阶 | [企业 AI 从 PoC 到正式采用](poc-to-production-adoption.md) | 先读需求发现、AI 指标；聚焦业务负责人、试点队列、培训与扩围，技术验收回到生产化正课 |
+| 进阶 | [Agent 长期记忆：写入、纠错、删除与过期](agent-memory-design.md) | 先读上下文工程、生产化与安全；聚焦记忆生命周期，不能用记忆替代权威业务状态 |
+| 实践 | [内部服务助手评测](../practice/internal-service-evaluation.md) | 先读实践 PRD；对照30条用例的结果、轨迹和权限 |
+| 实践 | [成本与采用验收](../practice/internal-service-adoption.md) | 先读指标、定价与采用；区分任务完成、批准和交付 |

@@ -7,7 +7,7 @@ permalink: aipmwiki/docs/05-resources/books
 # 书籍推荐
 
 > 格式：书名 + 一句话推荐理由。欢迎 PR 补充，但请确保自己读过。  
-> 截至 2026-07，本页优先收录 AI PM 转型最常用、复用率高的书。
+> 截至 2026-09，本页优先收录 AI PM 转型最常用、复用率高的书；会随模型与产品演进补充官方长文，书籍本身不替代最新产品文档。
 
 ## 入门认知
 
@@ -38,3 +38,12 @@ permalink: aipmwiki/docs/05-resources/books
 
 - **The AI Product Manager's Handbook（Irene Bratsis）**：覆盖面广，但偏传统 ML 时代框架，可作补充阅读。
 - **人工智能产品经理：AI 时代 PM 修炼手册（修订版）**：中文可读性尚可，但大模型时代内容更新有限，建议只作历史参考。
+
+## 配套的官方长文
+
+以下材料不是书籍，适合在读完基础书后针对当前工作补课，访问日均为 2026-09-14。
+
+- [Continuous voice interaction with GPT-Live](https://openai.com/index/continuous-voice-interaction-with-gpt-live/)：理解全双工语音的媒体快路径、异步工具调用和上下文压缩。
+- [Less switching, more flow](https://workspace.google.com/blog/product-announcements/less-switching-more-flow-5-new-agentic-capabilities-across-google-workspace-apps)：观察办公 Agent 如何交付可编辑文件，并保留来源选择与用户审核。
+- [Computer use tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool)：学习 Computer Use 的应用侧执行、隔离、最小权限与人工监督边界。
+- [Enterprise managed permissions for GitHub Copilot agent operations](https://github.blog/changelog/2026-09-09-enterprise-managed-permissions-for-github-copilot-agent-operations/)：理解编程 Agent 的企业级命令、文件和网络权限治理。

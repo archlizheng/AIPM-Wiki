@@ -4,16 +4,16 @@ type: note
 permalink: aipmwiki/docs/03-case-studies/vertical/ai-customer-service
 ---
 
-# 智能客服:最成熟的 LLM 落地场景拆解
+# 智能客服:公开商业化闭环案例拆解
 
 **分类**:垂直行业
-**体验时间**:2026 年 7 月
+**体验时间**:2026 年 9 月（基于公开资料，未进行付费账户实测）
 
 ## 一、产品背景
 
-如果要选一个"LLM 商业闭环跑得最通"的场景,智能客服大概率排第一。它的问题边界清晰(围绕企业已有的知识库、工单系统、订单数据回答问题或完成操作)、有明确的效果标尺(解决率、转人工率、满意度),也天然自带"按结果付费"的计费锚点(一次会话解决 = 一次可计价的商业价值)。这篇拆解选两个官方资料最充分、可核实的标杆产品作为锚点:Intercom 的 Fin AI Agent,以及独立创业公司 Sierra。
+智能客服是公开商业化案例较多、也较容易定义任务闭环的场景之一。它的问题边界可围绕企业知识库、工单系统和订单数据回答或完成操作，常见效果标尺包括解决率、转人工率与满意度，也提供了“按结果付费”的可讨论锚点。这篇拆解选两个官方资料较充分、可核实的产品作为锚点：Fin AI Agent 与 Sierra；“最成熟”不作为行业普遍结论。
 
-Fin 是这条赛道里最早把"按结果付费"做成标准商业条款的产品:2026 年 6 月起,Intercom 母公司正式更名为 Fin,同月 Salesforce 宣布以约 36 亿美元的价格签署收购 Fin 的最终协议(预计 2027 财年第四季度完成交割),这笔交易本身就说明了资本市场如何为"智能客服的商业闭环"定价。Sierra 由前 Salesforce 高管、现 OpenAI 董事长 Bret Taylor 联合创立,主打面向企业的定制化客服 Agent,同样采用按结果付费,但走的是高客单价、深度定制的 to big-B 路线,不公开标准价目表。
+Fin 的公开帮助页把按结果付费具体化为 resolution、procedure handoff、disqualification 和 qualification。2026 年 6 月 15 日 Salesforce 宣布签署约 36 亿美元收购 Fin（公告称 Fin formerly Intercom），预计在 Salesforce FY2027 第四季度完成；截至 2026 年 9 月 14 日，本文未找到交割公告，仍应写成拟议收购。Sierra 由 Bret Taylor 等创立，主打企业定制客服 Agent，同样公开采用结果导向定价，但不公开标准价目表。
 
 两者的共同点是:都不是"卖一个聊天机器人软件",而是把"帮企业解决了多少客户问题"直接变成计费单位——这正是智能客服区别于其他 AI 应用场景的关键商业模式创新。
 
@@ -38,7 +38,7 @@ Fin 把计费和"结果"强绑定,官方定义了四类可计费结果,而不是
 | Disqualification(资格排除) | $0.99 | 判定某个销售线索不符合资质标准 |
 | Qualification(线索合格) | $9.99 | 判定线索符合标准并完成路由 |
 
-需要注意的是,Fin 明确规定"AI 只是回应了打招呼"不算解决,企业默认规则触发的转人工也不计费——这些细节决定了这套计费体系是否真的"按价值付费"而不是"按调用次数变相收费"。
+需要注意的是，Fin 明确规定“AI 只是回应了打招呼”不算解决；默认行为或工作区规则触发的转人工，以及失败的 Procedure，不计为 outcome。官方帮助页还说明一次会话最多收取一个 outcome，即使执行了多次动作；这些细节决定了这套计费体系是否真的按结果计价。
 
 ## 三、技术方案推测
 
@@ -53,13 +53,13 @@ Fin 把计费和"结果"强绑定,官方定义了四类可计费结果,而不是
 
 | 指标 | 含义 | 行业参考水位 |
 |------|------|------|
-| 解决率(Resolution Rate) | AI 独立解决、无需转人工的会话占比 | Intercom 官方案例显示实际部署中解决率区间约为 42%-50% |
-| 转人工率 | 触发人工介入的会话占比 | 与解决率互补,行业普遍关注"解决率能否稳定在 70% 以上"这道门槛 |
+| 解决率(Resolution Rate) | Fin resolved conversations ÷ Fin involved conversations；2026-07 起排除没有回答机会的 constrained conversations | 分母定义会改变数值，不能把不同版本或不同客户数字横比 |
+| 转人工率 | 触发人工介入的会话占比 | 与解决率互补；需按场景、升级原因和客户分群看，本文不设行业 70% 门槛 |
 | 满意度(CSAT) | 用户对 AI 回答的主观评价 | 各厂商标准不一,常作为解决率的校验指标而非唯一标尺 |
 
-**定价逻辑**:Fin 标准化到 $0.99/结果,按 Intercom 座位方案叠加,起步门槛为标准套餐下每月最低约 50 次解决;Sierra 则不公开标准价目表,行业信息显示其合同通常以年费形式起步(常见区间在十几万美元级别),外加数月的实施/上线周期,采用"结果计费为主 + 部分场景(如纯路由/问候式交互)按对话量计费"的混合模式。这种"高客单价 + 深度定制 + 结果导向"的打法,和 Fin 面向中小到中大型企业的标准化按结果付费形成了鲜明对比,反映出智能客服赛道里"标准化产品"与"定制化解决方案"两种商业模式可以并存。
+**定价逻辑**：Fin 官方当前公开页面显示 Intercom 方案为 $29/席位/月起，另按 outcome 计费；具体 outcome 价格与适用渠道以 2026-07-30 帮助页为准，Fin Voice、高量或特殊需求需联系销售。删除没有官方价目支撑的“每月最低 50 次解决”和 Sierra 的年费区间；Sierra 只保留“结果导向、企业合同、不公开标准价目表”。这说明标准化 outcome SKU 与深度定制合同可以并存，但不证明哪一种已成为行业主流。
 
-**国内落地差异**:相比海外"按结果/按解决量付费"的成熟商业条款,国内智能客服市场(如阿里 AI 店小蜜、智齿科技等)目前仍以按坐席/按调用量/按项目制收费为主流,"按效果付费"尚未成为主流条款——核心原因是国内人力成本相对更低,企业对"AI 客服"的心理付费锚点始终参照人工客服的成本,厂商很难在效果计价上定出海外市场那样的溢价空间;但从阿里 2026 年披露的数据看,店小蜜的"AI+人工"协同模式转化率已经反超纯人工客服,说明效果层面的差距正在缩小,商业模式上的差异更多是市场环境导致,而非技术能力差距。
+**国内落地差异（证据边界）**：本次没有找到足够的国内厂商官方价目与统一合同样本，不能把“按坐席/调用量/项目制”写成全国市场主流，也不能把单一厂商的转化率宣传当作行业结论。若研究国内版本，应分别核验厂商合同、部署案例的分母与时间窗，再与 Fin 的公开 outcome 定义对照。
 
 ## 五、PM 视角的启示
 
@@ -77,9 +77,9 @@ Fin 把计费和"结果"强绑定,官方定义了四类可计费结果,而不是
 
 ## 参考资料
 
-- [Fin AI Agent outcomes](https://www.intercom.com/help/en/articles/8205718-fin-ai-agent-outcomes) — Intercom/Fin 官方帮助中心,2026-07 访问
-- [Fin pricing: Outcomes](https://fin.ai/help/en/articles/13975800-fin-pricing-outcomes) — Fin 官方帮助中心,2026-07 访问
-- [Salesforce Signs Definitive Agreement to Acquire Fin](https://www.salesforce.com/news/press-releases/2026/06/15/salesforce-signs-definitive-agreement-to-acquire-fin/) — Salesforce 官方新闻稿,2026-07 访问
-- [Outcome-based pricing for AI Agents](https://sierra.ai/blog/outcome-based-pricing-for-ai-agents) — Sierra 官方博客,2026-07 访问
-- [Constellation of models: the architecture powering Sierra's agents](https://sierra.ai/blog/constellation-of-models) — Sierra 官方博客,2026-07 访问
-- [阿里发布全新 AI 店小蜜,智能客服进入自主执行阶段](https://news.qq.com/rain/a/20260513A07N2600) — 腾讯新闻转载报道,2026-07 访问
+- [Fin AI Agent outcomes](https://www.intercom.com/help/en/articles/8205718-fin-ai-agent-outcomes) — Intercom/Fin 官方帮助中心,2026-07-30 更新,访问 2026-09-14；结果定义、一次会话一次计费、失败不计费
+- [AI Chatbot for Customer Service, Sales, & Support](https://www.intercom.com/ai-chatbot) — Intercom 官方产品/价目页,动态页,访问 2026-09-14；$29/席位/月 + $0.99/outcome 公开起始口径
+- [Update to Fin performance metrics](https://www.intercom.com/help/en/articles/15599377-update-to-fin-performance-metrics) — Intercom 官方帮助中心,2026-07 更新,访问 2026-09-14；Resolution Rate 分母和 constrained 定义
+- [Salesforce Signs Definitive Agreement to Acquire Fin](https://www.salesforce.com/news/press-releases/2026/06/15/salesforce-signs-definitive-agreement-to-acquire-fin/) — Salesforce 官方新闻稿,2026-06-15,访问 2026-09-14；拟议收购、约 $3.6B、预计 FY2027 Q4 交割，未据此写成已完成
+- [Outcome-based pricing for AI Agents](https://sierra.ai/blog/outcomemaxxing) — Sierra 官方博客,2026-06-03,访问 2026-09-14；结果定价论述为厂商观点
+- [Constellation of models: the architecture powering Sierra's agents](https://sierra.ai/uk/blog/constellation-of-models) — Sierra 官方博客,2025-12-03,访问 2026-09-14；15+ 模型为厂商架构自述，非 2026 年新增

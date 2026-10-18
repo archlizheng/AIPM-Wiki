@@ -189,6 +189,20 @@ permalink: aipmwiki/docs/02-pm-skills/vibe-coding/from-idea-to-demo
 - [ ] 若要移交工程师,是否整理好工具与数据来源、已知问题清单、下一步真实需求?
 ```
 
+## 七、2026 年的 Builder 交接格式
+
+当编程 Agent、全栈生成器和设计工具都能生成原型时，PM 要交接的是可复核的过程。保存需求卡、工具入口、模型和价格核验日、每轮 Prompt、运行命令、评测输入、已知问题和移交条件。页面能打开不等于接口权限、数据保护和发布门禁已经成立。
+
+建议把 Demo 产物分成四层。第一层是可点击界面，第二层是使用虚构数据的可运行流程，第三层是带评测和日志的受控试点，第四层才是工程团队负责的生产系统。不同工具的 GA、Preview 和 Experimental 状态也应随项目记录，不能把网页上的按钮当成稳定能力。
+
+| 交接字段 | 示例 | 目的 |
+|---|---|---|
+| 验证假设 | 员工能在两分钟内找到现行设备标准 | 说明 Demo 证明什么 |
+| 数据范围 | D01-D12 虚构材料 | 避免把真实数据带入原型 |
+| 副作用 | 只生成草稿，不提交 | 保护真实系统 |
+| 证据 | 20 条评测、失败截图、运行日志 | 让工程师复核 |
+| 接手条件 | API、权限、监控、回滚方案齐全 | 说明何时离开原型阶段 |
+
 ## 相关阅读
 
 - [什么是 Vibe Coding](what-is-vibe-coding.md)
@@ -197,6 +211,8 @@ permalink: aipmwiki/docs/02-pm-skills/vibe-coding/from-idea-to-demo
 - [模型选型决策框架:效果、成本、延迟、合规四要素](../cost-and-tech/model-selection-framework.md)
 - [什么是 RAG:检索增强生成入门](../../01-ai-basics/llm/what-is-rag.md)
 - [传统 PM 转型 AI PM 指南](../../00-roadmap/transition-guide.md)
+- [AI 产品 PRD 怎么写](../prd-and-design/ai-prd-guide.md)
+- [Computer Use 产品怎么设计](../prd-and-design/computer-use-product-design.md)
 
 ## 参考资料
 

@@ -72,6 +72,8 @@ OpenAI 的 Function Calling 文档描述了模型生成结构化工具调用、�
 
 ### 推荐的最小状态机
 
+下图是通用运行状态，`waiting_approval/approved/denied`表示一次工具动作的用户确认，不是主管的业务审批。贯穿教学另用`awaiting_confirmation`表示员工确认，业务申请`pending_approval/approved/rejected`由业务系统管理。两组状态不可直接映射；草稿cancelled也不能撤销已提交申请。
+
 ```text
 created → planning → running_tool → observing
               ↑           │             │
@@ -276,3 +278,38 @@ Agent 演示容易比拼「还能多干一件事」；生产验收更该问：**
 - [Function calling](https://developers.openai.com/api/docs/guides/function-calling) —— OpenAI 开发者文档，2026-07 访问
 - [Model Context Protocol specification](https://modelcontextprotocol.io/specification/latest) —— MCP 官方规范，2026-07 访问
 - 选题启发：磊叔 / AIRay1015《关于 AI 产品经理的 100 个问题》Q14、Q18、Q19（[飞书链接](https://my.feishu.cn/wiki/Rl6zw6lp2ipOnnkBVxwc5urRnLc)）；**不摘录答案正文**
+
+## 2026-09 深化：长任务运行时与恢复契约
+
+托管 Agent Runtime 正在把“任务能否运行几小时或几天”从应用代码中抽成基础设施能力。OpenAI 2026-09-10 发布的 Agents API 仍是 Public Beta，提供 durable sessions、自动 context compaction、tool search、并行 subagents 和可选择的 sandbox；Google Cloud 2026-07-29 的平台更新声称 Agent Runtime 可连续运行最长 7 天；AWS 2026-08-06 发布 Runtime Instances，描述了最长 14 天的共享 session。平台负责保存和调度，不负责替你定义任务成功。
+
+| 项目 | 产品要写清 | 触发失败后的状态 |
+|---|---|---|
+| 暂停 | 因等待确认、外部系统或时间窗口暂停多久 | `waiting_approval` / `blocked` |
+| 恢复 | 从哪个事件、哪个版本和哪个状态继续 | 恢复前重新鉴权与校验 |
+| 压缩 | 哪些上下文可摘要，哪些规则必须原文/外部重载 | 压缩失败则暂停 |
+| 重启 | 如何避免重复副作用 | 先按幂等键查询业务对象 |
+| 过期 | 会话、确认、临时文件和密钥多久失效 | 过期任务不得重放写操作 |
+| 交接 | 转人工时带哪些状态、证据和下一步 | `handed_off`，不把未完成说成成功 |
+
+内部 IT 服务助手的提交任务可这样验收：E01 先得到草稿并进入 `awaiting_confirmation`；确认后进入 `submitting`；网络超时先查询同一 `request_key`，只有确认业务对象不存在时才允许有限重试；拿到业务申请 ID 后进入 `pending_approval`。主管审批和 IT 交付仍由人完成，不能从模型上下文推断 `approved` 或 `fulfilled`。
+
+固定审批链、写操作少且可由代码校验时，Workflow 往往比自由 Agent 更容易解释；跨多个系统、持续时间长、需要沙箱和可恢复状态时，托管 Runtime 才可能抵消自建成本。无论平台如何选择，都必须有服务端鉴权、任务级完成证据、可回滚或可转人工的停止点。厂商客户效果数字属于厂商自述，不能直接当上线指标。
+
+### 正常与异常轨迹对照（虚构内部服务任务）
+
+| 场景 | 动作轨迹 | 用户看到什么 | 验收 |
+|---|---|---|---|
+| 正常提交 | 草稿→确认→重鉴权→同键写入→业务ID | 已提交，待主管审批 | 仅一个申请，确认绑定字段 |
+| 确认过期后恢复 | 暂停→恢复→校验失败→新预览确认 | 等待重新确认 | 旧确认不能产生写入 |
+| 取消后旧任务重试 | 取消草稿→队列恢复→检测终态→停止 | 草稿已取消 | 不从cancelled复活，不建单 |
+| 超时实际已建单 | 同键提交→超时→按键查询→返回原ID | 已核实提交，待审批 | 不换键再建、不用聊天猜状态 |
+| 批准与撤回竞态 | 预览待审批→主管批准→撤回重查→拒绝/人工 | 已批准，需IT处理 | 不伪造withdrawn |
+
+这里“确认过期”指员工提交凭证过期，不是把主管已有业务审批作废。业务批准、会话授权和执行令牌的有效性分别定义。对未知结果，查询失败或“暂未找到”不一定等于确定没有执行；只有接口契约能确认未执行、且确认与权限仍有效时才有限重试。具体字段与30条回归见[实践PRD](../practice/internal-service-prd.md)及[评测](../practice/internal-service-evaluation.md)。
+
+参考更新：
+
+- [Introducing the Agents API](https://openai.com/index/introducing-the-agents-api/) — OpenAI，2026-09-10，Public Beta，访问 2026-09-14。
+- [What’s new in Gemini Enterprise Agent Platform](https://cloud.google.com/blog/products/ai-machine-learning/whats-new-in-gemini-enterprise-agent-platform) — Google Cloud，2026-07-29，状态需按产品文档复核，访问 2026-09-14。
+- [Runtime instances](https://aws.amazon.com/blogs/aws/runtime-instances-persistent-compute-for-production-ai-agents-on-amazon-bedrock-agentcore/) — AWS，2026-08-06，Launch，访问 2026-09-14。

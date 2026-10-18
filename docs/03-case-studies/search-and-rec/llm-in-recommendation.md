@@ -7,7 +7,7 @@ permalink: aipmwiki/docs/03-case-studies/search-and-rec/llm-in-recommendation
 # 推荐系统中大模型的实际落地位置
 
 **分类**:搜推
-**体验时间**:2026 年 7 月
+**体验时间**:2026 年 7 月（历史案例）；**动态核验**:2026-09-14
 
 ## 一、产品背景
 
@@ -127,12 +127,13 @@ permalink: aipmwiki/docs/03-case-studies/search-and-rec/llm-in-recommendation
 
 ## 参考资料
 
-- [Meet Alexa for Shopping, your personalized, agentic AI assistant on Amazon](https://www.aboutamazon.com/news/retail/alexa-for-shopping-ai-assistant) — About Amazon;访问日期 2026-07-14
-- [How Amazon is using generative and agentic AI to transform the shopping experience](https://www.aboutamazon.com/news/retail/amazon-agentic-ai-gen-ai-shopping) — About Amazon;含更名与转化倾向等公司口径;访问日期 2026-07-14
-- [Amazon.com Announces Fourth Quarter Results](https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Fourth-Quarter-Results/) — Amazon IR;Rufus 3 亿+ 顾客、近 120 亿美元增量年化销售;访问日期 2026-07-14
-- [The technology behind Amazon's genAI-powered shopping assistant Rufus](https://www.amazon.science/blog/the-technology-behind-amazons-genai-powered-shopping-assistant-rufus) — Amazon Science;购物域 LLM + RAG;访问日期 2026-07-14
-- [How Rufus scales conversational shopping experiences… with Amazon Bedrock](https://aws.amazon.com/blogs/machine-learning/how-rufus-scales-conversational-shopping-experiences-to-millions-of-amazon-customers-with-amazon-bedrock/) — AWS ML Blog;多模型路由;访问日期 2026-07-14
-- [PinRec: Outcome-Conditioned, Multi-Token Generative Retrieval…](https://arxiv.org/abs/2504.10507) — arXiv;约 +2% sitewide clicks、+4% search repins;访问日期 2026-07-14
-- [GenPage: Towards End-to-End Generative Homepage Construction at Netflix](https://netflixtechblog.com/genpage-towards-end-to-end-generative-homepage-construction-at-netflix-77146fba8a08) — Netflix TechBlog;serving 延迟约 -20%;访问日期 2026-07-14
-- [Semantic IDs for Generative Search and Recommendation](https://research.atspotify.com/2025/9/semantic-ids-for-generative-search-and-recommendation) — Spotify Research;访问日期 2026-07-14
-- [LIGER: Unifying Generative and Dense Retrieval…](https://arxiv.org/abs/2411.18814) — arXiv;混合召回与冷启动研究;访问日期 2026-07-14
+- [Meet Alexa for Shopping, your personalized, agentic AI assistant on Amazon](https://www.aboutamazon.com/news/retail/alexa-for-shopping-ai-assistant) — About Amazon;访问日期 2026-09-14
+- [How Amazon is using generative and agentic AI to transform the shopping experience](https://www.aboutamazon.com/news/retail/amazon-agentic-ai-gen-ai-shopping) — About Amazon;含更名与转化倾向等公司口径;访问日期 2026-09-14
+- [Amazon.com Announces Fourth Quarter Results](https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Fourth-Quarter-Results/) — Amazon IR;Rufus 3 亿+ 顾客、近 120 亿美元增量年化销售;访问日期 2026-09-14
+- [How AWS is helping retailers build their own AI-powered shopping experiences](https://www.aboutamazon.com/news/aws/aws-agentic-shopping-assistant-retailers) — About Amazon/AWS；介绍面向零售商的 Agentic Shopping Assistant 与测试/生产边界；访问日期 2026-09-14
+- [The technology behind Amazon's genAI-powered shopping assistant Rufus](https://www.amazon.science/blog/the-technology-behind-amazons-genai-powered-shopping-assistant-rufus) — Amazon Science;购物域 LLM + RAG;访问日期 2026-09-14
+- [How Rufus scales conversational shopping experiences… with Amazon Bedrock](https://aws.amazon.com/blogs/machine-learning/how-rufus-scales-conversational-shopping-experiences-to-millions-of-amazon-customers-with-amazon-bedrock/) — AWS ML Blog;多模型路由;访问日期 2026-09-14
+- [PinRec: Outcome-Conditioned, Multi-Token Generative Retrieval…](https://arxiv.org/abs/2504.10507) — arXiv;约 +2% sitewide clicks、+4% search repins;论文实验口径，访问日期 2026-09-14
+- [GenPage: Towards End-to-End Generative Homepage Construction at Netflix](https://netflixtechblog.com/genpage-towards-end-to-end-generative-homepage-construction-at-netflix-77146fba8a08) — Netflix TechBlog;serving 延迟约 -20%;工程博客口径，访问日期 2026-09-14
+- [Semantic IDs for Generative Search and Recommendation](https://research.atspotify.com/2025/9/semantic-ids-for-generative-search-and-recommendation) — Spotify Research；研究文章，访问日期 2026-09-14
+- [LIGER: Unifying Generative and Dense Retrieval…](https://arxiv.org/abs/2411.18814) — arXiv;混合召回与冷启动研究，访问日期 2026-09-14
