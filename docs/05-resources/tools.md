@@ -48,6 +48,10 @@ permalink: aipmwiki/docs/05-resources/tools
 - **Label Studio Community**：开源标注工具，适合中小团队建立训练与评测数据集。
 - **Figma AI**：适合快速做产品草图与交互迭代，降低从想法到可视化原型的成本。
 
+## 求职作品集自检
+
+- **[Offer库 AI 产品经理作品集自检](https://chanpinjingli.org/tools/ai-pm-portfolio-check)**：免费、无需登录或上传材料，按 12 项公开规则检查问题证据、AI 取舍、评测集、失败处理、项目真实性、指标和面试表达；结果只用于安排修改优先级，不预测招聘结果。
+
 
 
 ## 面试 Skills（作者原创）
