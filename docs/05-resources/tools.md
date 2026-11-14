@@ -42,6 +42,10 @@ permalink: aipmwiki/docs/05-resources/tools
 
 
 
+## 模型 API 价格参考
+
+- [AIHOT 大模型 API 价格对比](https://aihot.news/leaderboard/prices)：按输入、输出和缓存命中的单价横向对比模型，适合给调用成本估算挑候选。正式预算采用供应商官方报价。
+
 ## 评测 / 标注 / 原型（可选进阶）
 
 - **Braintrust**：适合搭建 LLM 应用评测闭环，把「感觉好用」变成可比较指标。
